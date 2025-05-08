@@ -1,0 +1,10 @@
+numpy==2.2.5
+pandas==2.2.3
+datasets==3.5.1
+faiss-cpu==1.11.0
+torch==2.7.0
+open-clip-torch==2.32.0
+torchvision==0.22.0
+transformers==4.51.3
+tokenizers==0.21.1
+scipy==1.15.2
