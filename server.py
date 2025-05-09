@@ -324,27 +324,29 @@ async def run_graphrag_cli(query_text: str) -> str:
             # Check if the CLI exists, don't try to run commands yet
             if os.path.exists(graphrag_cmd):
                 logger.info("GraphRAG CLI executable found")
-                output_lines.append("GraphRAG CLI is available")
+                # output_lines.append("GraphRAG CLI is available")
             else:
-                output_lines.append("GraphRAG CLI executable not found, but attempting to continue")
+                # output_lines.append("GraphRAG CLI executable not found, but attempting to continue")
+                pass
         except Exception as e:
             logger.warning(f"Error verifying GraphRAG CLI: {str(e)}")
-            output_lines.append(f"Note: GraphRAG CLI verification had issues: {str(e)}")
+            # output_lines.append(f"Note: GraphRAG CLI verification had issues: {str(e)}")
 
         # 1) init if first run
         settings_file = os.path.join(PROJECT_ROOT, "settings.yaml")
         if not os.path.exists(settings_file):
             logger.info(f"Settings file not found at {settings_file}, initializing project")
-            output_lines.append(">>> Initializing project")
+            # output_lines.append(">>> Initializing project")
             try:
-                output_lines.append(await call_cmd(graphrag_cmd, "init", "--root", PROJECT_ROOT))
+                _ = await call_cmd(graphrag_cmd, "init", "--root", PROJECT_ROOT)
+                # output_lines.append(await call_cmd(graphrag_cmd, "init", "--root", PROJECT_ROOT))
             except Exception as e:
                 error_msg = str(e)
                 logger.error(f"Project initialization failed: {error_msg}")
-                output_lines.append(f"ERROR: Failed to initialize project. {error_msg}")
+                # output_lines.append(f"ERROR: Failed to initialize project. {error_msg}")
         else:
             logger.info(f"Settings file exists at {settings_file}, skipping initialization")
-            output_lines.append(">>> Project already initialized")
+            # output_lines.append(">>> Project already initialized")
 
         # 2) index
         outputs_file = os.path.join(PROJECT_ROOT, "output_old")
@@ -352,14 +354,15 @@ async def run_graphrag_cli(query_text: str) -> str:
             logger.info(f"Output directory not found at {outputs_file}, indexing documents")
             output_lines.append(">>> Indexing documents")
             try:
-                output_lines.append(await call_cmd(graphrag_cmd, "index", "--root", PROJECT_ROOT))
+                _ = await call_cmd(graphrag_cmd, "index", "--root", PROJECT_ROOT)
+                # output_lines.append(await call_cmd(graphrag_cmd, "index", "--root", PROJECT_ROOT))
             except Exception as e:
                 error_msg = str(e)
                 logger.error(f"Document indexing failed: {error_msg}")
-                output_lines.append(f"ERROR: Failed to index documents. {error_msg}")
+                # output_lines.append(f"ERROR: Failed to index documents. {error_msg}")
         else:
             logger.info(f"Output directory exists at {outputs_file}, skipping indexing")
-            output_lines.append(">>> Documents already indexed")
+            # output_lines.append(">>> Documents already indexed")
 
         # Create a shorter, simplified query string for command-line use
         # Remove newlines and limit query length to avoid command-line issues
@@ -370,7 +373,7 @@ async def run_graphrag_cli(query_text: str) -> str:
         # 3) run queries
         method = "global"
         logger.info(f"Running query with method: {method}")
-        output_lines.append(f">>> Query method: {method}")
+        # output_lines.append(f">>> Query method: {method}")
 
         try:
             # Use direct query parameter with simplified query
@@ -384,7 +387,7 @@ async def run_graphrag_cli(query_text: str) -> str:
         except Exception as e:
             error_msg = str(e)
             logger.error(f"Query execution failed: {error_msg}")
-            output_lines.append(f"ERROR: Failed to execute query. {error_msg}")
+            # output_lines.append(f"ERROR: Failed to execute query. {error_msg}")
 
             # If error mentions query length, try with even shorter query
             if "too long" in str(e).lower() or "length" in str(e).lower():
@@ -397,17 +400,17 @@ async def run_graphrag_cli(query_text: str) -> str:
                         "--method", method,
                         "--query", very_short_query
                     )
-                    output_lines.append("(Using very shortened query due to length restrictions)")
+                    # output_lines.append("(Using very shortened query due to length restrictions)")
                     output_lines.append(query_result)
                 except Exception as e2:
                     logger.error(f"Even shorter query also failed: {str(e2)}")
-                    output_lines.append(f"ERROR: Even shorter query also failed. {str(e2)}")
+                    # output_lines.append(f"ERROR: Even shorter query also failed. {str(e2)}")
 
         return "\n\n".join(output_lines)
     except Exception as e:
         logger.error(f"Error in GraphRAG CLI execution: {str(e)}")
         logger.error(traceback.format_exc())
-        output_lines.append(f"ERROR: {str(e)}")
+        # output_lines.append(f"ERROR: {str(e)}")
         return "\n\n".join(output_lines)
 
 
@@ -459,9 +462,9 @@ async def process_combined(request: CombinedRequest):
             cli_out = f"ERROR in CLI: {str(cli_out)}"
 
         graphrag_combined = (
-            "=== GraphRAG Output ===\n"
+            # "=== GraphRAG Output ===\n"
             f"{rag_out}\n\n"
-            "=== graphrag CLI Output ===\n"
+            # "=== graphrag CLI Output ===\n"
             f"{cli_out}"
         )
 
