@@ -58,7 +58,7 @@ embed_text:
 input:
   type: file # or blob
   file_type: text # [csv, text, json]
-  base_dir: "input_old"
+  base_dir: "input"
 
 chunks:
   size: 1200

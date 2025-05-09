@@ -6,7 +6,7 @@ import sys
 # === Configuration ===
 PROJECT_ROOT = "./ragtest"
 INPUT_DIR = f"{PROJECT_ROOT}/input"
-QUERY_TEXT = "Any information regarding heart and hypertension?"
+QUERY_TEXT = "Tell me general theme of the data"
 
 
 def cli_init(root: str):
