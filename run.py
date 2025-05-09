@@ -25,9 +25,11 @@ def main():
     else:
         indexer._build_index()
 
-    test_image = "./datasets/mimic-cxr-images-512/files/p19/p19000065/s51613820/58f383e7-edcbd8c7-2f6dc2af-eb97ddf1-f7cbc46a.jpg" #TODO: add your path
-    test_report = "./datasets/mimic-cxr/files/p19/p19000065/s51613820.txt" #TODO: add your path
-    retriever = Retriever(indexer, test_image, test_report, top_k=5, metric="cosine")
+    test_image = "C:/Users/Nilesh/Downloads/sample_RAG/sample_RAG/input_s51613820/58f383e7-edcbd8c7-2f6dc2af-eb97ddf1-f7cbc46a.jpg" #TODO: add your path
+    # test_report = "./datasets/mimic-cxr/files/p19/p19000065/s51613820.txt" #TODO: add your path
+    user_query = "Is there any problem with this?"
+
+    retriever = Retriever(indexer, test_image, user_query, top_k=5, metric="cosine")
     results = retriever.retrieve_similar_items()
     
     for r in results:

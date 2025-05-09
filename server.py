@@ -1,21 +1,27 @@
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 import os
 import sys
 import asyncio
 import subprocess
 import traceback
 from pathlib import Path
+import logging
+from typing import Optional, List
+import tempfile
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-
-# ─── GraphRAG Initialization (done once) ────────────────────────────────────────
+# --- Neo4j Imports ---
 from neo4j import GraphDatabase
 from neo4j_graphrag.embeddings import OpenAIEmbeddings
 from neo4j_graphrag.retrievers import VectorRetriever
 from neo4j_graphrag.llm import OpenAILLM
 from neo4j_graphrag.generation import GraphRAG
 from dotenv import load_dotenv
-import logging
+
+# --- MultiModal RAG Imports ---
+from utils.embedding_model import EmbeddingModelLoader
+from modules.retriever import Retriever
+from modules.indexer import Indexer
 
 # ─── Logging setup ───────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -26,7 +32,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ─── Load .env ─────────────────────────────────────────────────────────────────
-# looks for a ".env" next to this file
 env_path = "./.env"
 if os.path.exists(env_path):
     load_dotenv(env_path)
@@ -34,15 +39,16 @@ if os.path.exists(env_path):
 else:
     logger.warning(f".env file not found at {env_path}")
 
-# ─── FastAPI setup ──────────────────────────────────────────────────────────────
-app = FastAPI()
+# --- CONFIGURATION ---
+# MultiModal RAG configuration
+MODEL_NAME = "biomedclip"
+INDEX_DIR = "./datasets/indexed_files/"
+INDEX_FILE = os.path.join(INDEX_DIR, "biomedclip_index_merged.index")
+DOC_MAP = "./image_report_mapping_all_227835.json"
+VECTOR_DB = "faiss"
+TOP_K = 5  # default number of results
 
-
-class RunRequest(BaseModel):
-    text: str
-
-
-# ─── Environment & Paths ────────────────────────────────────────────────────────
+# GraphRAG configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     logger.error("OPENAI_API_KEY environment variable not set")
@@ -62,35 +68,114 @@ NEO4J_URI = "neo4j+s://9301fe45.databases.neo4j.io"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "l_jBXBupg2kTYC7kdbcUdf4aJ2Pc8L5XwBxGA09m8tY"
 VECTOR_INDEX = "idx_desc_embedding_Disease"
-MODEL_NAME = "gpt-4o-mini"
+MODEL_NAME_GRAPHRAG = "gpt-4o-mini"
 
-# — driver, embedder, retriever, llm, rag pipeline —
-try:
-    logger.info(f"Connecting to Neo4j at {NEO4J_URI}")
-    driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
-    # Test the connection
-    with driver.session() as session:
-        result = session.run("RETURN 1 AS test")
-        test_value = result.single()["test"]
-        logger.info(f"Neo4j connection test: {test_value}")
-
-    logger.info(f"Initializing OpenAI embeddings with model: text-embedding-3-small")
-    embedder = OpenAIEmbeddings(model="text-embedding-3-small", api_key=OPENAI_API_KEY)
-
-    logger.info(f"Setting up Vector Retriever with index: {VECTOR_INDEX}")
-    retriever = VectorRetriever(driver=driver, index_name=VECTOR_INDEX, embedder=embedder)
-
-    logger.info(f"Initializing OpenAI LLM with model: {MODEL_NAME}")
-    llm = OpenAILLM(model_name=MODEL_NAME, model_params={"temperature": 0}, api_key=OPENAI_API_KEY)
-
-    logger.info("Creating GraphRAG pipeline")
-    rag = GraphRAG(retriever=retriever, llm=llm)
-except Exception as e:
-    logger.error(f"Error during initialization: {str(e)}")
-    logger.error(traceback.format_exc())
-    raise
+# --- Initialize FastAPI ---
+app = FastAPI(title="Combined MultiModal RAG and GraphRAG API")
 
 
+# --- Pydantic schema for incoming requests ---
+class CombinedRequest(BaseModel):
+    image_path: str
+    user_query: str
+    top_k: int = TOP_K
+    include_reports: bool = True  # Whether to include detailed report info in response
+
+
+# --- Load resources at startup ---
+@app.on_event("startup")
+def load_resources():
+    # --- Initialize MultiModal RAG components ---
+    global indexer
+    # 1. Load embedding model & tokenizer
+    loader = EmbeddingModelLoader(model_name=MODEL_NAME)
+    emb_model, preprocess, emb_tokenizer, context_length = loader.load_model_and_tokenizer()
+
+    # 2. Initialize Indexer and ensure FAISS index is built/loaded
+    indexer = Indexer(
+        emb_model, preprocess, emb_tokenizer, context_length,
+        INDEX_FILE, DOC_MAP, VECTOR_DB
+    )
+    if os.path.isdir(INDEX_DIR) and os.listdir(INDEX_DIR):
+        if os.path.exists(INDEX_FILE):
+            indexer._load_index()
+        else:
+            indexer.merge_faiss_indexes(INDEX_DIR, INDEX_FILE)
+            indexer._load_index()
+    else:
+        indexer._build_index()
+
+    # --- Initialize GraphRAG components ---
+    global driver, embedder, retriever_graphrag, llm, rag
+    try:
+        logger.info(f"Connecting to Neo4j at {NEO4J_URI}")
+        driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+        # Test the connection
+        with driver.session() as session:
+            result = session.run("RETURN 1 AS test")
+            test_value = result.single()["test"]
+            logger.info(f"Neo4j connection test: {test_value}")
+
+        logger.info(f"Initializing OpenAI embeddings with model: text-embedding-3-small")
+        embedder = OpenAIEmbeddings(model="text-embedding-3-small", api_key=OPENAI_API_KEY)
+
+        logger.info(f"Setting up Vector Retriever with index: {VECTOR_INDEX}")
+        retriever_graphrag = VectorRetriever(driver=driver, index_name=VECTOR_INDEX, embedder=embedder)
+
+        logger.info(f"Initializing OpenAI LLM with model: {MODEL_NAME_GRAPHRAG}")
+        llm = OpenAILLM(model_name=MODEL_NAME_GRAPHRAG, model_params={"temperature": 0}, api_key=OPENAI_API_KEY)
+
+        logger.info("Creating GraphRAG pipeline")
+        rag = GraphRAG(retriever=retriever_graphrag, llm=llm)
+    except Exception as e:
+        logger.error(f"Error during initialization: {str(e)}")
+        logger.error(traceback.format_exc())
+        raise
+
+
+# --- Step 1: MultiModal RAG Retrieval ---
+async def perform_multimodal_rag(image_path: str, user_query: str, top_k: int):
+    """Perform MultiModal RAG retrieval"""
+    if not os.path.isfile(image_path):
+        raise HTTPException(status_code=400, detail="Image path does not exist")
+
+    # Perform retrieval
+    retriever = Retriever(
+        indexer,
+        image_path,
+        user_query,
+        top_k=top_k,
+        metric="cosine"
+    )
+    results = retriever.retrieve_similar_items()
+
+    # Read the report contents
+    response = []
+    concatenated_reports = ""
+
+    for r in results:
+        # Assuming report_path is relative or absolute path on disk
+        report_full_path = os.path.join("./all_reports", os.path.basename(r["report_path"]))
+        if not os.path.isfile(report_full_path):
+            # skip or return placeholder
+            report_text = ""
+        else:
+            with open(report_full_path, "r") as f:
+                report_text = f.read()
+                concatenated_reports += report_text + "\n\n"
+
+        response.append({
+            "rank": r["rank"],
+            "image": r["image_path"],
+            "report": r["report_path"],
+            "content": report_text,
+            "score": round(r["score"], 4),
+        })
+
+    return response, concatenated_reports
+
+
+# --- Step 2: GraphRAG Processing ---
 # ─── Helper: run GraphRAG search ─────────────────────────────────────────────────
 async def run_graph_rag(query_text: str) -> str:
     """
@@ -137,34 +222,37 @@ async def run_graphrag_cli(query_text: str) -> str:
         cmd_str = " ".join(cmd)
         logger.info(f"Executing command: {cmd_str}")
         try:
+            # Specify encoding for subprocess to handle output_old properly
             result = subprocess.run(
                 cmd,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True,
+                encoding='utf-8',  # Explicitly set encoding to UTF-8
+                errors='replace',  # Replace invalid characters instead of erroring
                 env=env,
                 check=False  # Don't raise exception on non-zero return codes
             )
 
             if result.returncode != 0:
-                error_msg = result.stderr.strip()
+                error_msg = result.stderr.strip() if result.stderr else "No error message available"
                 logger.error(f"Command failed with return code {result.returncode}: {error_msg}")
                 # For help command failures, which are expected, don't raise an error
-                if cmd[-1] == "--help" and "No such option: --help" in error_msg:
+                if cmd[-1] == "--help" and result.stderr and "No such option: --help" in result.stderr:
                     return "Command help not available, but command exists"
-                raise RuntimeError(f"Command {cmd_str!r} failed with code {result.returncode}: {error_msg}")
+                return f"Command failed: {error_msg}"
 
-            output = result.stdout.strip()
+            # Check if stdout is None before calling strip()
+            output = result.stdout.strip() if result.stdout else ""
             logger.info(f"Command completed successfully")
             return output
         except FileNotFoundError:
             logger.error(f"Command not found: {cmd[0]}")
-            raise RuntimeError(
-                f"Command not found: {cmd[0]}. Make sure the graphrag CLI is installed and in your PATH.")
+            return f"Command not found: {cmd[0]}. Make sure the graphrag CLI is installed and in your PATH."
         except Exception as e:
             logger.error(f"Error executing command: {str(e)}")
             logger.error(traceback.format_exc())
-            raise
+            return f"Error: {str(e)}"
 
     # Wrap synchronous command execution in asyncio.to_thread
     async def call_cmd(*cmd):
@@ -185,6 +273,8 @@ async def run_graphrag_cli(query_text: str) -> str:
                     ["where", "graphrag"],
                     capture_output=True,
                     text=True,
+                    encoding='utf-8',
+                    errors='replace',
                     check=False
                 )
                 if result.returncode == 0:
@@ -194,6 +284,8 @@ async def run_graphrag_cli(query_text: str) -> str:
                     ["which", "graphrag"],
                     capture_output=True,
                     text=True,
+                    encoding='utf-8',
+                    errors='replace',
                     check=False
                 )
                 if result.returncode == 0:
@@ -229,29 +321,15 @@ async def run_graphrag_cli(query_text: str) -> str:
         # Try a simple command like 'help' to test if the CLI works
         # Many CLIs support --help or just running the command with no args will show help
         try:
-            # First try without any args - most CLIs will show usage info
-            help_output = await call_cmd(graphrag_cmd)
-            logger.info("GraphRAG CLI is working")
-            output_lines.append("GraphRAG CLI is available and working")
+            # Check if the CLI exists, don't try to run commands yet
+            if os.path.exists(graphrag_cmd):
+                logger.info("GraphRAG CLI executable found")
+                output_lines.append("GraphRAG CLI is available")
+            else:
+                output_lines.append("GraphRAG CLI executable not found, but attempting to continue")
         except Exception as e:
-            try:
-                # If that fails, try with --help flag
-                help_output = await call_cmd(graphrag_cmd, "--help")
-                logger.info("GraphRAG CLI is working with --help flag")
-                output_lines.append("GraphRAG CLI is available and working")
-            except Exception as e:
-                # If both fail, but the executable exists, try to continue anyway
-                if os.path.exists(graphrag_cmd):
-                    logger.warning(f"GraphRAG CLI exists but help command failed: {str(e)}")
-                    output_lines.append("GraphRAG CLI exists but couldn't verify its operation")
-                else:
-                    error_msg = str(e)
-                    logger.error(f"GraphRAG CLI check completely failed: {error_msg}")
-                    output_lines.append(f"ERROR: GraphRAG CLI not properly installed or not in PATH.")
-                    output_lines.append(
-                        f"Please install GraphRAG CLI with 'pip install graphrag' and ensure it's in your PATH.")
-                    output_lines.append(f"Technical details: {error_msg}")
-                    return "\n\n".join(output_lines)
+            logger.warning(f"Error verifying GraphRAG CLI: {str(e)}")
+            output_lines.append(f"Note: GraphRAG CLI verification had issues: {str(e)}")
 
         # 1) init if first run
         settings_file = os.path.join(PROJECT_ROOT, "settings.yaml")
@@ -283,11 +361,19 @@ async def run_graphrag_cli(query_text: str) -> str:
             logger.info(f"Output directory exists at {outputs_file}, skipping indexing")
             output_lines.append(">>> Documents already indexed")
 
+        # Create a shorter, simplified query string for command-line use
+        # Remove newlines and limit query length to avoid command-line issues
+        # simplified_query = query_text.replace("\n", " ")
+        # if len(simplified_query) > 250:  # More restrictive limit for command line
+        #     simplified_query = simplified_query[:245] + "..."
+
         # 3) run queries
         method = "global"
         logger.info(f"Running query with method: {method}")
         output_lines.append(f">>> Query method: {method}")
+
         try:
+            # Use direct query parameter with simplified query
             query_result = await call_cmd(
                 graphrag_cmd, "query",
                 "--root", PROJECT_ROOT,
@@ -300,6 +386,23 @@ async def run_graphrag_cli(query_text: str) -> str:
             logger.error(f"Query execution failed: {error_msg}")
             output_lines.append(f"ERROR: Failed to execute query. {error_msg}")
 
+            # If error mentions query length, try with even shorter query
+            if "too long" in str(e).lower() or "length" in str(e).lower():
+                logger.info("Trying with shorter query due to length limitations")
+                very_short_query = query_text[:250] + "..."
+                try:
+                    query_result = await call_cmd(
+                        graphrag_cmd, "query",
+                        "--root", PROJECT_ROOT,
+                        "--method", method,
+                        "--query", very_short_query
+                    )
+                    output_lines.append("(Using very shortened query due to length restrictions)")
+                    output_lines.append(query_result)
+                except Exception as e2:
+                    logger.error(f"Even shorter query also failed: {str(e2)}")
+                    output_lines.append(f"ERROR: Even shorter query also failed. {str(e2)}")
+
         return "\n\n".join(output_lines)
     except Exception as e:
         logger.error(f"Error in GraphRAG CLI execution: {str(e)}")
@@ -308,22 +411,43 @@ async def run_graphrag_cli(query_text: str) -> str:
         return "\n\n".join(output_lines)
 
 
-# ─── Endpoint: run both in parallel ─────────────────────────────────────────────
-@app.post("/run")
-async def run_both(req: RunRequest):
-    logger.info(f"Received request with text: {req.text}")
-
+# --- Combined Pipeline Endpoint ---
+@app.post("/process/")
+async def process_combined(request: CombinedRequest):
+    """
+    Combined pipeline:
+    1. Run MultiModal RAG to get relevant reports
+    2. Feed concatenated reports to GraphRAG for knowledge graph analysis
+    """
     try:
-        # Run both tasks in parallel
-        rag_task = run_graph_rag(req.text)
-        cli_task = run_graphrag_cli(req.text)
-
-        # Wait for both tasks to complete
-        rag_out, cli_out = await asyncio.gather(
-            rag_task,
-            cli_task,
-            return_exceptions=True  # This will prevent one failure from canceling the other task
+        # Step 1: Get relevant reports from MultiModal RAG
+        logger.info(f"Running MultiModal RAG with image: {request.image_path} and query: {request.user_query}")
+        results, concatenated_reports = await perform_multimodal_rag(
+            request.image_path,
+            request.user_query,
+            request.top_k
         )
+
+        # Step 2: Use the concatenated reports as input_old for GraphRAG
+        # Create a modified query combining user query and context from retrieved reports
+        enhanced_query = f"User Query: {request.user_query}\n\nContext from similar medical reports:\n{concatenated_reports}"
+
+        # Run both GraphRAG tasks in parallel
+        logger.info(f"Running GraphRAG with enhanced query")
+        rag_task = run_graph_rag(enhanced_query)
+        cli_task = run_graphrag_cli(enhanced_query)
+
+        # Wait for both tasks to complete - REMOVED TIMEOUT
+        try:
+            rag_out, cli_out = await asyncio.gather(
+                rag_task,
+                cli_task,
+                return_exceptions=True  # This prevents one failure from canceling the other task
+            )
+        except Exception as e:
+            logger.error(f"Error waiting for GraphRAG operations: {str(e)}")
+            rag_out = f"Error: {str(e)}" if isinstance(rag_task, asyncio.Task) and not rag_task.done() else "Unknown error"
+            cli_out = f"Error: {str(e)}" if isinstance(cli_task, asyncio.Task) and not cli_task.done() else "Unknown error"
 
         # Check if either task raised an exception
         if isinstance(rag_out, Exception):
@@ -334,36 +458,46 @@ async def run_both(req: RunRequest):
             logger.error(f"CLI task failed: {str(cli_out)}")
             cli_out = f"ERROR in CLI: {str(cli_out)}"
 
-        combined = (
+        graphrag_combined = (
             "=== GraphRAG Output ===\n"
             f"{rag_out}\n\n"
             "=== graphrag CLI Output ===\n"
             f"{cli_out}"
         )
 
-        logger.info("Request completed successfully")
-        return {"combined": combined}
+        # Create response structure
+        response = {
+            "query": request.user_query,
+            "graphrag_output": graphrag_combined
+        }
+
+        # Include MultiModal RAG results if requested
+        if request.include_reports:
+            response["multimodal_rag_results"] = results
+
+        logger.info("Combined pipeline completed successfully")
+        return response
+
     except Exception as e:
-        error_msg = f"Error processing request: {str(e)}"
+        error_msg = f"Error in combined pipeline: {str(e)}"
         stack_trace = traceback.format_exc()
         logger.error(error_msg)
         logger.error(stack_trace)
         raise HTTPException(status_code=500, detail=f"{error_msg}\n\n{stack_trace}")
 
 
-# ─── Startup event handler ─────────────────────────────────────────────────────
-@app.on_event("startup")
-async def startup_event():
-    logger.info("Application is starting up")
-
-
 @app.on_event("shutdown")
 async def shutdown_event():
     logger.info("Application is shutting down")
     try:
-        driver.close()
-        logger.info("Neo4j driver closed")
+        if 'driver' in globals():
+            driver.close()
+            logger.info("Neo4j driver closed")
     except Exception as e:
         logger.error(f"Error closing Neo4j driver: {str(e)}")
 
-# ─── To run: uvicorn app:app --reload ────────────────────────────────────────────
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=9000)

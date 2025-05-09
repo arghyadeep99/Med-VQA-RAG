@@ -7,13 +7,13 @@ class Retriever:
     def __init__(self, 
                 indexer,
                 query_image_path, 
-                query_report_path,
+                user_query,
                 top_k = 1,
                 metric = "cosine"):
         
         self.indexer = indexer
         self.query_image_path = query_image_path
-        self.query_report_path = query_report_path
+        self.user_query = user_query
         self.top_k = top_k
         self.metric = metric
 
@@ -24,7 +24,7 @@ class Retriever:
         Retrieve top-k most similar entries from the FAISS index given an image + report query.
         """
         # 1. Compute query embedding
-        query_embedding = self.indexer._compute_embedding(self.query_report_path, self.query_image_path)
+        query_embedding = self.indexer._compute_embedding(self.user_query, self.query_image_path)
         query_embedding = query_embedding.astype("float32").reshape(1, -1)
 
         print(f"Query vector norm: {np.linalg.norm(query_embedding):.4f}")

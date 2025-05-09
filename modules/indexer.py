@@ -156,16 +156,16 @@ class Indexer:
 
         return merged_index
 
-    def _compute_embedding(self, report_path, image_path):
+    def _compute_embedding(self, user_query, image_path):
         # load and preprocess image
         img = Image.open(image_path).convert("RGB")
         img_input = self.preprocess(img).unsqueeze(0).to(self.device)
 
-        # tokenize text
-        with open(report_path, "r") as f:
-            text = f.read()
+        # # tokenize text
+        # with open(user_query, "r") as f:
+        #     text = f.read()
 
-        txt_input = self.tokenizer([text], context_length=self.context_length).to(self.device)
+        txt_input = self.tokenizer([user_query], context_length=self.context_length).to(self.device)
 
         # forward pass
         with torch.no_grad():
