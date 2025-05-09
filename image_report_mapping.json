@@ -1,0 +1,502 @@
+[
+    {
+        "id": 0,
+        "report_path": "./mimic-cxr/files/p10/p10000032/s50414267.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000032/s50414267/02aa804e-bde0afdd-112c0b34-7bc16630-4e384014.jpg"
+    },
+    {
+        "id": 1,
+        "report_path": "./mimic-cxr/files/p10/p10000032/s53189527.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000032/s53189527/2a2277a9-b0ded155-c0de8eb9-c124d10e-82c5caab.jpg"
+    },
+    {
+        "id": 2,
+        "report_path": "./mimic-cxr/files/p10/p10000032/s53911762.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000032/s53911762/68b5c4b1-227d0485-9cc38c3f-7b84ab51-4b472714.jpg"
+    },
+    {
+        "id": 3,
+        "report_path": "./mimic-cxr/files/p10/p10000032/s56699142.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000032/s56699142/ea030e7a-2e3b1346-bc518786-7a8fd698-f673b44c.jpg"
+    },
+    {
+        "id": 4,
+        "report_path": "./mimic-cxr/files/p10/p10000764/s57375967.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000764/s57375967/096052b7-d256dc40-453a102b-fa7d01c6-1b22c6b4.jpg"
+    },
+    {
+        "id": 5,
+        "report_path": "./mimic-cxr/files/p10/p10000898/s50771383.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000898/s50771383/0c4eb1e1-b801903c-bcebe8a4-3da9cd3c-3b94a27c.jpg"
+    },
+    {
+        "id": 6,
+        "report_path": "./mimic-cxr/files/p10/p10000898/s54205396.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000898/s54205396/8959e402-2175d68d-edba5a6c-baab51c3-9359f700.jpg"
+    },
+    {
+        "id": 7,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s50578979.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s50578979/d0b71acc-b5a62046-bbb5f6b8-7b173b85-65cdf738.jpg"
+    },
+    {
+        "id": 8,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s51178377.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s51178377/3be619d1-506a66cf-ff1ab8a1-2efb77bb-fe7d59fc.jpg"
+    },
+    {
+        "id": 9,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s55697293.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s55697293/6a5c3985-7764bdd0-ec5a6a74-af78bcaa-4ca33ec3.jpg"
+    },
+    {
+        "id": 10,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s56164612.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s56164612/8e3f2822-0c1d4b71-2a265bbf-5b96e531-ccf5fa30.jpg"
+    },
+    {
+        "id": 11,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s56522600.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s56522600/6fa5997e-b1dfecf8-3c174666-8815c84a-32db59ff.jpg"
+    },
+    {
+        "id": 12,
+        "report_path": "./mimic-cxr/files/p10/p10000935/s58219844.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000935/s58219844/88498b37-c21dc7ba-bc202800-b517a62d-f7ac5bcf.jpg"
+    },
+    {
+        "id": 13,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s50985099.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s50985099/6ad03ed1-97ee17ee-9cf8b320-f7011003-cd93b42d.jpg"
+    },
+    {
+        "id": 14,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s51967283.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s51967283/943486a3-b3fa9ff7-50f5a769-7a62fcbb-f39b6da4.jpg"
+    },
+    {
+        "id": 15,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s54577367.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s54577367/96f9a77c-59b47dfb-0cac64db-6538421a-a6b135e2.jpg"
+    },
+    {
+        "id": 16,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s54935705.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s54935705/6ad819bb-bae74eb9-7b663e90-b8deabd7-57f8054a.jpg"
+    },
+    {
+        "id": 17,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s54980801.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s54980801/a75a1fbe-802065ad-717eb7c1-e2ce3552-646276a6.jpg"
+    },
+    {
+        "id": 18,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s57861150.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s57861150/5aa15ba6-55f5e96e-39cea686-7c3b28b2-b8c97a88.jpg"
+    },
+    {
+        "id": 19,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s58206436.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s58206436/54affd39-8bf24209-232bac8a-df6c277a-398ee8a5.jpg"
+    },
+    {
+        "id": 20,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s58636672.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s58636672/127f4cd5-c4f21388-b4f9168b-918534d6-308fb782.jpg"
+    },
+    {
+        "id": 21,
+        "report_path": "./mimic-cxr/files/p10/p10000980/s59988438.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10000980/s59988438/57a3c797-7272b246-fa226777-e4c7d84c-91ec2e96.jpg"
+    },
+    {
+        "id": 22,
+        "report_path": "./mimic-cxr/files/p10/p10001038/s58224503.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001038/s58224503/28fad2ac-d6001216-b4f72c5b-2d4d452e-17b6c9a5.jpg"
+    },
+    {
+        "id": 23,
+        "report_path": "./mimic-cxr/files/p10/p10001122/s53447138.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001122/s53447138/8039752c-2ea661b7-16f1eafe-055b7e7b-dbd4cdd1.jpg"
+    },
+    {
+        "id": 24,
+        "report_path": "./mimic-cxr/files/p10/p10001122/s53957785.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001122/s53957785/07b9ddda-9a4a1e1a-4495463d-4c77d947-ed368713.jpg"
+    },
+    {
+        "id": 25,
+        "report_path": "./mimic-cxr/files/p10/p10001176/s53186264.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001176/s53186264/1fe73f8e-036bd24e-4578c891-33c1746e-864884a7.jpg"
+    },
+    {
+        "id": 26,
+        "report_path": "./mimic-cxr/files/p10/p10001176/s54684191.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001176/s54684191/20f28a4a-25597874-b9a79e92-d0a4a168-c4126873.jpg"
+    },
+    {
+        "id": 27,
+        "report_path": "./mimic-cxr/files/p10/p10001217/s52067803.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001217/s52067803/a917c883-720a5bbf-02c84fc6-98ad00ac-c562ff80.jpg"
+    },
+    {
+        "id": 28,
+        "report_path": "./mimic-cxr/files/p10/p10001217/s58913004.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001217/s58913004/5e54fc9c-37c49834-9ac3b915-55811712-9d959d26.jpg"
+    },
+    {
+        "id": 29,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s50225296.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s50225296/0009a9fb-eb905e90-824cad7c-16d40468-007f0038.jpg"
+    },
+    {
+        "id": 30,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s51065211.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s51065211/1af1b768-31250d78-0286cc9f-0950490e-f4103bcb.jpg"
+    },
+    {
+        "id": 31,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s55350604.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s55350604/0fb4f936-4101f4fa-702d001f-155c63e8-d0d6b2b6.jpg"
+    },
+    {
+        "id": 32,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s56534136.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s56534136/d69651ae-dc7bacca-a05efc02-1d5882cd-001c77c4.jpg"
+    },
+    {
+        "id": 33,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s57492692.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s57492692/a83c7ff9-2d42639c-6ddebd0e-6b67809b-38210026.jpg"
+    },
+    {
+        "id": 34,
+        "report_path": "./mimic-cxr/files/p10/p10001401/s58747570.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001401/s58747570/19e55bee-714bb193-0968d683-5bf655a5-7b5caba9.jpg"
+    },
+    {
+        "id": 35,
+        "report_path": "./mimic-cxr/files/p10/p10001851/s59664767.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001851/s59664767/9fb2d581-65c0f51e-3ff2db55-6b21a902-c270ad96.jpg"
+    },
+    {
+        "id": 36,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s50279568.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s50279568/3892f17f-8fa034e8-e9b81865-01c48bbb-b9452626.jpg"
+    },
+    {
+        "id": 37,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s50376803.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s50376803/469d0d94-3dad5068-efac76ef-a28cc502-68fe6275.jpg"
+    },
+    {
+        "id": 38,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s50712381.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s50712381/7b25b3ed-e780a527-319cb7b3-02d5d071-f1cddee9.jpg"
+    },
+    {
+        "id": 39,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s50807032.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s50807032/027b8cb9-29af1bce-48a57329-6cf1fcdf-de453e37.jpg"
+    },
+    {
+        "id": 40,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s51181158.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s51181158/96bfb531-d6621042-58ea2067-b155e38f-f76e305b.jpg"
+    },
+    {
+        "id": 41,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s51817555.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s51817555/d5f12914-f14ffd99-3ff2ee54-6f0cbd0c-4c411a2c.jpg"
+    },
+    {
+        "id": 42,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s52060840.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s52060840/8df1bc0a-1f93728a-1f356bcc-5bfe1147-ab211251.jpg"
+    },
+    {
+        "id": 43,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s53109065.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s53109065/1e583282-042438d1-4c0d5389-f3c06b76-e9a29eaa.jpg"
+    },
+    {
+        "id": 44,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s53268982.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s53268982/9f5446a9-46ea84a3-6806d8b7-2c0f6d4d-38799159.jpg"
+    },
+    {
+        "id": 45,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s53880659.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s53880659/52d6c812-26dfed36-97e26b11-1fa88177-e8b8b150.jpg"
+    },
+    {
+        "id": 46,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s53894864.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s53894864/a6617202-f5a8661d-78eb1442-037bf3e4-3dd8967f.jpg"
+    },
+    {
+        "id": 47,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s54000534.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s54000534/4ee6a7f9-915c4c58-7dd1082b-6d03b302-aef0b6d9.jpg"
+    },
+    {
+        "id": 48,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s54369281.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s54369281/3fc658da-23a5d1b2-68e913fd-bf919f75-b7113290.jpg"
+    },
+    {
+        "id": 49,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s54579606.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s54579606/112a33d1-0217c1be-710ee746-aaacee7c-f7bf92e3.jpg"
+    },
+    {
+        "id": 50,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s54828594.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s54828594/7561a64e-145a404e-f12d8f04-3b19c4e1-3de6e5a0.jpg"
+    },
+    {
+        "id": 51,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s55333410.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s55333410/02e759a5-72ab444e-581216c8-af8fea64-8b1a744b.jpg"
+    },
+    {
+        "id": 52,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s55893591.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s55893591/4c3fdd2f-79be0bc9-f5a0ed41-3c9dc58e-75a6d19a.jpg"
+    },
+    {
+        "id": 53,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s56308417.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s56308417/e59ad2c0-255eb7ad-933f2ba8-6bf37730-3ca4bed2.jpg"
+    },
+    {
+        "id": 54,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s56349965.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s56349965/1d5dafe8-b4e14a97-e72964db-47f5e168-f3d50666.jpg"
+    },
+    {
+        "id": 55,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s56722923.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s56722923/c1ad3e27-62d05ef8-95018fe3-b8bcfe4b-bbba0e1f.jpg"
+    },
+    {
+        "id": 56,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s57156853.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s57156853/9fd47edd-07087209-b901811e-3e9e5f50-f382f611.jpg"
+    },
+    {
+        "id": 57,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s57166219.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s57166219/7f885b34-699f595b-36446207-4f146366-55dfb63f.jpg"
+    },
+    {
+        "id": 58,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s57839849.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s57839849/1f413a3b-78c5a4aa-978ff5ff-f72a424c-b3a51b92.jpg"
+    },
+    {
+        "id": 59,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s58196907.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s58196907/00dccb6d-d0c6f3d3-96277b9f-0ee6d7aa-08abfc1f.jpg"
+    },
+    {
+        "id": 60,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s58350684.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s58350684/19a1ff65-39b30ed1-5638c787-652a1e79-24c39743.jpg"
+    },
+    {
+        "id": 61,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s58788638.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s58788638/dae10c54-dcb7bb1f-428bb377-af3b739e-9b16e579.jpg"
+    },
+    {
+        "id": 62,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s59066712.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s59066712/66ee3842-a927ac25-a5df697e-f1f36b1f-201b2172.jpg"
+    },
+    {
+        "id": 63,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s59212874.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s59212874/0d5aa7bb-94ab68f3-9f0fa40e-4ad68eb7-2949d77c.jpg"
+    },
+    {
+        "id": 64,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s59305618.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s59305618/9b1a8a51-2b8e4a04-1719059d-aa6bc888-7ace612b.jpg"
+    },
+    {
+        "id": 65,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s59635781.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s59635781/547c0b6b-72739eeb-3c33bc3e-3aa73d13-a9a54bd5.jpg"
+    },
+    {
+        "id": 66,
+        "report_path": "./mimic-cxr/files/p10/p10001884/s59984865.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10001884/s59984865/2d8a8525-19d0c810-045e1619-ef196132-cd4f1710.jpg"
+    },
+    {
+        "id": 67,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s52163036.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s52163036/1e647043-eed3576e-3123c170-780cb897-93a89502.jpg"
+    },
+    {
+        "id": 68,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s52535468.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s52535468/0c27f551-2cc6bf3e-a2e2cabd-97973771-40f1e6ce.jpg"
+    },
+    {
+        "id": 69,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s54573731.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s54573731/9ca8f84e-92fac212-e60ac49d-01779362-caa16791.jpg"
+    },
+    {
+        "id": 70,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s55312734.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s55312734/227844e4-4cf4b717-bb4bf0e5-961883ef-664990fe.jpg"
+    },
+    {
+        "id": 71,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s55608920.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s55608920/940de880-0e87eceb-571361e8-e19b8de7-1a8e714f.jpg"
+    },
+    {
+        "id": 72,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s55941092.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s55941092/ab37274f-b4c1fc04-e2ff24b4-4a130ba3-cd167968.jpg"
+    },
+    {
+        "id": 73,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s55969846.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s55969846/75a4feeb-09da971a-8852f2d6-5eb13992-42d9a50c.jpg"
+    },
+    {
+        "id": 74,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s57741292.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s57741292/48edbd44-ca2376ca-059a9f55-3fc8abd1-e13e4b76.jpg"
+    },
+    {
+        "id": 75,
+        "report_path": "./mimic-cxr/files/p10/p10002013/s58054149.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002013/s58054149/81bca127-0c416084-67f8033c-ecb26476-6d1ecf60.jpg"
+    },
+    {
+        "id": 76,
+        "report_path": "./mimic-cxr/files/p10/p10002131/s52823782.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002131/s52823782/051b7911-cb00aec9-0b309188-89803662-303ec278.jpg"
+    },
+    {
+        "id": 77,
+        "report_path": "./mimic-cxr/files/p10/p10002157/s56373033.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002157/s56373033/3c659977-44aefeb8-cdc200a8-24ea059e-9dd6758c.jpg"
+    },
+    {
+        "id": 78,
+        "report_path": "./mimic-cxr/files/p10/p10002177/s50520012.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002177/s50520012/2833b85f-3bb4273f-cffd3794-2bf2cd57-7ddb3f5f.jpg"
+    },
+    {
+        "id": 79,
+        "report_path": "./mimic-cxr/files/p10/p10002221/s53781756.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002221/s53781756/8b88f03a-2004113d-4118def5-35820db5-d0913df8.jpg"
+    },
+    {
+        "id": 80,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s50027225.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s50027225/e8c44648-ff02beea-3d5ff638-dec79b01-7df71a69.jpg"
+    },
+    {
+        "id": 81,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s50292543.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s50292543/7f51d06c-dad16fe6-ff21a632-edc5a3e6-ffa387bf.jpg"
+    },
+    {
+        "id": 82,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s50444997.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s50444997/85b903ac-bfc4d6cd-491d2a72-18e7c16e-23d2cafa.jpg"
+    },
+    {
+        "id": 83,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s50862960.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s50862960/38f6981f-10343eb8-7c974e21-458d5218-f29f1617.jpg"
+    },
+    {
+        "id": 84,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s51574899.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s51574899/4e39ddbc-47422ff9-3de977e6-924e3c52-4cac3943.jpg"
+    },
+    {
+        "id": 85,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s52460896.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s52460896/54c2ed5c-f4fbc20d-3bf4c783-283c3878-e9eb320d.jpg"
+    },
+    {
+        "id": 86,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s54020701.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s54020701/40a4d537-de28a3ab-aa746c28-750aea7d-2965bcdb.jpg"
+    },
+    {
+        "id": 87,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s54831516.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s54831516/852306b6-02fc04aa-82d30dbf-0c2dd18d-5c9ef054.jpg"
+    },
+    {
+        "id": 88,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s55758034.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s55758034/3bea0373-0d10dd77-1cac5b90-651be924-d343b184.jpg"
+    },
+    {
+        "id": 89,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s56100138.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s56100138/06c9ad0d-eba8bb4c-7f1216e8-3164684d-4a4b228d.jpg"
+    },
+    {
+        "id": 90,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s56597576.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s56597576/d98d5096-a32483d3-669ed39b-bc81eafb-5e251563.jpg"
+    },
+    {
+        "id": 91,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s56836542.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s56836542/471418ab-0bfd6700-6bb770d0-07f7f6a3-2ce2d9c2.jpg"
+    },
+    {
+        "id": 92,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s57064083.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s57064083/217e6a56-b4a78227-a2acc34d-3b571d4a-27b9746a.jpg"
+    },
+    {
+        "id": 93,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s57321224.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s57321224/bdf7f3f9-17832c70-9048e935-65663ff2-13f0814e.jpg"
+    },
+    {
+        "id": 94,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s57506266.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s57506266/e325a8d1-1d6b0dca-404efabc-204c6bbd-599788f0.jpg"
+    },
+    {
+        "id": 95,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s57887188.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s57887188/3dc1b72b-7d6efa14-1f9db998-e46ff2db-2cb7375e.jpg"
+    },
+    {
+        "id": 96,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s57961288.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s57961288/0780573c-30edcc44-42f1084d-e77f7ebf-8a7dd236.jpg"
+    },
+    {
+        "id": 97,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s58581921.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s58581921/61e718b7-5e69fae3-b75fc103-ee2b065d-983557f5.jpg"
+    },
+    {
+        "id": 98,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s58601917.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s58601917/b5f871e6-fc68f8fa-7580a463-b7674531-c7033269.jpg"
+    },
+    {
+        "id": 99,
+        "report_path": "./mimic-cxr/files/p10/p10002428/s58658824.txt",
+        "image_path": "./mimic-cxr-images-512/files/p10/p10002428/s58658824/12622d34-1a419a0d-6809a110-318f0fb1-eb8635e6.jpg"
+    }
+]
