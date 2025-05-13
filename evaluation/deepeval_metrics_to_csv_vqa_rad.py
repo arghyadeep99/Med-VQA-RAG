@@ -46,11 +46,11 @@ client = OpenAI()
 
 # ─────────────────── 1. Load data ────────────────────
 # df_baseline = pd.read_csv("./llava_preds_vqa_rad_baseline.csv")
-df = pd.read_csv("./filtered_datasets/filtered_llava_preds_vqa_rad_baseline_synced.csv")
+df = pd.read_csv("./filtered_datasets_deepeval/filtered_LLama_3_2_VI_MMRAG_VQA_RAD_synced.csv")
 df_gt = pd.read_csv("./VQA_RAD_Chest_Data.csv")
 
 CHUNK_SIZE = 10
-CSV_PATH = "deepeval_results/deepeval_results_llava_rad_vqa_rad_baseline.csv"
+CSV_PATH = "deepeval_results/deepeval_results_llama3_vi_vqa_rad_only_rag.csv"
 
 # df_baseline = df_baseline.head(20)
 # df_enhanced = df_enhanced.head(20)

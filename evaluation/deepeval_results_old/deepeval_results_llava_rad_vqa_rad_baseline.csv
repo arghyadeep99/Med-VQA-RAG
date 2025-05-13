@@ -1,0 +1,1596 @@
+model_type,metric_name,test_name,success,input,actual_output,expected_output,metric_score,metric_threshold,metric_success,metric_reason,evaluation_model,evaluation_cost,context,retrieval_context,verbose_logs
+enhanced,AnswerRelevancy,test_case_9,True,Which lung lobe is the lesion present in?,The lesion is located in the left upper lobe.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0035175,,,"Statements:
+[
+    ""The lesion is located in the left upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Where is the lesion?,"The lesion is in the left perihilar region, likely in the left upper lobe.",,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.0037925000000000003,,,"Statements:
+[
+    ""The lesion is in the left perihilar region."",
+    ""The lesion is likely in the left upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Where in the image are the calcifications located?,The calcifications are located in the left ventricle of the heart.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0037825000000000003,,,"Statements:
+[
+    ""The calcifications are located in the left ventricle."",
+    ""The calcifications are in the heart.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Which ribs are located near the abnormality seen in this image?,"The abnormality in the image is located near the right heart border, which means that the ribs that are located near this area are the right ribs. Specifically, the right fifth rib is located near the abnormality.",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, focusing solely on identifying the ribs near the abnormality in the image. Great job on maintaining precision and relevance!",gpt-4o,0.00426,,,"Statements:
+[
+    ""The abnormality in the image is located near the right heart border."",
+    ""The ribs located near this area are the right ribs."",
+    ""The right fifth rib is located near the abnormality.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Which plane is this image taken?,"As an AI language model, I do not have the ability to view images. However, if you provide me with the name of the airline or the specific aircraft, I can try to help you find the image.",,0.6666666666666666,0.5,True,"The score is 0.67 because the response partially addresses the question by discussing the AI's capabilities, which is not directly related to identifying the plane in the image. However, it still provides some context that might be useful, hence the score is not lower.",gpt-4o,0.004837500000000001,,,"Statements:
+[
+    ""As an AI language model, I do not have the ability to view images."",
+    ""If you provide me with the name of the airline, I can try to help you find the image."",
+    ""If you provide me with the specific aircraft, I can try to help you find the image.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's capabilities, not about identifying the plane in the image.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is the lung lesion located?,"The lung lesion is located in the left lower lobe, which is partially obscured by the patient's left hand.",,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the lung lesion without any irrelevant information. Great job on staying focused and concise!,gpt-4o,0.003917500000000001,,,"Statements:
+[
+    ""The lung lesion is located in the left lower lobe."",
+    ""The lesion is partially obscured by the patient's left hand.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What level is the abnormality located at?,"The abnormality is located at the level of the left ventricle, which is the lower and most anterior part of the left hemithorax.",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.004295,,,"Statements:
+[
+    ""The abnormality is located at the level of the left ventricle."",
+    ""The left ventricle is the lower part of the left hemithorax."",
+    ""The left ventricle is the most anterior part of the left hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where is the catheter tip located?,The catheter tip is located in the right atrium.,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the catheter tip's location without any irrelevant information. Great job!,gpt-4o,0.0035625000000000006,,,"Statements:
+[
+    ""The catheter tip is located in the right atrium.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What are the two major organs present in this image?,"As an AI language model, I do not have the ability to view images. Therefore, I cannot identify the two major organs present in the image. Please provide me with more information or a description of the image so that I can assist you better.",,0.0,0.5,False,"The score is 0.00 because the output did not address the question about identifying the two major organs in the image. Instead, it included statements about the AI's capabilities and requests for more information, which are irrelevant to the input question.",gpt-4o,0.005222500000000001,,,"Statements:
+[
+    ""As an AI language model, I do not have the ability to view images."",
+    ""I cannot identify the two major organs present in the image."",
+    ""Please provide me with more information or a description of the image."",
+    ""I can assist you better with more information.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's capabilities, not about identifying organs.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement expresses inability to identify organs, not information about organs.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement requests more information, not about identifying organs.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement offers assistance with more information, not about identifying organs.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,False,How many lesions are present in the image?,"As an AI language model, I do not have the ability to directly observe or analyze images. In the case of the provided lesion-containing brain image, it is difficult to quantify the exact number of lesions present. Lesions can refer to a variety of abnormalities within the brain, including areas of brain damage, brain tumors, and regions of atelectasis. It is important to consult with a medical professional for a thorough analysis of any brain abnormalities.",,0.2,0.5,False,"The score is 0.20 because the output contains multiple statements that do not directly address the question about the number of lesions in the image. While the output provides some context and related information, it fails to deliver the specific answer required, which significantly lowers its relevancy score.",gpt-4o,0.006182500000000001,,,"Statements:
+[
+    ""As an AI language model, I do not have the ability to directly observe or analyze images."",
+    ""It is difficult to quantify the exact number of lesions present in the provided lesion-containing brain image."",
+    ""Lesions can refer to a variety of abnormalities within the brain."",
+    ""Abnormalities include areas of brain damage, brain tumors, and regions of atelectasis."",
+    ""It is important to consult with a medical professional for a thorough analysis of any brain abnormalities.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI model's capabilities, not about the number of lesions in the image.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement provides a definition of lesions, not the number of lesions in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement lists types of abnormalities, not the number of lesions in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement advises consulting a professional, not the number of lesions in the image.""
+    }
+]"
+enhanced,GEval,test_case_5,False,Where is the lung lesion located?,"The lung lesion is located in the left lower lobe, which is partially obscured by the patient's left hand.",Right lung,0.020412127728647193,0.5,False,There is a factual contradiction as the expected output states 'Right lung' while the actual output states 'left lower lobe'.,gpt-4o,0.0010525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What level is the abnormality located at?,"The abnormality is located at the level of the left ventricle, which is the lower and most anterior part of the left hemithorax.",T5,0.07792388802479293,0.5,False,"The Actual Output contradicts the Expected Output by identifying the abnormality at the left ventricle instead of T5, which is a factual contradiction.",gpt-4o,0.0011175,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,Where is the lesion?,"The lesion is in the left perihilar region, likely in the left upper lobe.",Right lower lobe,0.07012801721838163,0.5,False,"There is a factual contradiction as the expected output states 'Right lower lobe' while the actual output states 'left perihilar region, likely in the left upper lobe.'",gpt-4o,0.0011525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,Which plane is this image taken?,"As an AI language model, I do not have the ability to view images. However, if you provide me with the name of the airline or the specific aircraft, I can try to help you find the image.",PA,0.2765617300999283,0.5,False,"The actual output does not provide the expected answer 'PA' and instead explains the AI's limitations, which is a factual contradiction to the task of identifying the plane from an image.",gpt-4o,0.0012000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,Where is the catheter tip located?,The catheter tip is located in the right atrium.,Right superior cavoatrial junction,0.3560763796488107,0.5,False,"There is a factual contradiction as the expected location is the right superior cavoatrial junction, but the actual output states the right atrium. This is a critical medical omission.",gpt-4o,0.0011350000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,Which lung lobe is the lesion present in?,The lesion is located in the left upper lobe.,Right lower lobe,0.007584656985418528,0.5,False,There is a factual contradiction between the expected output (right lower lobe) and the actual output (left upper lobe).,gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,Which ribs are located near the abnormality seen in this image?,"The abnormality in the image is located near the right heart border, which means that the ribs that are located near this area are the right ribs. Specifically, the right fifth rib is located near the abnormality.",4th and 5th,0.4727603820159446,0.5,False,"The Actual Output correctly identifies the 5th rib but omits the 4th rib, which is a critical omission. There is no factual contradiction, and the response provides additional context about the location near the right heart border.",gpt-4o,0.0013275000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,Where in the image are the calcifications located?,The calcifications are located in the left ventricle of the heart.,High on the image,0.01742302039213299,0.5,False,"There is a factual contradiction as the actual output specifies a location in the heart, which does not align with the expected output of 'high on the image.'",gpt-4o,0.001105,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,What are the two major organs present in this image?,"As an AI language model, I do not have the ability to view images. Therefore, I cannot identify the two major organs present in the image. Please provide me with more information or a description of the image so that I can assist you better.",Heart 	lungs,0.6216832414612901,0.5,True,"The actual output correctly states the AI's inability to view images, which is factually accurate. There are no critical medical omissions since the AI cannot provide an answer without image data. The response is a minor paraphrase of the expected output's context.",gpt-4o,0.0013750000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,How many lesions are present in the image?,"As an AI language model, I do not have the ability to directly observe or analyze images. In the case of the provided lesion-containing brain image, it is difficult to quantify the exact number of lesions present. Lesions can refer to a variety of abnormalities within the brain, including areas of brain damage, brain tumors, and regions of atelectasis. It is important to consult with a medical professional for a thorough analysis of any brain abnormalities.",One,0.3079415057906868,0.5,False,"The actual output does not provide the expected answer of 'One' and instead explains the AI's limitations, which is a factual contradiction. It does not omit critical medical information but fails to address the specific question asked.",gpt-4o,0.0013900000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_1,True,At which rib is the lesion located?,The lesion is located at the level of the right ninth rib.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0035775,,,"Statements:
+[
+    ""The lesion is located at the level of the right ninth rib.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What rib is the lesion located inferior to?,The lesion is located in the left anterior seventh rib.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the query. Great job!",gpt-4o,0.0035725,,,"Statements:
+[
+    ""The lesion is located in the left anterior seventh rib.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,In which lobe is the nodule located?,The nodule is located in the left upper lobe.,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the nodule, with no irrelevant information included. Great job on staying focused and concise!",gpt-4o,0.0036725000000000004,,,"Statements:
+[
+    ""The nodule is located in the left upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Which lobe is the lesion located in?,"The lesion is located in the left perihilar region, which is part of the left upper lobe.",,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the lesion in the brain. There are no irrelevant statements, making it a precise and focused answer.",gpt-4o,0.004002500000000001,,,"Statements:
+[
+    ""The lesion is located in the left perihilar region."",
+    ""The left perihilar region is part of the left upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Where is the lesion located?,"The lesion is located in the left lower lobe, as seen on the CT scan.",,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0037700000000000008,,,"Statements:
+[
+    ""The lesion is located in the left lower lobe."",
+    ""The lesion is seen on the CT scan.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What is the location of the primary lesion?,The location of the primary lesion is not specified in the given information.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining a clear and focused answer.",gpt-4o,0.0042650000000000006,,,"Statements:
+[
+    ""The location of the primary lesion is not specified."",
+    ""The information given does not specify the location."",
+    ""The primary lesion's location is unspecified."",
+    ""The given information lacks details on the lesion's location."",
+    ""Location unspecified.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is the aneurysm located?,The aneurysm is located in the left ventricle of the heart.,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the aneurysm without any irrelevant information. Great job on staying focused and concise!,gpt-4o,0.0038375,,,"Statements:
+[
+    ""The aneurysm is located in the left ventricle."",
+    ""The aneurysm is in the heart.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,What is the name of this image's plane?,"As an AI language model, I do not have the ability to view images. However, if you provide me with the name of the plane, I can tell you whether it is a valid name or not.",,0.0,0.5,False,"The score is 0.00 because the output did not address the question of identifying the plane in the image, instead focusing on unrelated topics such as AI capabilities and verification methods.",gpt-4o,0.004635,,,"Statements:
+[
+    ""As an AI language model, I do not have the ability to view images."",
+    ""If you provide me with the name of the plane, I can tell you whether it is a valid name or not.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's capabilities, not about identifying the plane in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement suggests a method to verify a plane's name but does not address identifying the plane in the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,How do we call these wide undulations along the vertebral column?,"The wide undulations along the vertebral column are called the intervertebral discs. These discs are composed of a tough, fibrous outer layer called the annulus, which surrounds a softer, more gel-like center called the nucleus. The intervertebral discs act as shock absorbers, cushioning the vertebral column and allowing for movement. There are anteroposterior (AP) and lateral radiographs of the thoracic spine.",,0.0,0.5,False,"The score is 0.00 because the output entirely focuses on intervertebral discs and thoracic spine radiographs, which are unrelated to the query about wide undulations along the vertebral column. The response fails to address the input question, leading to a complete lack of relevancy.",gpt-4o,0.008075,,,"Statements:
+[
+    ""The wide undulations along the vertebral column are called the intervertebral discs."",
+    ""These discs are composed of a tough, fibrous outer layer called the annulus."",
+    ""The annulus surrounds a softer, more gel-like center called the nucleus."",
+    ""The intervertebral discs act as shock absorbers."",
+    ""They cushion the vertebral column."",
+    ""The discs allow for movement."",
+    ""There are anteroposterior (AP) radiographs of the thoracic spine."",
+    ""There are lateral radiographs of the thoracic spine.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement incorrectly identifies the wide undulations as intervertebral discs, which are not undulations but structures between vertebrae.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement describes the composition of intervertebral discs, not the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement describes the structure of intervertebral discs, not the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the function of intervertebral discs, not the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the function of intervertebral discs, not the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the function of intervertebral discs, not the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is about radiographs of the thoracic spine, not about the wide undulations along the vertebral column.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is about radiographs of the thoracic spine, not about the wide undulations along the vertebral column.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What is the organ principally shown in this image?,"The organ principally shown in this image is the heart. The heart is a muscular organ that pumps blood through the body. It is located in the midline of the body, on the left side in the frontal view and in the midline in the lateral view. The heart is surrounded by the mediastinum, which is the central part of the thorax that contains the esophagus, trachea, and aorta. The aorta is the main blood vessel in the body and is located on the left side in the frontal view and in the lower left side in the lateral view. The heart is a vital part of the body and plays a crucial role in maintaining the health and well-being of the body.",,0.15384615384615385,0.5,False,"The score is 0.15 because the output contains numerous irrelevant details about the heart and surrounding structures, which do not directly address the question of identifying the organ in the image. However, the score is not zero because there is some mention of the heart, which is likely the organ in question.",gpt-4o,0.009815,,,"Statements:
+[
+    ""The organ principally shown in this image is the heart."",
+    ""The heart is a muscular organ that pumps blood through the body."",
+    ""It is located in the midline of the body."",
+    ""The heart is on the left side in the frontal view."",
+    ""It is in the midline in the lateral view."",
+    ""The heart is surrounded by the mediastinum."",
+    ""The mediastinum is the central part of the thorax."",
+    ""The mediastinum contains the esophagus, trachea, and aorta."",
+    ""The aorta is the main blood vessel in the body."",
+    ""The aorta is located on the left side in the frontal view."",
+    ""The aorta is in the lower left side in the lateral view."",
+    ""The heart is a vital part of the body."",
+    ""The heart plays a crucial role in maintaining the health and well-being of the body.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The location of the heart is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The position of the heart in the frontal view is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The position of the heart in the lateral view is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The mediastinum surrounding the heart is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The mediastinum's location is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The contents of the mediastinum are not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The aorta's description is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The aorta's position in the frontal view is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The aorta's position in the lateral view is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The heart being a vital part of the body is not directly relevant to identifying the organ in the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The heart's role in health is not directly relevant to identifying the organ in the image.""
+    }
+]"
+enhanced,GEval,test_case_4,False,Where is the lesion located?,"The lesion is located in the left lower lobe, as seen on the CT scan.",Anterior mediastinum,0.02102238108037862,0.5,False,There is a factual contradiction as the expected location is 'anterior mediastinum' but the actual output states 'left lower lobe'.,gpt-4o,0.0010725,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,What is the organ principally shown in this image?,"The organ principally shown in this image is the heart. The heart is a muscular organ that pumps blood through the body. It is located in the midline of the body, on the left side in the frontal view and in the midline in the lateral view. The heart is surrounded by the mediastinum, which is the central part of the thorax that contains the esophagus, trachea, and aorta. The aorta is the main blood vessel in the body and is located on the left side in the frontal view and in the lower left side in the lateral view. The heart is a vital part of the body and plays a crucial role in maintaining the health and well-being of the body.",Lung,0.015253846030885507,0.5,False,"The actual output identifies the heart as the organ shown, contradicting the expected output which identifies the lung. This is a factual contradiction.",gpt-4o,0.0013725,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,Where is the aneurysm located?,The aneurysm is located in the left ventricle of the heart.,In the thorasic aorta,0.04987660088868274,0.5,False,"There is a factual contradiction as the expected location is the thoracic aorta, but the actual output states the left ventricle of the heart.",gpt-4o,0.0010825000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,What rib is the lesion located inferior to?,The lesion is located in the left anterior seventh rib.,7th rib,0.8125044417233498,0.5,True,"The Actual Output correctly identifies the 7th rib, aligning with the Expected Output, but includes additional location details not required by the question.",gpt-4o,0.0010500000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What is the location of the primary lesion?,The location of the primary lesion is not specified in the given information.,Right lung hilum,0.1678983042008877,0.5,False,"The actual output contradicts the expected output by stating the location is unspecified, which is a factual contradiction.",gpt-4o,0.00099,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,In which lobe is the nodule located?,The nodule is located in the left upper lobe.,Left upper lobe,0.9939913351929895,0.5,True,"The actual output correctly identifies the nodule's location as the left upper lobe, matching the expected output without any factual contradictions or critical omissions. Minor paraphrasing is acceptable.",gpt-4o,0.0011375,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,At which rib is the lesion located?,The lesion is located at the level of the right ninth rib.,7th rib,0.04514371966016141,0.5,False,"There is a factual contradiction as the Expected Output states the lesion is at the 7th rib, while the Actual Output states it is at the right ninth rib.",gpt-4o,0.0011025000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,What is the name of this image's plane?,"As an AI language model, I do not have the ability to view images. However, if you provide me with the name of the plane, I can tell you whether it is a valid name or not.",Posteroanterior,0.29825007580433854,0.5,False,"The actual output correctly states the AI's limitation in viewing images, avoiding factual contradictions, but fails to provide the expected answer 'Posteroanterior' and does not address any medical information.",gpt-4o,0.0012325,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Which lobe is the lesion located in?,"The lesion is located in the left perihilar region, which is part of the left upper lobe.",Upper right lobe,0.21058572081302235,0.5,False,"The actual output contradicts the expected output by identifying the lesion in the left upper lobe instead of the upper right lobe, which is a factual contradiction.",gpt-4o,0.0011200000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,How do we call these wide undulations along the vertebral column?,"The wide undulations along the vertebral column are called the intervertebral discs. These discs are composed of a tough, fibrous outer layer called the annulus, which surrounds a softer, more gel-like center called the nucleus. The intervertebral discs act as shock absorbers, cushioning the vertebral column and allowing for movement. There are anteroposterior (AP) and lateral radiographs of the thoracic spine.",Scoliosis,0.08102522890809546,0.5,False,"The Actual Output contains factual contradictions as it incorrectly identifies intervertebral discs instead of scoliosis for wide undulations along the vertebral column. This is a critical medical omission as scoliosis is a condition, not a structural component like discs.",gpt-4o,0.0014550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_0,True,To which side is the trachea deviated?,The trachea is deviated to the left.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining a clear and focused answer. Great job!",gpt-4o,0.0037050000000000004,,,"Statements:
+[
+    ""The trachea is deviated."",
+    ""The deviation is to the left.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which side of the image is the thoracic mass located on?,The thoracic mass is located on the left side of the image.,,1.0,0.5,True,The score is 1.00 because the response directly and accurately addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0036375,,,"Statements:
+[
+    ""The thoracic mass is located on the left side of the image.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What is the location of the lesion?,The location of the lesion is not specified in the given text.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining a clear and focused answer.",gpt-4o,0.0040775,,,"Statements:
+[
+    ""The location of the lesion is not specified."",
+    ""The text does not provide details about the lesion's location."",
+    ""The given text lacks specific information."",
+    ""Lesion location is ambiguous.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Where is the lesion located?,"The lesion is located in the left lower lobe, as seen on the CT scan.",,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the lesion's location without any irrelevant information. Great job on staying focused and concise!,gpt-4o,0.0038300000000000005,,,"Statements:
+[
+    ""The lesion is located in the left lower lobe."",
+    ""The lesion is seen on the CT scan.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,what is the location of the cavitary lesion,The location of the cavitary lesion is not specified in the provided radiograph.,,0.5,0.5,True,"The score is 0.50 because the response partially addresses the query but lacks specific information about the location of the cavitary lesion, which is crucial for full relevancy.",gpt-4o,0.0039525,,,"Statements:
+[
+    ""The location of the cavitary lesion is not specified."",
+    ""The radiograph is provided.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide the location of the cavitary lesion.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What is the likely sex of this patient?,"As an AI language model, I do not have access to the patient's personal information, and as such, I cannot determine the patient's sex. It is important to respect a person's gender identity and use the pronouns that they prefer.",,0.5,0.5,True,"The score is 0.50 because while the output partially addresses the question about determining the patient's sex, it includes irrelevant information about AI's capabilities and limitations, which detracts from the focus on the patient's sex.",gpt-4o,0.004852500000000001,,,"Statements:
+[
+    ""The AI language model does not have access to the patient's personal information."",
+    ""The AI cannot determine the patient's sex."",
+    ""It is important to respect a person's gender identity."",
+    ""Use the pronouns that a person prefers.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's capabilities and privacy, not about determining the patient's sex.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's limitations, not about determining the patient's sex.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Which lung has a defect?,"The left lung is slightly defective, with an abnormality that causes it to have a lower volume than the right lung. This is due to a congenital abnormality that is present at birth.",,0.8,0.5,True,"The score is 0.80 because the response mostly addresses the question about which lung has a defect, but includes an irrelevant statement about congenital abnormalities being present at birth, which doesn't directly answer the query.",gpt-4o,0.00485,,,"Statements:
+[
+    ""The left lung is slightly defective."",
+    ""The left lung has an abnormality."",
+    ""The abnormality causes the left lung to have a lower volume than the right lung."",
+    ""The condition is due to a congenital abnormality."",
+    ""The congenital abnormality is present at birth.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about the congenital abnormality being present at birth does not directly address which lung has a defect.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What modality is this?,"As an AI language model, I'm unable to view images or other visual content. Therefore, I cannot determine the modality of the content you're referring to. If you have any specific questions related to the content or technology involved, I'd be happy to help to the best of my ability.",,0.4,0.5,False,"The score is 0.40 because while the output attempts to address the input, it includes several irrelevant statements that do not directly answer the question about modality. These statements divert focus from the main query, thus lowering the score.",gpt-4o,0.0054225,,,"Statements:
+[
+    ""As an AI language model, I am unable to view images."",
+    ""I cannot determine the modality of the content you're referring to."",
+    ""I can help with specific questions related to the content."",
+    ""I can assist with questions about technology involved."",
+    ""I am happy to help to the best of my ability.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's limitations and does not address the modality of the content.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement expresses an inability to determine the modality, which does not address the input question.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is a general offer of assistance and does not address the modality of the content.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,This radiograph contains what foreign body?,"The radiograph contains a foreign body in the left lateral lung, likely in the left lower lobe. The foreign body has a linear appearance and is oriented horizontally. It is likely a needle or a small fragment of metal. There is no evidence of pneumothorax or other complications. The patient is status post left lower lobe wedge resection.",,0.625,0.5,True,"The score is 0.62 because while the output partially addresses the input by discussing aspects of the radiograph, it includes irrelevant details such as the absence of pneumothorax, lack of complications, and the patient's surgical history, which do not directly help in identifying the foreign body. These extraneous details dilute the focus on the primary question, preventing a higher score.",gpt-4o,0.006235,,,"Statements:
+[
+    ""The radiograph contains a foreign body in the left lateral lung."",
+    ""The foreign body is likely in the left lower lobe."",
+    ""The foreign body has a linear appearance."",
+    ""The foreign body is oriented horizontally."",
+    ""It is likely a needle or a small fragment of metal."",
+    ""There is no evidence of pneumothorax."",
+    ""There are no other complications."",
+    ""The patient is status post left lower lobe wedge resection.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The absence of pneumothorax is not directly related to identifying the foreign body.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The lack of complications does not help identify the foreign body.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The patient's surgical history is not directly relevant to identifying the foreign body in the radiograph.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,Which side is the pneumothorax on?,"A pneumothorax is a medical emergency in which a person's lung has collapsed, and there is a pocket of air surrounding the lung. The side of the pneumothorax depends on the direction of blood flow in the injured lung. If blood flows into the lung, the pneumothorax will be on the left side, since the left side of the heart is towards the injured lung. If blood flows out of the lung, the pneumothorax will be on the right side, since the right side of the heart is towards the healthy lung.",,0.375,0.5,False,"The score is 0.38 because while the output provides detailed information about pneumothorax and related conditions, it fails to directly answer the specific question about which side the pneumothorax is on. The inclusion of general descriptions and unrelated details about the heart's position detracts from the relevancy, preventing a higher score.",gpt-4o,0.00731,,,"Statements:
+[
+    ""A pneumothorax is a medical emergency."",
+    ""A pneumothorax involves a collapsed lung."",
+    ""There is a pocket of air surrounding the lung in a pneumothorax."",
+    ""The side of the pneumothorax depends on the direction of blood flow in the injured lung."",
+    ""If blood flows into the lung, the pneumothorax will be on the left side."",
+    ""The left side of the heart is towards the injured lung."",
+    ""If blood flows out of the lung, the pneumothorax will be on the right side."",
+    ""The right side of the heart is towards the healthy lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the severity of a pneumothorax but does not address which side it is on.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement explains what a pneumothorax is but does not specify which side it is on.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the condition of a pneumothorax but does not specify the side.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement describes the position of the heart, not the pneumothorax.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement describes the position of the heart, not the pneumothorax.""
+    }
+]"
+enhanced,GEval,test_case_9,False,What is the location of the lesion?,The location of the lesion is not specified in the given text.,right lower lateral lung field,0.07384183184927881,0.5,False,"The actual output contradicts the expected output by stating the location is unspecified, which is a factual contradiction.",gpt-4o,0.0009875,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,To which side is the trachea deviated?,The trachea is deviated to the left.,Right,0.0014063625700234139,0.5,False,There is a factual contradiction as the Expected Output states 'Right' while the Actual Output states 'left'.,gpt-4o,0.00099,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,what is the location of the cavitary lesion,The location of the cavitary lesion is not specified in the provided radiograph.,Right upper lobe,0.1849412519186825,0.5,False,"The actual output contradicts the expected output by stating the location is unspecified, which is a factual contradiction.",gpt-4o,0.000995,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,Which side of the image is the thoracic mass located on?,The thoracic mass is located on the left side of the image.,Left side,0.9880797079542409,0.5,True,"The actual output correctly identifies the location of the thoracic mass as on the left side, matching the expected output without any factual contradictions or omissions.",gpt-4o,0.001075,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,What modality is this?,"As an AI language model, I'm unable to view images or other visual content. Therefore, I cannot determine the modality of the content you're referring to. If you have any specific questions related to the content or technology involved, I'd be happy to help to the best of my ability.",chest x Ray,0.24930135302764406,0.5,False,"The actual output does not provide the expected modality 'chest x Ray' and instead explains the AI's limitations, which is a factual contradiction to the expected output.",gpt-4o,0.0012050000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,Where is the lesion located?,"The lesion is located in the left lower lobe, as seen on the CT scan.",Left mid lung,0.38988301284820764,0.5,False,"There is a factual contradiction; the expected location is 'left mid lung' while the actual output states 'left lower lobe'. This is a critical medical omission as the location of the lesion is important. Minor paraphrasing is acceptable, but the location discrepancy is significant.",gpt-4o,0.00133,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What is the likely sex of this patient?,"As an AI language model, I do not have access to the patient's personal information, and as such, I cannot determine the patient's sex. It is important to respect a person's gender identity and use the pronouns that they prefer.",Female,0.39912353547371887,0.5,False,"The actual output does not provide the expected output of 'Female' and instead gives a general statement about AI limitations and gender identity, which is a factual contradiction to the task. However, it does not omit critical medical information and respects gender identity, which is a minor paraphrasing of respecting personal information.",gpt-4o,0.0014625,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Which side is the pneumothorax on?,"A pneumothorax is a medical emergency in which a person's lung has collapsed, and there is a pocket of air surrounding the lung. The side of the pneumothorax depends on the direction of blood flow in the injured lung. If blood flows into the lung, the pneumothorax will be on the left side, since the left side of the heart is towards the injured lung. If blood flows out of the lung, the pneumothorax will be on the right side, since the right side of the heart is towards the healthy lung.",Right side,0.05087466877768236,0.5,False,"The actual output contains factual inaccuracies about the determination of pneumothorax side, which contradicts the expected output of 'Right side'. It introduces incorrect information about blood flow and heart orientation, which is not relevant to identifying the side of a pneumothorax.",gpt-4o,0.001555,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,This radiograph contains what foreign body?,"The radiograph contains a foreign body in the left lateral lung, likely in the left lower lobe. The foreign body has a linear appearance and is oriented horizontally. It is likely a needle or a small fragment of metal. There is no evidence of pneumothorax or other complications. The patient is status post left lower lobe wedge resection.",sternotomy wires and surgical clips,0.16678455984783155,0.5,False,"The actual output describes a foreign body in the left lung, likely a needle or metal fragment, which contradicts the expected output of sternotomy wires and surgical clips. There is a critical omission of the expected foreign bodies, and the description does not align with the expected findings.",gpt-4o,0.0014750000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,Which lung has a defect?,"The left lung is slightly defective, with an abnormality that causes it to have a lower volume than the right lung. This is due to a congenital abnormality that is present at birth.",Left,0.877383469138279,0.5,True,"The actual output correctly identifies the left lung as having a defect, aligning with the expected output. There are no factual contradictions or critical medical omissions, and the additional details about the defect are acceptable as minor paraphrasing.",gpt-4o,0.001265,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_3,True,In which lobe do you see an abnormal mass in the above images?,"In the above images, the abnormal mass is seen in the left lobe.",,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the abnormal mass in the images. There are no irrelevant statements, making the answer concise and focused.",gpt-4o,0.0037150000000000004,,,"Statements:
+[
+    ""The abnormal mass is seen in the left lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What is the biological sex of the patient?,The biological sex of the patient is female.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input question without any irrelevant information, demonstrating a clear and concise answer.",gpt-4o,0.0034925,,,"Statements:
+[
+    ""The biological sex of the patient is female.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is the lesion located?,"The lesion is located in the left lower lobe, as seen on the CT scan.",,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the lesion's location without any irrelevant information. Great job on staying focused and concise!,gpt-4o,0.0038300000000000005,,,"Statements:
+[
+    ""The lesion is located in the left lower lobe."",
+    ""The lesion is seen on the CT scan.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,How large is the mass in the right upper quadrant?,The mass in the right upper quadrant is approximately 1.5 x 10^19 kg.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the mass in the right upper quadrant without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.003747500000000001,,,"Statements:
+[
+    ""The mass in the right upper quadrant is approximately 1.5 x 10^19 kg.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,How would you describe the location of the lesion?,The location of the lesion is not specified in the provided information.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the input question about the lesion's location, repeating irrelevant statements instead.",gpt-4o,0.004370000000000001,,,"Statements:
+[
+    ""The location of the lesion is not specified."",
+    ""The information provided does not specify the lesion's location."",
+    ""Lesion location is unspecified.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide any information about the lesion's location.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide any information about the lesion's location.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide any information about the lesion's location.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which plane is this image taken in?,"As an AI language model, I do not have the ability to view images. However, if you provide me with the name of the airline or the aircraft type, I can try to help you find the image.",,0.6666666666666666,0.5,True,"The score is 0.67 because the response partially addresses the question by discussing the AI's capabilities, which is not directly relevant to identifying the plane in the image. However, it still provides some context that could be useful, hence the score is not lower.",gpt-4o,0.004855,,,"Statements:
+[
+    ""As an AI language model, I do not have the ability to view images."",
+    ""If you provide me with the name of the airline, I can try to help you find the image."",
+    ""If you provide me with the aircraft type, I can try to help you find the image.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's capabilities and does not address identifying the plane in the image.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What imaging modality was used?,"The imaging modality used to visualize the spinal cord in the rat was not specified. However, it is likely that a cross-sectional imaging technique such as a CT or MRI was used. These techniques allow for visualization of the spinal cord and other structures in the body.",,0.6,0.5,True,"The score is 0.60 because while the output discusses imaging techniques, it lacks specificity about the particular modality used, which was the core of the inquiry. However, it still provides some relevant context about imaging capabilities, maintaining a moderate level of relevance.",gpt-4o,0.005197500000000001,,,"Statements:
+[
+    ""The imaging modality used to visualize the spinal cord in the rat was not specified."",
+    ""It is likely that a cross-sectional imaging technique was used."",
+    ""A CT or MRI might have been used."",
+    ""These techniques allow for visualization of the spinal cord."",
+    ""They also allow for visualization of other structures in the body.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not specify any imaging modality used.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the capabilities of imaging techniques in general, not about the specific modality used.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,False,What is the patient's gender?,"I'm sorry, but I am not able to determine the patient's gender. In order to provide the best possible care, it is important for healthcare providers to have as much information as possible about their patients, including their gender. However, as an AI language model, I do not have access to information about specific patients unless they are seeking care at an institution where I am contracted to provide assistance. Is there anything else I can help with?",,0.2857142857142857,0.5,False,"The score is 0.29 because the output contains multiple statements that do not directly address the question about the patient's gender. These statements focus on general information about AI and its operations, which are not relevant to the specific inquiry. However, the score is not zero because there might be some attempt to engage with the question, albeit indirectly.",gpt-4o,0.00627,,,"Statements:
+[
+    ""I am not able to determine the patient's gender."",
+    ""Healthcare providers need as much information as possible about their patients."",
+    ""Patient information includes their gender."",
+    ""I am an AI language model."",
+    ""I do not have access to information about specific patients."",
+    ""I provide assistance at institutions where I am contracted."",
+    ""Is there anything else I can help with?""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is about the general need for information, not specifically about the patient's gender.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is about the AI's nature, not about the patient's gender.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement explains the AI's limitations, not the patient's gender.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is about the AI's operational context, not the patient's gender.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This is a general offer for further assistance, not related to the patient's gender.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,What are the two hyperlucent inferior dots?,"The two hyperlucent inferior dots are a pair of small, round, and reflective dots located at the inferior aspect of the Air Jordan 1 Retro High OG ""University Blue."" These dots are likely meant to represent the brand's iconic ""Swoosh"" logo, which appears in a white color on the medial aspect of the right shoe. However, these dots are hyperlucent, or see-through, which is an unexpected and unique detail. It is possible that these dots are meant to represent a special edition or collaborative release, as they do not appear on the original ""University Blue"" colorway.",,0.875,0.5,True,"The score is 0.88 because the response effectively addresses the question about the hyperlucent inferior dots, but includes a minor irrelevant detail about the 'Swoosh' logo, which slightly detracts from the overall focus.",gpt-4o,0.006302500000000001,,,"Statements:
+[
+    ""The two hyperlucent inferior dots are small, round, and reflective."",
+    ""They are located at the inferior aspect of the Air Jordan 1 Retro High OG 'University Blue.'"",
+    ""These dots likely represent the brand's iconic 'Swoosh' logo."",
+    ""The 'Swoosh' logo appears in white on the medial aspect of the right shoe."",
+    ""The dots are hyperlucent, or see-through."",
+    ""This is an unexpected and unique detail."",
+    ""The dots may represent a special edition or collaborative release."",
+    ""They do not appear on the original 'University Blue' colorway.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about the 'Swoosh' logo on the medial aspect of the shoe does not directly address the hyperlucent inferior dots.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,What type of image is this?,"As an AI language model, I'm unable to view images. Please provide the image's description or URL so I can help you better.",,0.0,0.5,False,"The score is 0.00 because the output did not address the question about the type of image, instead focusing on unrelated topics such as AI limitations, requests for more information, and suggestions for next steps.",gpt-4o,0.00489,,,"Statements:
+[
+    ""As an AI language model, I am unable to view images."",
+    ""Please provide the image's description or URL."",
+    ""I can help you better with the image's description or URL.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the AI's limitations and does not address the type of image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is a request for more information, not an answer to the question about the image type.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement is a suggestion for how to proceed, not an answer to the question about the image type.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Which side is the abnormality on?,The abnormality is on the right side.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0035175000000000002,,,"Statements:
+[
+    ""The abnormality is on the right side.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Which lung has diffuse opacification?,The left lung has diffuse opacification.,,1.0,0.5,True,The score is 1.00 because the response directly and accurately addresses the question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.0035075,,,"Statements:
+[
+    ""The left lung has diffuse opacification.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What vein is the central venous catheter located in the patient?,The central venous catheter is located in the right internal jugular vein.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the query. Great job!",gpt-4o,0.0036525000000000004,,,"Statements:
+[
+    ""The central venous catheter is located in the right internal jugular vein.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where is the abnormality located?,"The abnormality is located in the left lower lobe, which is also where the patient is experiencing the most significant symptoms. However, as noted in the report, ""The abnormality is not confined to the left lower lobe, but rather involves the entire left lower lobe and a portion of the lingula.""",,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0047025,,,"Statements:
+[
+    ""The abnormality is located in the left lower lobe."",
+    ""The patient is experiencing the most significant symptoms in the left lower lobe."",
+    ""The abnormality is not confined to the left lower lobe."",
+    ""The abnormality involves the entire left lower lobe."",
+    ""The abnormality involves a portion of the lingula.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What is the gender of this patient?,"I'm sorry, but I am not able to determine the gender of a patient. Gender is a personal characteristic that is not typically relevant in a medical context. However, if you do need to know the gender of a patient for some reason, you can usually ask the patient themselves or check their identification.",,0.8,0.5,True,"The score is 0.80 because the response mostly addresses the question about the patient's gender, but includes a statement about the irrelevance of gender in a medical context, which doesn't directly answer the query.",gpt-4o,0.004977500000000001,,,"Statements:
+[
+    ""I am not able to determine the gender of a patient."",
+    ""Gender is a personal characteristic."",
+    ""Gender is not typically relevant in a medical context."",
+    ""If you need to know the gender of a patient, you can ask the patient themselves."",
+    ""You can check the patient's identification.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement suggests gender is not relevant in a medical context, which does not address the question of determining the patient's gender.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What is the location of the three circular opacities?,"The three circular opacities are located in the left upper lobe, left lower lobe, and right middle lobe.",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining complete focus on the location of the three circular opacities. Great job!",gpt-4o,0.004275,,,"Statements:
+[
+    ""The three circular opacities are located in the left upper lobe."",
+    ""The three circular opacities are located in the left lower lobe."",
+    ""The three circular opacities are located in the right middle lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is the location of the mass?,"The location of the mass is not specified in the given information. The information provided describes the motion of a particle under the influence of a force, without specifying the location of the mass.",,0.5,0.5,True,"The score is 0.50 because while the output partially addresses the question, it includes irrelevant details about particle motion and force influence, which do not directly answer the query about the mass's location.",gpt-4o,0.0048000000000000004,,,"Statements:
+[
+    ""The location of the mass is not specified."",
+    ""The information describes the motion of a particle."",
+    ""The particle is under the influence of a force."",
+    ""The location of the mass is not specified in the given information.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about the motion of a particle does not address the location of the mass.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The influence of a force on a particle does not provide information about the location of the mass.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,Where is the gastric bubble placed?,"The gastric bubble is a fluid collection in the stomach that is seen on an upright radiograph. It is caused by the displacement of the stomach by the liver and other abdominal organs. The gastric bubble is not a clinically significant finding, and there is no evidence that it causes symptoms.",,0.4,0.5,False,"The score is 0.40 because the output contains some relevant information about the gastric bubble, but it primarily focuses on aspects unrelated to its location, such as its cause, clinical significance, and symptoms. This distracts from directly answering the input question, thus preventing a higher score.",gpt-4o,0.005420000000000001,,,"Statements:
+[
+    ""The gastric bubble is a fluid collection in the stomach."",
+    ""It is seen on an upright radiograph."",
+    ""The gastric bubble is caused by the displacement of the stomach by the liver and other abdominal organs."",
+    ""It is not a clinically significant finding."",
+    ""There is no evidence that the gastric bubble causes symptoms.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement explains the cause of the gastric bubble, not its location.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses the clinical significance of the gastric bubble, not its location.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement addresses the symptoms related to the gastric bubble, not its location.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which orientation is the image acquired?,"The image is acquired in the ""portable"" orientation, meaning that the long dimension of the image is oriented horizontally. This is the default orientation for many digital image formats, including JPEG and PNG. However, it is important to note that the exact orientation of an image can vary depending on the specific image file format and the hardware or software used to create or view the image.",,0.75,0.5,True,"The score is 0.75 because the response partially addresses the question about the image's orientation, but includes irrelevant details about image formats and hardware/software, which do not directly answer the query.",gpt-4o,0.005817500000000001,,,"Statements:
+[
+    ""The image is acquired in the 'portable' orientation."",
+    ""The long dimension of the image is oriented horizontally."",
+    ""This is the default orientation for many digital image formats."",
+    ""JPEG and PNG are examples of digital image formats with this default orientation."",
+    ""The exact orientation of an image can vary."",
+    ""Orientation depends on the specific image file format."",
+    ""Orientation can also depend on the hardware or software used."",
+    ""The hardware or software used can create or view the image.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses examples of image formats, not the orientation of the image.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement is about the hardware or software used, not directly about the image's orientation.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,Which side is the diaphragm more depressed?,"The diaphragm is a muscle that is not typically visualized on a radiograph. It is not possible to determine the exact position of the diaphragm on a radiograph. However, in general, the diaphragm is a somewhat flat, thin, and oval-shaped muscle that is located between the ribs and the abdomen. It is not typically visualized on a radiograph.",,0.0,0.5,False,"The score is 0.00 because the output contains multiple irrelevant statements that do not address the specific question about which side of the diaphragm is more depressed. Instead, the statements focus on unrelated aspects such as the diaphragm's visibility on a radiograph, its shape, and location, none of which answer the input question.",gpt-4o,0.006620000000000001,,,"Statements:
+[
+    ""The diaphragm is a muscle."",
+    ""The diaphragm is not typically visualized on a radiograph."",
+    ""It is not possible to determine the exact position of the diaphragm on a radiograph."",
+    ""The diaphragm is a somewhat flat, thin, and oval-shaped muscle."",
+    ""The diaphragm is located between the ribs and the abdomen."",
+    ""The diaphragm is not typically visualized on a radiograph.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes what the diaphragm is, not its position or depression.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the diaphragm is not visible on a radiograph, which doesn't address which side is more depressed.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement suggests the position cannot be determined on a radiograph, not which side is more depressed.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the shape of the diaphragm, not its position or depression.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the location of the diaphragm, not which side is more depressed.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This is a repeat of a previous statement indicating the diaphragm is not visible on a radiograph, which doesn't address the question.""
+    }
+]"
+enhanced,GEval,test_case_3,False,Which lung has diffuse opacification?,The left lung has diffuse opacification.,Right,0.00972049994902598,0.5,False,"There is a factual contradiction as the Actual Output states the left lung has diffuse opacification, while the Expected Output indicates it should be the right lung.",gpt-4o,0.0010675,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,What vein is the central venous catheter located in the patient?,The central venous catheter is located in the right internal jugular vein.,Right Subclavian Vein,0.20156958440807,0.5,False,There is a factual contradiction between the Expected Output (Right Subclavian Vein) and the Actual Output (right internal jugular vein). This is a critical medical detail.,gpt-4o,0.0011475,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,Where is the abnormality located?,"The abnormality is located in the left lower lobe, which is also where the patient is experiencing the most significant symptoms. However, as noted in the report, ""The abnormality is not confined to the left lower lobe, but rather involves the entire left lower lobe and a portion of the lingula.""",R hemidiaphragm,0.07477400366013878,0.5,False,"There is a factual contradiction as the Expected Output states the abnormality is in the R hemidiaphragm, but the Actual Output describes it in the left lower lobe and lingula.",gpt-4o,0.0012950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Where is the gastric bubble placed?,"The gastric bubble is a fluid collection in the stomach that is seen on an upright radiograph. It is caused by the displacement of the stomach by the liver and other abdominal organs. The gastric bubble is not a clinically significant finding, and there is no evidence that it causes symptoms.",Underneath the right hemidiaphragm,0.18741285362671847,0.5,False,"The actual output does not address the location of the gastric bubble as expected, instead providing unrelated information about its clinical significance and formation.",gpt-4o,0.0011525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,Which side is the abnormality on?,The abnormality is on the right side.,Right,0.9946596671895044,0.5,True,"The actual output correctly identifies the abnormality on the right side, matching the expected output without any factual contradictions or omissions, and uses acceptable paraphrasing.",gpt-4o,0.0010675,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,Which side is the diaphragm more depressed?,"The diaphragm is a muscle that is not typically visualized on a radiograph. It is not possible to determine the exact position of the diaphragm on a radiograph. However, in general, the diaphragm is a somewhat flat, thin, and oval-shaped muscle that is located between the ribs and the abdomen. It is not typically visualized on a radiograph.",Left,0.19061773504501797,0.5,False,"The Actual Output does not address the question directly and contains factual inaccuracies about diaphragm visualization, contradicting the Expected Output which states 'Left'.",gpt-4o,0.001195,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Where is the location of the mass?,"The location of the mass is not specified in the given information. The information provided describes the motion of a particle under the influence of a force, without specifying the location of the mass.",anterior mediastinum,0.08134503611559049,0.5,False,"The actual output does not address the expected output of 'anterior mediastinum' and instead discusses unrelated information about particle motion, indicating a factual contradiction and critical omission.",gpt-4o,0.0011775000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Which orientation is the image acquired?,"The image is acquired in the ""portable"" orientation, meaning that the long dimension of the image is oriented horizontally. This is the default orientation for many digital image formats, including JPEG and PNG. However, it is important to note that the exact orientation of an image can vary depending on the specific image file format and the hardware or software used to create or view the image.",PA,0.016233735687417695,0.5,False,"The Actual Output provides incorrect information about the image orientation, mentioning 'portable' instead of 'PA', which contradicts the Expected Output. This is a factual contradiction.",gpt-4o,0.0012500000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,What is the location of the three circular opacities?,"The three circular opacities are located in the left upper lobe, left lower lobe, and right middle lobe.",Stomach,0.004208772521219692,0.5,False,"There is a factual contradiction as the expected location is 'Stomach' but the actual output mentions 'left upper lobe, left lower lobe, and right middle lobe.'",gpt-4o,0.0011825,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,What is the gender of this patient?,"I'm sorry, but I am not able to determine the gender of a patient. Gender is a personal characteristic that is not typically relevant in a medical context. However, if you do need to know the gender of a patient for some reason, you can usually ask the patient themselves or check their identification.",Man,0.29614746006560777,0.5,False,"The actual output does not provide the expected answer 'Man' and instead states an inability to determine gender, which is a factual contradiction. It also omits the critical information needed, which is the gender of the patient.",gpt-4o,0.0013250000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
