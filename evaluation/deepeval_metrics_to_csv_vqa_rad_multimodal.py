@@ -3,15 +3,20 @@ from dotenv import load_dotenv
 import logging
 import pandas as pd
 import json
+from pathlib import Path
 import csv
+import openai
+from openai import OpenAI
 from deepeval import evaluate
 from deepeval.metrics import (
     AnswerRelevancyMetric,
     # FaithfulnessMetric,
     # HallucinationMetric,
-    GEval,
+    # GEval,
+    MultimodalAnswerRelevancyMetric
 )
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
+from deepeval.test_case import MLLMTestCase, MLLMImage
 from typing import List, Dict, Any
 from deepeval.evaluate.types import TestResult, EvaluationResult
 
@@ -38,118 +43,51 @@ if not OPENAI_API_KEY:
 else:
     logger.info("OPENAI_API_KEY is set")
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()
+
 # ─────────────────── 1. Load data ────────────────────
 # df_baseline = pd.read_csv("./llava_preds_vqa_rad_baseline.csv")
-df = pd.read_csv("./filtered_datasets_deepeval/filtered_chexagent_preds_slake_only_rag_synced.csv")
-df_gt = pd.read_csv("./Slake_Chest.csv")
+df = pd.read_csv("./filtered_datasets_deepeval/filtered_llava_preds_vqa_rad_baseline_synced.csv")
+df = df.head(10)
+df_gt = pd.read_csv("./VQA_RAD_Chest_Data.csv")
 
 CHUNK_SIZE = 10
-CSV_PATH = "deepeval_results/deepeval_results_chexagent_slake_only_rag.csv"
+CSV_PATH = "deepeval_results_multimodal/deepeval_results_llava_vqa_rad_baseline.csv"
 
 # df_baseline = df_baseline.head(20)
 # df_enhanced = df_enhanced.head(20)
 # df = df.head(20)
 
-answer_lookup = df_gt.set_index("qid")["answer"].to_dict()
+answer_lookup = df_gt.set_index("QID_unique")["ANSWER"].to_dict()
+img_path_lookup = df_gt.set_index("QID_unique")["IMAGEID"].to_dict()
 
 
 # ──────────────── 2. Build test‑cases ────────────────
 def to_cases(df: pd.DataFrame, metric_name: str, answer_col: str = "model_output", is_baseline=True) -> (
-        list)[LLMTestCase]:
+        list)[MLLMTestCase]:
     cases = []
 
     for _, row in df.iterrows():
         qid = row["q_id"]
         expected = answer_lookup.get(qid)
+        img_path = img_path_lookup.get(qid)
+        img_path = Path(img_path).name
+        img_path_local = "D:/NLP685Project/VQA_RAD_Chest_Image_Folder/" + img_path
+        logger.info(f"Taking image from: {img_path_local}")
 
         if expected is None or pd.isna(expected):
             continue  # skip rows with no ground‑truth
 
-        if metric_name == "AnswerRelevancy":
+        actual_output = row[answer_col]
+        if metric_name == "MultiModalAnswerRelevancy":
             if is_baseline:
                 # NO retrieval_context supplied here
                 cases.append(
-                    LLMTestCase(
-                        input=row["query"],
-                        actual_output=row[answer_col],
+                    MLLMTestCase(
+                        input=[row["query"], MLLMImage(url=f"{img_path_local}", local=True)],
+                        actual_output=[actual_output],
                         # expected_output=expected,
-                    )
-                )
-            else:
-                # retrieval_context supplied here
-                cases.append(
-                    LLMTestCase(
-                        input=row["query"],
-                        actual_output=row[answer_col],
-                        # expected_output=expected,
-                        # retrieval_context=row["graphrag_output"]
-                    )
-                )
-
-        # elif metric_name == "Faithfulness":
-        #     # not calculated for baseline (not relevant)
-        #
-        #     # if is_baseline:
-        #     #     # NO retrieval_context supplied here
-        #     #     cases.append(
-        #     #         LLMTestCase(
-        #     #             input=row["query"],
-        #     #             actual_output=row[answer_col],
-        #     #             # expected_output=expected,
-        #     #         )
-        #     #     )
-        #     # else:
-        #     # retrieval_context supplied here
-        #     cases.append(
-        #         LLMTestCase(
-        #             input=row["query"],
-        #             actual_output=row[answer_col],
-        #             # expected_output=expected,
-        #             retrieval_context=[row["graphrag_output"]]
-        #         )
-        #     )
-        #
-        # elif metric_name == "Hallucination":
-        #     # not calculated for baseline (not relevant)
-        #
-        #     # if is_baseline:
-        #     #     # NO retrieval_context supplied here
-        #     #     cases.append(
-        #     #         LLMTestCase(
-        #     #             input=row["query"],
-        #     #             actual_output=row[answer_col],
-        #     #             # expected_output=expected,
-        #     #         )
-        #     #     )
-        #     # else:
-        #     # retrieval_context supplied here
-        #     cases.append(
-        #         LLMTestCase(
-        #             input=row["query"],
-        #             actual_output=row[answer_col],
-        #             # expected_output=expected,
-        #             context=[row["graphrag_output"]]
-        #         )
-        #     )
-
-        if metric_name == "GEval":
-            if is_baseline:
-                # NO retrieval_context supplied here
-                cases.append(
-                    LLMTestCase(
-                        input=row["query"],
-                        actual_output=row[answer_col],
-                        expected_output=expected,
-                    )
-                )
-            else:
-                # retrieval_context supplied here
-                cases.append(
-                    LLMTestCase(
-                        input=row["query"],
-                        actual_output=row[answer_col],
-                        expected_output=expected,
-                        # context=row["graphrag_output"]
                     )
                 )
 
@@ -229,20 +167,23 @@ def append_to_csv(records: List[Dict[str, Any]]):
 answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.5, model="gpt-4o")
 # faithfulness_metric = FaithfulnessMetric(threshold=0.5, model="gpt-4.1-nano")
 # hallucination_metric = HallucinationMetric(threshold=0.5, model="gpt-4.1-nano")
-g_eval_metric = GEval(
-    name="Correctness",
-    model="gpt-4o",
-    evaluation_params=[
-        LLMTestCaseParams.INPUT,
-        LLMTestCaseParams.EXPECTED_OUTPUT,
-        LLMTestCaseParams.ACTUAL_OUTPUT,
-    ],
-    evaluation_steps=[
-        "Check for factual contradictions",
-        "Penalize critical medical omissions in response",
-        "Accept minor paraphrasing"
-    ],
-)
+# g_eval_metric = GEval(
+#     name="Correctness",
+#     model="gpt-4o",
+#     evaluation_params=[
+#         LLMTestCaseParams.INPUT,
+#         LLMTestCaseParams.EXPECTED_OUTPUT,
+#         LLMTestCaseParams.ACTUAL_OUTPUT,
+#     ],
+#     evaluation_steps=[
+#         "Check for factual contradictions",
+#         "Penalize critical medical omissions in response",
+#         "Accept minor paraphrasing"
+#     ],
+#     # async_mode=False
+# )
+
+multimodal_answer_relevancy_metric = MultimodalAnswerRelevancyMetric(threshold=0.5, model="gpt-4o")
 
 
 def initialize_csv():
@@ -269,71 +210,16 @@ for idx in range(0, total, CHUNK_SIZE):
 
     all_results = []
 
-    # try:
-    #     # Baseline AnswerRelevancy
-    #     baseline_answer_relevancy_cases = to_cases(df_baseline_chunk, "AnswerRelevancy")
-    #     baseline_answer_relevancy = evaluate(
-    #         test_cases=baseline_answer_relevancy_cases,
-    #         metrics=[answer_relevancy_metric]
-    #     )
-    #     all_results += collect_results(baseline_answer_relevancy, "baseline", "AnswerRelevancy")
-    # except Exception as e:
-    #     logger.error(f"Failed baseline AnswerRelevancy: {str(e)}")
-    #
-    # try:
-    #     # Baseline GEval
-    #     baseline_g_eval_cases = to_cases(df_baseline_chunk, "GEval")
-    #     baseline_g_eval = evaluate(
-    #         test_cases=baseline_g_eval_cases,
-    #         metrics=[g_eval_metric]
-    #     )
-    #     all_results += collect_results(baseline_g_eval, "baseline", "GEval")
-    # except Exception as e:
-    #     logger.error(f"Failed baseline GEval: {str(e)}")
-
     try:
-        # Enhanced AnswerRelevancy
-        answer_relevancy_cases = to_cases(df_chunk, "AnswerRelevancy", is_baseline=False)
-        answer_relevancy = evaluate(
-            test_cases=answer_relevancy_cases,
-            metrics=[answer_relevancy_metric]
+        multimodal_answer_relevancy_cases = to_cases(df_chunk, "MultiModalAnswerRelevancy", is_baseline=False)
+        multimodal_answer_relevancy = evaluate(
+            test_cases=multimodal_answer_relevancy_cases,
+            metrics=[answer_relevancy_metric],
+            hyperparameters={"max_tokens": 40000, "max_completion_tokens": 40000, "temperature": 0}
         )
-        all_results += collect_results(answer_relevancy, "enhanced", "AnswerRelevancy")
+        all_results += collect_results(multimodal_answer_relevancy, "enhanced", "MultiModalAnswerRelevancy")
     except Exception as e:
-        logger.error(f"Failed enhanced AnswerRelevancy: {str(e)}")
-
-    # try:
-    #     # Enhanced Faithfulness
-    #     enhanced_faithfulness_cases = to_cases(df_enhanced_chunk, "Faithfulness", is_baseline=False)
-    #     enhanced_faithfulness = evaluate(
-    #         test_cases=enhanced_faithfulness_cases,
-    #         metrics=[faithfulness_metric]
-    #     )
-    #     all_results += collect_results(enhanced_faithfulness, "enhanced", "Faithfulness")
-    # except Exception as e:
-    #     logger.error(f"Failed enhanced Faithfulness: {str(e)}")
-    #
-    # try:
-    #     # Enhanced Hallucination
-    #     enhanced_hallucination_cases = to_cases(df_enhanced_chunk, "Hallucination", is_baseline=False)
-    #     enhanced_hallucination = evaluate(
-    #         test_cases=enhanced_hallucination_cases,
-    #         metrics=[hallucination_metric]
-    #     )
-    #     all_results += collect_results(enhanced_hallucination, "enhanced", "Hallucination")
-    # except Exception as e:
-    #     logger.error(f"Failed enhanced Hallucination: {str(e)}")
-
-    try:
-        # Enhanced GEval
-        g_eval_cases = to_cases(df_chunk, "GEval", is_baseline=False)
-        g_eval = evaluate(
-            test_cases=g_eval_cases,
-            metrics=[g_eval_metric]
-        )
-        all_results += collect_results(g_eval, "enhanced", "GEval")
-    except Exception as e:
-        logger.error(f"Failed enhanced GEval: {str(e)}")
+        logger.error(f"Failed multimodal AnswerRelevancy: {str(e)}")
 
     # Save results for this chunk
     if all_results:
