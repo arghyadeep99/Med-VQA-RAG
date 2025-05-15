@@ -19,7 +19,7 @@ LLaMA 11B visual-instruct.
 ## High Level Diagram
 ![High Level Architecture](docs/685-Proposal-Arch.png)
 
-## Reports
+## Report
 (report_link) can be found in the repo.
 
 ## Code Structure
@@ -44,7 +44,7 @@ This repo contains all the codes involved in various parts of setup (explained n
     ```bash
     pip install -r requirements.txt
     ```
-3. **Multimodal RAG** setup (FAISS: in-memory DB, high RAG usage)
+3. **Multimodal RAG** setup (FAISS: in-memory DB, high RAM usage)
 4. **Setup Aura DB** with **PrimeKG** data (open-source) and insert credentials in code
 5. **Setup Neo4J desktop** in local with credentials (provided by Neo4J official installation)
 6. **Setup GraphRAG** (**OpenAI key** needed)
@@ -55,6 +55,7 @@ This repo contains all the codes involved in various parts of setup (explained n
 8. Copy **Collab Pro** Notebooks and use **Nvidia A100** (40 GB VRAM) to collect model inference
 9. Run evaluation scripts inside evaluation folder to generate metrics
 
+## Contributions
 Contributions are welcome to improve the project. 
 Please follow these steps:
 
