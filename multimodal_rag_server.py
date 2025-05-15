@@ -17,14 +17,12 @@ VECTOR_DB = "faiss"
 TOP_K = 5  # default number of results
 
 
-# --- Pydantic schema for incoming requests ---
 class RetrieveRequest(BaseModel):
     image_path: str
     user_query: str
     top_k: int = TOP_K
 
 
-# --- Load model & index at startup ---
 @app.on_event("startup")
 def load_resources():
     global indexer, retriever_base

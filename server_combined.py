@@ -12,7 +12,6 @@ import tempfile
 
 from contextlib import asynccontextmanager
 
-# --- Neo4j Imports ---
 from neo4j import GraphDatabase
 from neo4j_graphrag.embeddings import OpenAIEmbeddings
 from neo4j_graphrag.retrievers import VectorRetriever
@@ -20,12 +19,10 @@ from neo4j_graphrag.llm import OpenAILLM
 from neo4j_graphrag.generation import GraphRAG
 from dotenv import load_dotenv
 
-# --- MultiModal RAG Imports ---
 from utils.embedding_model import EmbeddingModelLoader
 from modules.retriever import Retriever
 from modules.indexer import Indexer
 
-# ─── Logging setup ───────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s │ %(message)s",
@@ -33,7 +30,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ─── Load .env ─────────────────────────────────────────────────────────────────
 env_path = ".env"
 if os.path.exists(env_path):
     load_dotenv(env_path)
@@ -41,7 +37,6 @@ if os.path.exists(env_path):
 else:
     logger.warning(f".env file not found at {env_path}")
 
-# --- CONFIGURATION ---
 # MultiModal RAG configuration
 MODEL_NAME = "biomedclip"
 INDEX_DIR = "./datasets/indexed_files/"
@@ -69,7 +64,6 @@ if not os.path.exists(PROJECT_ROOT):
     logger.error(f"PROJECT_ROOT directory does not exist: {PROJECT_ROOT}")
     raise RuntimeError(f"Project directory does not exist: {PROJECT_ROOT}")
 
-# — Neo4j AuraDB connection info —
 NEO4J_URI = "neo4j+s://9301fe45.databases.neo4j.io"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "l_jBXBupg2kTYC7kdbcUdf4aJ2Pc8L5XwBxGA09m8tY"
@@ -77,7 +71,6 @@ VECTOR_INDEX = "idx_desc_embedding_Disease"
 MODEL_NAME_GRAPHRAG = "gpt-4o-mini"
 
 
-# --- Pydantic schema for incoming requests ---
 class CombinedRequest(BaseModel):
     image_path: str
     user_query: str
@@ -85,11 +78,9 @@ class CombinedRequest(BaseModel):
     include_reports: bool = True  # Whether to include detailed report info in response
 
 
-# --- Load resources at startup ---
 # @app.on_event("startup")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # --- Initialize MultiModal RAG components ---
     global indexer
     # 1. Load embedding model & tokenizer
     loader = EmbeddingModelLoader(model_name=MODEL_NAME)
@@ -109,7 +100,6 @@ async def lifespan(app: FastAPI):
     else:
         indexer._build_index()
 
-    # --- Initialize GraphRAG components ---
     global driver, embedder, retriever_graphrag, llm, rag
     try:
         logger.info(f"Connecting to Neo4j at {NEO4J_URI}")
@@ -146,12 +136,12 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"Error closing Neo4j driver: {str(e)}")
 
-# --- Initialize FastAPI ---
+
 app = FastAPI(title="Combined MultiModal RAG and GraphRAG API", lifespan=lifespan)
 
-# --- Step 1: MultiModal RAG Retrieval ---
+
+# Step 1: MultiModal RAG Retrieval
 async def perform_multimodal_rag(image_path: str, user_query: str, top_k: int):
-    """Perform MultiModal RAG retrieval"""
     if not os.path.isfile(image_path):
         raise HTTPException(status_code=400, detail="Image path does not exist")
 
@@ -194,12 +184,10 @@ async def perform_multimodal_rag(image_path: str, user_query: str, top_k: int):
     return response, concatenated_reports
 
 
-# --- Step 2: GraphRAG Processing ---
-# ─── Helper: run GraphRAG search ─────────────────────────────────────────────────
+# Step 2: GraphRAG Processing
 async def run_graph_rag(query_text: str) -> str:
-    """
-    Runs rag.search(...) in a thread so it can be awaited alongside the CLI.
-    """
+    # runs rag.search() in a thread so it can be awaited alongside the CLI.
+
     logger.info(f"Starting GraphRAG search with query: {query_text}")
 
     def sync_search():
@@ -224,14 +212,7 @@ async def run_graph_rag(query_text: str) -> str:
         raise
 
 
-# ─── Helper: run graphrag CLI steps ──────────────────────────────────────────────
 async def run_graphrag_cli(query_text: str) -> str:
-    """
-     1. init (if needed)
-     2. index
-     3. query global, local, drift
-    Captures and returns all stdout.
-    """
     logger.info(f"Starting GraphRAG CLI with query: {query_text}")
     env = os.environ.copy()
 
@@ -432,7 +413,7 @@ async def run_graphrag_cli(query_text: str) -> str:
         return "\n\n".join(output_lines)
 
 
-# --- Combined Pipeline Endpoint ---
+# Combined Pipeline Endpoint
 @app.post("/process_combined")
 async def process_combined(request: CombinedRequest):
     """
@@ -467,8 +448,10 @@ async def process_combined(request: CombinedRequest):
             )
         except Exception as e:
             logger.error(f"Error waiting for GraphRAG operations: {str(e)}")
-            rag_out = f"Error: {str(e)}" if isinstance(rag_task, asyncio.Task) and not rag_task.done() else "Unknown error"
-            cli_out = f"Error: {str(e)}" if isinstance(cli_task, asyncio.Task) and not cli_task.done() else "Unknown error"
+            rag_out = f"Error: {str(e)}" if isinstance(rag_task,
+                                                       asyncio.Task) and not rag_task.done() else "Unknown error"
+            cli_out = f"Error: {str(e)}" if isinstance(cli_task,
+                                                       asyncio.Task) and not cli_task.done() else "Unknown error"
 
         # Check if either task raised an exception
         if isinstance(rag_out, Exception):
@@ -480,9 +463,9 @@ async def process_combined(request: CombinedRequest):
             cli_out = f"ERROR in CLI: {str(cli_out)}"
 
         graphrag_combined = (
-            # "=== GraphRAG Output ===\n"
+            # GraphRAG Output
             f"{rag_out}\n\n"
-            # "=== graphrag CLI Output ===\n"
+            # graphrag CLI Output
             f"{cli_out}"
         )
 
@@ -505,6 +488,7 @@ async def process_combined(request: CombinedRequest):
         logger.error(error_msg)
         logger.error(stack_trace)
         raise HTTPException(status_code=500, detail=f"{error_msg}\n\n{stack_trace}")
+
 
 @app.post("/process_rag")
 async def process_rag(request: CombinedRequest):
@@ -535,6 +519,7 @@ async def process_rag(request: CombinedRequest):
         logger.error(error_msg)
         logger.error(stack_trace)
         raise HTTPException(status_code=500, detail=f"{error_msg}\n\n{stack_trace}")
+
 
 # @app.on_event("shutdown")
 # async def shutdown_event():

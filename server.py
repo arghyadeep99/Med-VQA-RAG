@@ -10,7 +10,7 @@ import logging
 from typing import Optional, List
 import tempfile
 
-# --- Neo4j Imports ---
+# Neo4j Imports
 from neo4j import GraphDatabase
 from neo4j_graphrag.embeddings import OpenAIEmbeddings
 from neo4j_graphrag.retrievers import VectorRetriever
@@ -18,12 +18,11 @@ from neo4j_graphrag.llm import OpenAILLM
 from neo4j_graphrag.generation import GraphRAG
 from dotenv import load_dotenv
 
-# --- MultiModal RAG Imports ---
+# MultiModal RAG Imports
 from utils.embedding_model import EmbeddingModelLoader
 from modules.retriever import Retriever
 from modules.indexer import Indexer
 
-# ─── Logging setup ───────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s │ %(message)s",
@@ -31,7 +30,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ─── Load .env ─────────────────────────────────────────────────────────────────
 env_path = "./.env"
 if os.path.exists(env_path):
     load_dotenv(env_path)
@@ -39,7 +37,6 @@ if os.path.exists(env_path):
 else:
     logger.warning(f".env file not found at {env_path}")
 
-# --- CONFIGURATION ---
 # MultiModal RAG configuration
 MODEL_NAME = "biomedclip"
 INDEX_DIR = "./datasets/indexed_files/"
@@ -63,18 +60,16 @@ if not os.path.exists(PROJECT_ROOT):
     logger.error(f"PROJECT_ROOT directory does not exist: {PROJECT_ROOT}")
     raise RuntimeError(f"Project directory does not exist: {PROJECT_ROOT}")
 
-# — Neo4j AuraDB connection info —
+# Neo4j AuraDB connection info
 NEO4J_URI = "neo4j+s://9301fe45.databases.neo4j.io"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "l_jBXBupg2kTYC7kdbcUdf4aJ2Pc8L5XwBxGA09m8tY"
 VECTOR_INDEX = "idx_desc_embedding_Disease"
 MODEL_NAME_GRAPHRAG = "gpt-4o-mini"
 
-# --- Initialize FastAPI ---
 app = FastAPI(title="Combined MultiModal RAG and GraphRAG API")
 
 
-# --- Pydantic schema for incoming requests ---
 class CombinedRequest(BaseModel):
     image_path: str
     user_query: str
@@ -82,10 +77,8 @@ class CombinedRequest(BaseModel):
     include_reports: bool = True  # Whether to include detailed report info in response
 
 
-# --- Load resources at startup ---
 @app.on_event("startup")
 def load_resources():
-    # --- Initialize MultiModal RAG components ---
     global indexer
     # 1. Load embedding model & tokenizer
     loader = EmbeddingModelLoader(model_name=MODEL_NAME)
@@ -105,7 +98,6 @@ def load_resources():
     else:
         indexer._build_index()
 
-    # --- Initialize GraphRAG components ---
     global driver, embedder, retriever_graphrag, llm, rag
     try:
         logger.info(f"Connecting to Neo4j at {NEO4J_URI}")
@@ -133,7 +125,6 @@ def load_resources():
         raise
 
 
-# --- Step 1: MultiModal RAG Retrieval ---
 async def perform_multimodal_rag(image_path: str, user_query: str, top_k: int):
     """Perform MultiModal RAG retrieval"""
     if not os.path.isfile(image_path):
@@ -175,12 +166,10 @@ async def perform_multimodal_rag(image_path: str, user_query: str, top_k: int):
     return response, concatenated_reports
 
 
-# --- Step 2: GraphRAG Processing ---
-# ─── Helper: run GraphRAG search ─────────────────────────────────────────────────
 async def run_graph_rag(query_text: str) -> str:
-    """
-    Runs rag.search(...) in a thread so it can be awaited alongside the CLI.
-    """
+
+    # Runs rag.search() in a thread so it can be awaited alongside the CLI.
+
     logger.info(f"Starting GraphRAG search with query: {query_text}")
 
     def sync_search():
@@ -205,15 +194,7 @@ async def run_graph_rag(query_text: str) -> str:
         raise
 
 
-# ─── Helper: run graphrag CLI steps ──────────────────────────────────────────────
 async def run_graphrag_cli(query_text: str) -> str:
-    """
-    Mirrors your second script:
-     1. init (if needed)
-     2. index
-     3. query global, local, drift
-    Captures and returns all stdout.
-    """
     logger.info(f"Starting GraphRAG CLI with query: {query_text}")
     env = os.environ.copy()
 
@@ -414,7 +395,7 @@ async def run_graphrag_cli(query_text: str) -> str:
         return "\n\n".join(output_lines)
 
 
-# --- Combined Pipeline Endpoint ---
+# Combined Pipeline Endpoint
 @app.post("/process/")
 async def process_combined(request: CombinedRequest):
     """
@@ -440,7 +421,7 @@ async def process_combined(request: CombinedRequest):
         rag_task = run_graph_rag(enhanced_query)
         cli_task = run_graphrag_cli(enhanced_query)
 
-        # Wait for both tasks to complete - REMOVED TIMEOUT
+        # Wait for both tasks to complete
         try:
             rag_out, cli_out = await asyncio.gather(
                 rag_task,
@@ -462,9 +443,9 @@ async def process_combined(request: CombinedRequest):
             cli_out = f"ERROR in CLI: {str(cli_out)}"
 
         graphrag_combined = (
-            # "=== GraphRAG Output ===\n"
+            # GraphRAG Output
             f"{rag_out}\n\n"
-            # "=== graphrag CLI Output ===\n"
+            # graphrag CLI Output
             f"{cli_out}"
         )
 
