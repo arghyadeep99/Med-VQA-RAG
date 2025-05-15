@@ -19,7 +19,7 @@ LLaMA 11B visual-instruct.
 ## High Level Diagram
 ![High Level Architecture](docs/685-Proposal-Arch.png)
 
-## Reports
+## Report
 (report_link) can be found in the repo.
 
 ## Code Structure
@@ -55,6 +55,7 @@ This repo contains all the codes involved in various parts of setup (explained n
 8. Copy **Collab Pro** Notebooks and use **Nvidia A100** (40 GB VRAM) to collect model inference
 9. Run evaluation scripts inside evaluation folder to generate metrics
 
+## Contributions
 Contributions are welcome to improve the project. 
 Please follow these steps:
 
