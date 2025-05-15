@@ -8,7 +8,6 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-# ─── GraphRAG Initialization (done once) ────────────────────────────────────────
 from neo4j import GraphDatabase
 from neo4j_graphrag.embeddings import OpenAIEmbeddings
 from neo4j_graphrag.retrievers import VectorRetriever
@@ -17,7 +16,6 @@ from neo4j_graphrag.generation import GraphRAG
 from dotenv import load_dotenv
 import logging
 
-# ─── Logging setup ───────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s │ %(message)s",
@@ -25,7 +23,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ─── Load .env ─────────────────────────────────────────────────────────────────
 # looks for a ".env" next to this file
 env_path = "./.env"
 if os.path.exists(env_path):
@@ -34,7 +31,6 @@ if os.path.exists(env_path):
 else:
     logger.warning(f".env file not found at {env_path}")
 
-# ─── FastAPI setup ──────────────────────────────────────────────────────────────
 app = FastAPI()
 
 
@@ -42,7 +38,6 @@ class RunRequest(BaseModel):
     text: str
 
 
-# ─── Environment & Paths ────────────────────────────────────────────────────────
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     logger.error("OPENAI_API_KEY environment variable not set")
@@ -57,14 +52,13 @@ if not os.path.exists(PROJECT_ROOT):
     logger.error(f"PROJECT_ROOT directory does not exist: {PROJECT_ROOT}")
     raise RuntimeError(f"Project directory does not exist: {PROJECT_ROOT}")
 
-# — Neo4j AuraDB connection info —
+# — Neo4j AuraDB connection info
 NEO4J_URI = "neo4j+s://9301fe45.databases.neo4j.io"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "l_jBXBupg2kTYC7kdbcUdf4aJ2Pc8L5XwBxGA09m8tY"
 VECTOR_INDEX = "idx_desc_embedding_Disease"
 MODEL_NAME = "gpt-4o-mini"
 
-# — driver, embedder, retriever, llm, rag pipeline —
 try:
     logger.info(f"Connecting to Neo4j at {NEO4J_URI}")
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
@@ -91,11 +85,10 @@ except Exception as e:
     raise
 
 
-# ─── Helper: run GraphRAG search ─────────────────────────────────────────────────
 async def run_graph_rag(query_text: str) -> str:
-    """
-    Runs rag.search(...) in a thread so it can be awaited alongside the CLI.
-    """
+
+    # Runs rag.search() in a thread so it can be awaited alongside the CLI.
+
     logger.info(f"Starting GraphRAG search with query: {query_text}")
 
     def sync_search():
@@ -120,15 +113,8 @@ async def run_graph_rag(query_text: str) -> str:
         raise
 
 
-# ─── Helper: run graphrag CLI steps ──────────────────────────────────────────────
 async def run_graphrag_cli(query_text: str) -> str:
-    """
-    Mirrors your second script:
-     1. init (if needed)
-     2. index
-     3. query global, local, drift
-    Captures and returns all stdout.
-    """
+
     logger.info(f"Starting GraphRAG CLI with query: {query_text}")
     env = os.environ.copy()
 
@@ -308,7 +294,6 @@ async def run_graphrag_cli(query_text: str) -> str:
         return "\n\n".join(output_lines)
 
 
-# ─── Endpoint: run both in parallel ─────────────────────────────────────────────
 @app.post("/run")
 async def run_both(req: RunRequest):
     logger.info(f"Received request with text: {req.text}")
@@ -351,7 +336,6 @@ async def run_both(req: RunRequest):
         raise HTTPException(status_code=500, detail=f"{error_msg}\n\n{stack_trace}")
 
 
-# ─── Startup event handler ─────────────────────────────────────────────────────
 @app.on_event("startup")
 async def startup_event():
     logger.info("Application is starting up")
@@ -365,5 +349,3 @@ async def shutdown_event():
         logger.info("Neo4j driver closed")
     except Exception as e:
         logger.error(f"Error closing Neo4j driver: {str(e)}")
-
-# ─── To run: uvicorn app:app --reload ────────────────────────────────────────────

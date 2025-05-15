@@ -10,10 +10,7 @@ def csv_to_random_text_chunks(
         num_files: int = 20,
         seed: int | None = 42
 ) -> None:
-    """
-    Read the specified columns from the CSV, shuffle the rows, and
-    write them out in `num_files` equally-sized text files.
-    """
+
     # load and shuffle
     df = pd.read_csv(input_csv, usecols=columns)
     df = df.sample(frac=1, random_state=seed).reset_index(drop=True)

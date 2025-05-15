@@ -8,12 +8,11 @@ from lightrag.kg.shared_storage import initialize_pipeline_status
 from lightrag.utils import logger, set_verbose_debug
 from dotenv import load_dotenv
 
-load_dotenv()  # Automatically sets them in os.environ
+load_dotenv()
 WORKING_DIR = "./"
 
 
 def configure_logging():
-    """Configure logging for the application"""
 
     # Reset any existing handlers to ensure clean configuration
     for logger_name in ["uvicorn", "uvicorn.access", "uvicorn.error", "lightrag"]:
@@ -21,14 +20,12 @@ def configure_logging():
         logger_instance.handlers = []
         logger_instance.filters = []
 
-    # Get log directory path from environment variable or use current directory
     log_dir = os.getenv("LOG_DIR", os.getcwd())
     log_file_path = os.path.abspath(os.path.join(log_dir, "lightrag_demo.log"))
 
     print(f"\nLightRAG demo log file: {log_file_path}\n")
     os.makedirs(os.path.dirname(log_dir), exist_ok=True)
 
-    # Get log file max size and backup count from environment variables
     log_max_bytes = int(os.getenv("LOG_MAX_BYTES", 10485760))  # Default 10MB
     log_backup_count = int(os.getenv("LOG_BACKUP_COUNT", 5))  # Default 5 backups
 
@@ -116,7 +113,6 @@ def main():
 
 
 if __name__ == "__main__":
-    # Configure logging before running the main function
     configure_logging()
     # asyncio.run(main())
     main()

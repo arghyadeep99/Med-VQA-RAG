@@ -20,7 +20,7 @@ from deepeval.test_case import MLLMTestCase, MLLMImage
 from typing import List, Dict, Any
 from deepeval.evaluate.types import TestResult, EvaluationResult
 
-# ─── Logging setup ───────────────────────────────────────────────────────────────
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s │ %(message)s",
@@ -43,7 +43,6 @@ if not OPENAI_API_KEY:
 else:
     logger.info("OPENAI_API_KEY is set")
 
-# ─────────────────── 1. Load data ────────────────────
 # df_baseline = pd.read_csv("./llava_preds_vqa_rad_baseline.csv")
 df = pd.read_csv("./filtered_datasets_deepeval/filtered_llava_preds_slake_baseline_synced.csv")
 df = df.head(10)
@@ -60,7 +59,6 @@ answer_lookup = df_gt.set_index("qid")["answer"].to_dict()
 img_path_lookup = df_gt.set_index("qid")["img_name"].to_dict()
 
 
-# ──────────────── 2. Build test‑cases ────────────────
 def to_cases(df: pd.DataFrame, metric_name: str, answer_col: str = "model_output", is_baseline=True) -> (
         list)[MLLMTestCase]:
     cases = []
@@ -92,7 +90,7 @@ def to_cases(df: pd.DataFrame, metric_name: str, answer_col: str = "model_output
 
 
 def process_test_result(test_result: TestResult, model_type: str, metric_name: str) -> List[Dict[str, Any]]:
-    """Convert a TestResult object into structured records for DataFrame"""
+    # Convert a TestResult object into structured records for DataFrame
     records = []
 
     # Handle potential None in metrics_data
@@ -126,7 +124,6 @@ def process_test_result(test_result: TestResult, model_type: str, metric_name: s
 
 
 def collect_results(evaluation_result: EvaluationResult, model_type: str, metric_name: str) -> List[Dict[str, Any]]:
-    """Process all test results from an EvaluationResult"""
     results = []
     for test_result in evaluation_result.test_results:
         results.extend(
@@ -136,7 +133,6 @@ def collect_results(evaluation_result: EvaluationResult, model_type: str, metric
 
 
 def append_to_csv(records: List[Dict[str, Any]]):
-    """Append new records to CSV"""
     with open(CSV_PATH, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         for record in records:
@@ -160,7 +156,6 @@ def append_to_csv(records: List[Dict[str, Any]]):
             ])
 
 
-# ───────────────── 3. Define metrics ─────────────────
 # answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.5, model="gpt-4o")
 # faithfulness_metric = FaithfulnessMetric(threshold=0.5, model="gpt-4.1-nano")
 # hallucination_metric = HallucinationMetric(threshold=0.5, model="gpt-4.1-nano")

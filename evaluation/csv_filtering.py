@@ -6,7 +6,6 @@ import tiktoken
 import logging
 from dotenv import load_dotenv
 
-# ─── Logging setup ───────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s │ %(message)s",
@@ -29,25 +28,6 @@ enc = tiktoken.get_encoding("cl100k_base")  # GPT‑4o‑mini’s encoding
 def n_tokens(text: str) -> int:
     return len(enc.encode(text))
 
-
-# # ---------- optional exact tokenizer ----------
-# try:
-#     import tiktoken  # pip install tiktoken
-#
-#     enc = tiktoken.get_encoding("cl100k_base")  # GPT‑4o‑mini’s encoding
-#
-#
-#     def n_tokens(text: str) -> int:
-#         return len(enc.encode(text))
-# except ImportError:  # fallback heuristic
-#     enc = None
-#
-#
-#     def n_tokens(text: str) -> int:
-#         return len(text) // 4  # rough ≈4 chars per token
-
-
-# ----------------------------------------------
 
 def filter_csv(infile: str, outfile: str, cols: list[str], limit: int):
     df = pd.read_csv(infile)

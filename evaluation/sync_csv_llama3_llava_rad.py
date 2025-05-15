@@ -1,7 +1,6 @@
 import pandas as pd
 from pathlib import Path
 
-# -------------------------------------------------------------
 files = ["./filtered_datasets_2/filtered_LLama_3_2_VI_Baseline_VQA_RAD.csv",
          "./filtered_datasets_2/filtered_LLama_3_2_VI_GraphRAG_VQA_RAD.csv",
          "./filtered_datasets_2/filtered_LLama_3_2_VI_MMRAG_VQA_RAD.csv"]

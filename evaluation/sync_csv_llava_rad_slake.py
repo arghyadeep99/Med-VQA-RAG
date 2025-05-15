@@ -1,7 +1,6 @@
 import pandas as pd
 from pathlib import Path
 
-# -------------------------------------------------------------
 files = ["./filtered_datasets_2/filtered_llava_preds_slake_baseline.csv",
          "./filtered_datasets_2/filtered_llava_preds_slake_graphrag.csv",
          "./filtered_datasets_2/filtered_llava_preds_slake_only_rag.csv"]
