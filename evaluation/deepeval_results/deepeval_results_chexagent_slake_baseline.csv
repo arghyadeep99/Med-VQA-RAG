@@ -1,0 +1,2156 @@
+model_type,metric_name,test_name,success,input,actual_output,expected_output,metric_score,metric_threshold,metric_success,metric_reason,evaluation_model,evaluation_cost,context,retrieval_context,verbose_logs
+enhanced,AnswerRelevancy,test_case_3,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003415,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the query. Great job!",gpt-4o,0.0034300000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033650000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Where is/are the abnormality located?,"Left Lung, Right",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003555,,,"Statements:
+[
+    ""Left Lung."",
+    ""Right.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, demonstrating a clear and focused understanding of the question.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,What diseases are included in the picture?,Pneumonia,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, providing a clear and concise answer. Great job!",gpt-4o,0.0034375,,,"Statements:
+[
+    ""Pneumonia.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What diseases are included in the picture?,Pleural Effusion,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0034675,,,"Statements:
+[
+    ""Pleural Effusion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034200000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_8,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,Which part of the body does this image belong to?,Chest,Chest,1.0000000000000002,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions between the expected and actual output, and no critical medical omissions are present. The actual output matches the expected output exactly.",gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What diseases are included in the picture?,Pulmonary Nodule,Nodule,0.858503709055784,0.5,True,The actual output 'Pulmonary Nodule' is a minor paraphrase of the expected output 'Nodule' and does not contain factual contradictions or critical omissions.,gpt-4o,0.0010675,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,Where is/are the abnormality located?,"Left Lung, Right","Center, Left Lung",0.35596625613359933,0.5,False,"The Actual Output contradicts the Expected Output by incorrectly identifying the Right lung instead of the Center, and omits the Center location.",gpt-4o,0.001015,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Where is/are the abnormality located?,Lower Left Lung,"Left Lung, Lower Right",0.2760887693432229,0.5,False,"The actual output contradicts the expected output by indicating the abnormality in the Lower Left Lung instead of the Left Lung, Lower Right. This is a factual contradiction and a critical medical omission.",gpt-4o,0.0011350000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and direct answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What diseases are included in the picture?,Cardiomegaly,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input question without any irrelevant information, maintaining a clear and focused answer. Great job!",gpt-4o,0.0034725000000000003,,,"Statements:
+[
+    ""Cardiomegaly.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, demonstrating a clear and direct answer to the question.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What diseases are included in the picture?,Pulmonary Mass,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining a clear and focused answer. Great job!",gpt-4o,0.0034325000000000002,,,"Statements:
+[
+    ""Pulmonary Mass.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003415,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' is irrelevant to the question about the largest organ in the picture, as it fails to provide context or a direct answer.",gpt-4o,0.0038550000000000004,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' is irrelevant to the question about the largest organ in the picture. It fails to provide a direct answer or context, making it completely unrelated to the input query.",gpt-4o,0.003935,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' does not address the question about the largest organ in the picture. It lacks context and comparison, making it irrelevant to the input query.",gpt-4o,0.003872500000000001,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not provide information about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,GEval,test_case_4,True,What is the largest organ in the picture?,Lung,Lung,1.0000000000000002,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008750000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What diseases are included in the picture?,Pulmonary Mass,Atelectasis,0.0918711464340542,0.5,False,"The actual output 'Pulmonary Mass' contradicts the expected output 'Atelectasis', indicating a factual error.",gpt-4o,0.00099,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008750000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,What diseases are included in the picture?,Cardiomegaly,Cardiomegal,0.8913542062211375,0.5,True,"The actual output 'Cardiomegaly' is a minor paraphrase of the expected output 'Cardiomegal', with no factual contradictions or critical omissions.",gpt-4o,0.001085,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions between the expected and actual output, and no critical medical omissions are present. The actual output matches the expected output exactly.",gpt-4o,0.001025,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Where is/are the abnormality located?,Center,"Right Lung, Lower Left",0.15217394283188096,0.5,False,"The actual output 'Center' contradicts the expected 'Right Lung, Lower Left' and omits critical medical details.",gpt-4o,0.00099,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the input without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What diseases are included in the picture?,Pneumonia,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, providing a clear and concise answer. Great job!",gpt-4o,0.0034475,,,"Statements:
+[
+    ""Pneumonia.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' does not address the question about the largest organ in the picture. It lacks context and comparison, making it irrelevant to the input query.",gpt-4o,0.003872500000000001,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not provide information about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant, directly addressing the question about the modality used to take the image without any irrelevant information. Great job on staying focused and concise!",gpt-4o,0.00351,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003405,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What diseases are included in the picture?,Cardiomegaly,,0.3,0.5,False,"The score is 0.30 because the output contains several irrelevant statements about symptoms, causes, treatments, and lifestyle recommendations that do not directly address the question of identifying diseases in a picture. However, the score is not lower because there might be some relevant information that partially addresses the input question.",gpt-4o,0.0068024999999999995,,,"Statements:
+[
+    ""Cardiomegaly is a medical condition."",
+    ""It involves an enlarged heart."",
+    ""The condition can be detected through imaging tests."",
+    ""Symptoms may include shortness of breath and fatigue."",
+    ""Cardiomegaly can be caused by high blood pressure."",
+    ""Heart valve disease is another potential cause."",
+    ""Treatment depends on the underlying cause."",
+    ""Lifestyle changes may be recommended."",
+    ""Medications can help manage symptoms."",
+    ""In severe cases, surgery might be necessary.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Symptoms are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Causes of cardiomegaly are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Causes of cardiomegaly are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Treatment options are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Lifestyle recommendations are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Medication management is not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Surgical options are not directly relevant to identifying diseases in a picture.""
+    }
+]"
+enhanced,GEval,test_case_3,True,What diseases are included in the picture?,Pneumonia,Pneumonia,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0009025000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Where is/are the abnormality located?,Center,Center,1.0,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,What diseases are included in the picture?,Cardiomegaly,Cardiomega,0.806180241562766,0.5,True,"The actual output 'Cardiomegaly' is a minor paraphrase of the expected output 'Cardiomega', with no factual contradictions or critical medical omissions.",gpt-4o,0.0010825000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,Where is/are the abnormality located?,Center,Center,1.0000000000000002,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034200000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003405,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Where is/are the abnormality located?,Lower Left Lung,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the input without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.003435,,,"Statements:
+[
+    ""Lower Left Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What diseases are included in the picture?,Pleural Effusion,,1.0,0.5,True,"The score is 1.00 because the output perfectly addresses the input without any irrelevant statements, providing a clear and direct answer to the question asked. Great job!",gpt-4o,0.0034875,,,"Statements:
+[
+    ""Pleural Effusion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise answer.",gpt-4o,0.00338,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_8,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,What diseases are included in the picture?,Pleural Effusion,Atelectasis,0.05756896708302839,0.5,False,"The actual output 'Pleural Effusion' contradicts the expected output 'Atelectasis', indicating a factual contradiction.",gpt-4o,0.0010025000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,"The Actual Output matches the Expected Output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009050000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009450000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,Where is/are the abnormality located?,Center,"Left Lung, Right",0.15034050641438185,0.5,False,"The Actual Output 'Center' contradicts the Expected Output 'Left Lung, Right', indicating a factual contradiction and critical medical omission.",gpt-4o,0.0010075000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions between the expected and actual output, and no critical medical omissions are present. The actual output matches the expected output exactly.",gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Where is/are the abnormality located?,Lower Left Lung,Both Lung,0.4091522420788373,0.5,False,"The Actual Output identifies the abnormality in the Lower Left Lung, which partially matches the Expected Output of Both Lung, indicating a factual contradiction and a critical medical omission.",gpt-4o,0.0010775000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033700000000000006,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Where is/are the abnormality located?,Heart,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.003415,,,"Statements:
+[
+    ""Heart""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input. Great job!",gpt-4o,0.0034500000000000004,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033650000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the response 'Lung' is irrelevant to the question about the largest organ in the picture, as it fails to provide a direct answer or context.",gpt-4o,0.0038550000000000004,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,What diseases are included in the picture?,Atelectasis,,0.4444444444444444,0.5,False,"The score is 0.44 because while the output contains some relevant information about diseases, it is diluted by several irrelevant statements about symptoms, diagnosis, treatment, complications, and seeking medical attention, which do not directly address the question of identifying diseases in a picture. This mix of relevant and irrelevant content results in a moderate score.",gpt-4o,0.006600000000000001,,,"Statements:
+[
+    ""Atelectasis is a condition."",
+    ""It involves the collapse of part or all of a lung."",
+    ""Atelectasis can occur due to a blockage of the air passages."",
+    ""It may also result from pressure on the outside of the lung."",
+    ""Symptoms can include difficulty breathing and chest pain."",
+    ""Atelectasis is often diagnosed through imaging tests."",
+    ""Treatment may involve removing the blockage or addressing the underlying cause."",
+    ""Atelectasis can be a complication of other respiratory conditions."",
+    ""It is important to seek medical attention if symptoms occur.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Symptoms are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Diagnosis methods are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Treatment methods are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Complications are not directly relevant to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Seeking medical attention is not directly relevant to identifying diseases in a picture.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,False,What diseases are included in the picture?,Cardiomegaly,,0.25,0.5,False,"The score is 0.25 because the output primarily focused on topics unrelated to the question, such as detection methods, potential causes, symptoms, treatment options, lifestyle changes, and monitoring, rather than directly addressing the diseases depicted in the picture. However, the score is not zero because there might have been some indirect or partial references to the diseases, albeit not clearly or directly.",gpt-4o,0.0068850000000000005,,,"Statements:
+[
+    ""Cardiomegaly is a condition characterized by an enlarged heart."",
+    ""It can be detected through imaging tests such as X-rays or echocardiograms."",
+    ""Cardiomegaly may be a symptom of underlying heart disease."",
+    ""Potential causes include high blood pressure, heart valve disease, or cardiomyopathy."",
+    ""Symptoms can include shortness of breath, fatigue, and swelling in the legs."",
+    ""Treatment depends on the underlying cause and may involve medication or surgery."",
+    ""Lifestyle changes such as diet and exercise can help manage the condition."",
+    ""Regular monitoring by a healthcare professional is recommended.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses detection methods, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses potential causes, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses symptoms, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses treatment options, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses lifestyle changes, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses monitoring, not the diseases included in the picture.""
+    }
+]"
+enhanced,GEval,test_case_6,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What diseases are included in the picture?,Cardiomegaly,Cardiomegaly,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0009075000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,There are no factual contradictions or critical omissions. The actual output matches the expected output exactly.,gpt-4o,0.000925,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,Where is/are the abnormality located?,Heart,Center,0.08411558545018019,0.5,False,There is a factual contradiction as the expected location is 'Center' but the actual output is 'Heart'.,gpt-4o,0.0009600000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,What diseases are included in the picture?,Atelectasis,Mass,0.13103312017164745,0.5,False,There is a factual contradiction between the Expected Output 'Mass' and the Actual Output 'Atelectasis'.,gpt-4o,0.0009750000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,What is the largest organ in the picture?,Lung,Lung,0.9999999999999998,0.5,True,"There are no factual contradictions between the expected and actual output, and the response does not omit any critical medical information. The actual output matches the expected output exactly.",gpt-4o,0.001065,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034325000000000002,,,"Statements:
+[
+    ""Lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and concise answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0033900000000000007,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' is irrelevant to the question about the largest organ in the picture, as it fails to provide a direct answer or context.",gpt-4o,0.0038450000000000008,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Where is/are the abnormality located?,"Right Lung, Left",,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the input without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.003545,,,"Statements:
+[
+    ""Right Lung."",
+    ""Left.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is/are the abnormality located?," centered mediastinum, left lung, right lung",,0.6666666666666666,0.5,True,"The score is 0.67 because the output partially addresses the input by mentioning the mediastinum, which is relevant to locating abnormalities. However, the statement 'Centered mediastinum.' lacks specificity regarding the exact location of the abnormality, preventing a higher score.",gpt-4o,0.00417,,,"Statements:
+[
+    ""Centered mediastinum."",
+    ""Left lung."",
+    ""Right lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Centered mediastinum.' does not specify an abnormality location.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Where is/are the abnormality located?,"Left Lung, Right",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003565,,,"Statements:
+[
+    ""Left Lung."",
+    ""Right.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_9,True,What modality is used to take this image?,X-Ray,X-Ray,0.9999999999999998,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,Where is/are the abnormality located?,"Right Lung, Left","Right Lung, Left",0.9999999999999998,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0009050000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,Where is/are the abnormality located?,"Left Lung, Right","Left Lung, Lower Right",0.637915357728383,0.5,True,"The Actual Output correctly identifies the Left Lung but omits 'Lower' for the Right, which is a critical detail.",gpt-4o,0.0009975000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Where is/are the abnormality located?," centered mediastinum, left lung, right lung","Right Lung, Left",0.6734617327069549,0.5,True,"The actual output includes both 'right lung' and 'left lung' as expected, but adds 'centered mediastinum' which is not mentioned in the expected output. This is a factual addition, not a contradiction, and does not omit critical medical information.",gpt-4o,0.0013,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034050000000000005,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034200000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and direct answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer. Great job!",gpt-4o,0.0034200000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Where is/are the abnormality located?,"Left Lung, Right",,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the input question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.003585,,,"Statements:
+[
+    ""Left Lung."",
+    ""Right.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, demonstrating a clear and focused answer. Great job on maintaining relevance throughout!",gpt-4o,0.003445,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Where is/are the abnormality located?,"Left Lung, Right",,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003565,,,"Statements:
+[
+    ""Left Lung."",
+    ""Right.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What diseases are included in the picture?,Atelectasis,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.005655,,,"Statements:
+[
+    ""Atelectasis is a condition."",
+    ""It involves the collapse of part or all of a lung."",
+    ""Atelectasis can occur due to a blockage of the air passages."",
+    ""It may also result from pressure on the outside of the lung."",
+    ""Symptoms can include difficulty breathing and chest pain."",
+    ""Atelectasis is often diagnosed through imaging tests."",
+    ""Treatment may involve addressing the underlying cause."",
+    ""In some cases, atelectasis can resolve on its own."",
+    ""Preventive measures include deep breathing exercises."",
+    ""Atelectasis is more common after surgery.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_8,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What is the largest organ in the picture?,Lung,Lung,0.9999999999999998,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,Where is/are the abnormality located?,"Left Lung, Right","Left Lung, Right",1.0,0.5,True,"The Actual Output matches the Expected Output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009150000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,Where is/are the abnormality located?,"Left Lung, Right","Left Lung, Right",0.9985936376094753,0.5,True,"The Actual Output matches the Expected Output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009150000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.000925,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,What diseases are included in the picture?,Atelectasis,Pneumonia,0.16875201323255568,0.5,False,There is a factual contradiction as the expected output is 'Pneumonia' but the actual output is 'Atelectasis'. This is a critical medical omission since the diseases mentioned are different.,gpt-4o,0.0011525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_7,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant and directly addresses the question about the modality used to take the image, without any irrelevant information.",gpt-4o,0.0034400000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, demonstrating a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where is/are the abnormality located?,"Left Lung, Right",,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the input without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035250000000000004,,,"Statements:
+[
+    ""Left Lung."",
+    ""Right.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining complete focus on the location of the abnormality. Great job on staying concise and relevant!",gpt-4o,0.0034750000000000002,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer. Great job!",gpt-4o,0.0034100000000000007,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034100000000000003,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison, failing to provide a relevant answer.",gpt-4o,0.003915,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,What diseases are included in the picture?,Cardiomegaly,,0.2,0.5,False,"The score is 0.20 because the output primarily focuses on topics like detection methods, causes, symptoms, and treatment options, which are not directly related to identifying the diseases depicted in the picture. However, the score is not zero as there might be some tangential relevance to the broader context of diseases.",gpt-4o,0.005745000000000001,,,"Statements:
+[
+    ""Cardiomegaly is a condition characterized by an enlarged heart."",
+    ""It can be detected through imaging tests such as X-rays or echocardiograms."",
+    ""Cardiomegaly may be caused by high blood pressure or coronary artery disease."",
+    ""Symptoms can include shortness of breath and swelling in the legs."",
+    ""Treatment depends on the underlying cause of the condition.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses detection methods, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses causes of cardiomegaly, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses symptoms of cardiomegaly, not the diseases included in the picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses treatment options, not the diseases included in the picture.""
+    }
+]"
+enhanced,GEval,test_case_5,True,What diseases are included in the picture?,Cardiomegaly,Cardiomegaly,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0009075000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,Where is/are the abnormality located?,"Left Lung, Right","Left Lung, Right",1.0,0.5,True,"The Actual Output matches the Expected Output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009150000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions or critical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,Where is/are the abnormality located?,Center,Center,1.0,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,"There are no factual contradictions, no critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009550000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What diseases are included in the picture?,Cardiomegaly,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, providing a clear and concise answer. Great job!",gpt-4o,0.0034625000000000003,,,"Statements:
+[
+    ""Cardiomegaly.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining a clear and focused answer. Great job!",gpt-4o,0.003405,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining a clear and focused answer.",gpt-4o,0.0033750000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0034000000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What modality is used to take this image?,X-Ray,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0033900000000000002,,,"Statements:
+[
+    ""X-Ray""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Which part of the body does this image belong to?,Chest,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0033950000000000004,,,"Statements:
+[
+    ""Chest""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What is the largest organ in the picture?,Lung,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the input.",gpt-4o,0.0034200000000000003,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is/are the abnormality located?,Center,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.003415,,,"Statements:
+[
+    ""Center""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,What is the largest organ in the picture?,Lung,,0.0,0.5,False,"The score is 0.00 because the statement 'Lung' is irrelevant to the question about the largest organ in the picture, as it fails to provide context or a direct answer.",gpt-4o,0.0038550000000000004,,,"Statements:
+[
+    ""Lung""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'Lung' does not address the question about the largest organ in the picture. It merely names an organ without context or comparison.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What diseases are included in the picture?,Atelectasis,,0.5555555555555556,0.5,True,"The score is 0.56 because while the output provides some relevant information about diseases, it includes several irrelevant statements such as symptoms, diagnosis methods, treatment methods, and general advice on seeking medical attention, which do not directly address the question of identifying diseases in a picture. These extraneous details dilute the focus, preventing a higher score.",gpt-4o,0.006525000000000001,,,"Statements:
+[
+    ""Atelectasis is a condition."",
+    ""It involves the collapse of part or all of a lung."",
+    ""Atelectasis can occur due to a blockage of the air passages."",
+    ""It may also result from pressure on the outside of the lung."",
+    ""Symptoms can include difficulty breathing and chest pain."",
+    ""Atelectasis is often diagnosed through imaging tests."",
+    ""Treatment may involve removing the blockage or addressing the underlying cause."",
+    ""Atelectasis can be a complication of other respiratory conditions."",
+    ""It is important to seek medical attention if symptoms are present.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Symptoms are not directly related to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Diagnosis methods are not directly related to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Treatment methods are not directly related to identifying diseases in a picture.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""General advice on seeking medical attention is not directly related to identifying diseases in a picture.""
+    }
+]"
+enhanced,GEval,test_case_9,True,What diseases are included in the picture?,Atelectasis,Atelectasis,1.0,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009125000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Where is/are the abnormality located?,Center,Center,1.0,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,Which part of the body does this image belong to?,Chest,Chest,1.0000000000000002,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,Where is/are the abnormality located?,Center,Center,1.0,0.5,True,"The actual output matches the expected output exactly, with no factual contradictions or omissions.",gpt-4o,0.0009000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The actual output matches the expected output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,The actual output matches the expected output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What modality is used to take this image?,X-Ray,X-Ray,1.0,0.5,True,The Actual Output matches the Expected Output exactly with no factual contradictions or omissions.,gpt-4o,0.0008950000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,Which part of the body does this image belong to?,Chest,Chest,1.0,0.5,True,The Actual Output matches the Expected Output with no factual contradictions or omissions.,gpt-4o,0.0008850000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What is the largest organ in the picture?,Lung,Lung,1.0,0.5,True,There are no factual contradictions or critical medical omissions. The actual output matches the expected output exactly.,gpt-4o,0.0009350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,What diseases are included in the picture?,Cardiomegaly,Cardiomegaly,1.0,0.5,True,"There are no factual contradictions or critical medical omissions, and the actual output matches the expected output exactly.",gpt-4o,0.0009575000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"

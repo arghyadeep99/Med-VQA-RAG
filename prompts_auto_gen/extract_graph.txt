@@ -1,0 +1,113 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity, first identify all entities needed from the text in order to capture the information and ideas in the text.
+Next, report all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: Suggest several labels or categories for the entity. The categories should not be specific, but should be as general as possible.
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: a numeric score indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in The primary language of the provided text is English. as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into The primary language of the provided text is English., just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+text:
+Hypertension, also known as high blood pressure, is a condition in which the blood vessels have persistently raised pressure. Long-term hypertension can cause severe health complications such as heart disease, stroke, and kidney failure. It is often called the "silent killer" because it may not show any symptoms.
+
+The condition is diagnosed when blood pressure readings consistently exceed 140/90 mmHg. Lifestyle changes such as reducing salt intake, increasing physical activity, and managing stress are the first line of treatment. In some cases, medications like ACE inhibitors, beta-blockers, and diuretics are prescribed.
+
+------------------------
+output:
+("entity"{tuple_delimiter}HYPERTENSION{tuple_delimiter}CONDITION{tuple_delimiter}Hypertension, also known as high blood pressure, is a condition where blood vessels have persistently raised pressure, leading to severe health complications like heart disease, stroke, and kidney failure. It is often asymptomatic and diagnosed with readings above 140/90 mmHg.)
+{record_delimiter}
+("entity"{tuple_delimiter}HEART DISEASE{tuple_delimiter}CONDITION{tuple_delimiter}A severe health complication that can result from long-term hypertension.)
+{record_delimiter}
+("entity"{tuple_delimiter}STROKE{tuple_delimiter}CONDITION{tuple_delimiter}A severe health complication that can result from long-term hypertension.)
+{record_delimiter}
+("entity"{tuple_delimiter}KIDNEY FAILURE{tuple_delimiter}CONDITION{tuple_delimiter}A severe health complication that can result from long-term hypertension.)
+{record_delimiter}
+("entity"{tuple_delimiter}LIFESTYLE CHANGES{tuple_delimiter}TREATMENT{tuple_delimiter}First line of treatment for hypertension, including reducing salt intake, increasing physical activity, and managing stress.)
+{record_delimiter}
+("entity"{tuple_delimiter}MEDICATIONS{tuple_delimiter}TREATMENT{tuple_delimiter}Includes ACE inhibitors, beta-blockers, and diuretics prescribed for hypertension in some cases.)
+{record_delimiter}
+("relationship"{tuple_delimiter}HYPERTENSION{tuple_delimiter}HEART DISEASE{tuple_delimiter}Long-term hypertension can cause heart disease.{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}HYPERTENSION{tuple_delimiter}STROKE{tuple_delimiter}Long-term hypertension can cause stroke.{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}HYPERTENSION{tuple_delimiter}KIDNEY FAILURE{tuple_delimiter}Long-term hypertension can cause kidney failure.{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}HYPERTENSION{tuple_delimiter}LIFESTYLE CHANGES{tuple_delimiter}Lifestyle changes are the first line of treatment for hypertension.{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}HYPERTENSION{tuple_delimiter}MEDICATIONS{tuple_delimiter}Medications may be prescribed for hypertension in some cases.{tuple_delimiter}9)
+{completion_delimiter}
+#############################
+
+
+Example 2:
+
+text:
+Type 2 diabetes is a chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion. It leads to elevated levels of glucose in the blood. Risk factors include obesity, sedentary lifestyle, poor diet, and genetic predisposition.
+
+Management of type 2 diabetes includes dietary control, regular exercise, oral hypoglycemic agents such as metformin, and sometimes insulin therapy. Long-term complications include neuropathy, nephropathy, retinopathy, and cardiovascular disease.
+
+------------------------
+output:
+("entity"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}DISEASE{tuple_delimiter}A chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion, leading to elevated levels of glucose in the blood. Risk factors include obesity, sedentary lifestyle, poor diet, and genetic predisposition.){record_delimiter}
+("entity"{tuple_delimiter}INSULIN RESISTANCE{tuple_delimiter}CONDITION{tuple_delimiter}A condition where the body's cells do not respond effectively to insulin, a key factor in type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}INSULIN SECRETION{tuple_delimiter}BIOLOGICAL PROCESS{tuple_delimiter}The process by which the pancreas releases insulin into the bloodstream, which is impaired in type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}GLUCOSE{tuple_delimiter}BIOCHEMICAL{tuple_delimiter}A simple sugar that is an important energy source in living organisms and is a component of many carbohydrates. Elevated levels are a hallmark of diabetes.){record_delimiter}
+("entity"{tuple_delimiter}OBESITY{tuple_delimiter}CONDITION{tuple_delimiter}A medical condition characterized by excess body fat that increases the risk of health problems such as type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}SEDENTARY LIFESTYLE{tuple_delimiter}LIFESTYLE{tuple_delimiter}A way of life that involves little physical activity, contributing to various health issues including type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}POOR DIET{tuple_delimiter}LIFESTYLE{tuple_delimiter}Eating habits that lack nutritional value, contributing to health problems such as obesity and type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}GENETIC PREDISPOSITION{tuple_delimiter}CONDITION{tuple_delimiter}The increased likelihood of developing a particular disease based on a person's genetic makeup, including type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}DIETARY CONTROL{tuple_delimiter}TREATMENT{tuple_delimiter}A method of managing type 2 diabetes that involves monitoring and regulating food intake.){record_delimiter}
+("entity"{tuple_delimiter}REGULAR EXERCISE{tuple_delimiter}TREATMENT{tuple_delimiter}Physical activity that is performed to improve health and can help manage type 2 diabetes.){record_delimiter}
+("entity"{tuple_delimiter}ORAL HYPOGLYCEMIC AGENTS{tuple_delimiter}TREATMENT{tuple_delimiter}Medications taken by mouth to lower blood sugar levels in people with type 2 diabetes, such as metformin.){record_delimiter}
+("entity"{tuple_delimiter}METFORMIN{tuple_delimiter}MEDICATION{tuple_delimiter}An oral hypoglycemic agent used to treat type 2 diabetes by lowering glucose levels in the blood.){record_delimiter}
+("entity"{tuple_delimiter}INSULIN THERAPY{tuple_delimiter}TREATMENT{tuple_delimiter}The use of insulin injections to manage diabetes by regulating blood glucose levels.){record_delimiter}
+("entity"{tuple_delimiter}NEUROPATHY{tuple_delimiter}COMPLICATION{tuple_delimiter}A type of nerve damage that can result from long-term complications of diabetes, affecting various parts of the body.){record_delimiter}
+("entity"{tuple_delimiter}NEPHROPATHY{tuple_delimiter}COMPLICATION{tuple_delimiter}Kidney damage that can arise as a long-term complication of diabetes, potentially leading to kidney failure.){record_delimiter}
+("entity"{tuple_delimiter}RETINOPATHY{tuple_delimiter}COMPLICATION{tuple_delimiter}Damage to the retina of the eye that can result from long-term diabetes, leading to vision problems or blindness.){record_delimiter}
+("entity"{tuple_delimiter}CARDIOVASCULAR DISEASE{tuple_delimiter}COMPLICATION{tuple_delimiter}A range of heart and blood vessel disorders that can be long-term complications of diabetes, including heart attack and stroke.){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}INSULIN RESISTANCE{tuple_delimiter}Type 2 diabetes is characterized by insulin resistance.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}INSULIN SECRETION{tuple_delimiter}Type 2 diabetes involves impaired insulin secretion.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}GLUCOSE{tuple_delimiter}Type 2 diabetes leads to elevated levels of glucose in the blood.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}OBESITY{tuple_delimiter}Obesity is a risk factor for developing type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}SEDENTARY LIFESTYLE{tuple_delimiter}A sedentary lifestyle is a risk factor for developing type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}POOR DIET{tuple_delimiter}A poor diet is a risk factor for developing type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}GENETIC PREDISPOSITION{tuple_delimiter}Genetic predisposition can increase the risk of developing type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}DIETARY CONTROL{tuple_delimiter}Dietary control is a method of managing type 2 diabetes.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}REGULAR EXERCISE{tuple_delimiter}Regular exercise is recommended for managing type 2 diabetes.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}ORAL HYPOGLYCEMIC AGENTS{tuple_delimiter}Oral hypoglycemic agents, such as metformin, are used to treat type 2 diabetes.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}INSULIN THERAPY{tuple_delimiter}Insulin therapy is sometimes necessary for managing type 2 diabetes.{tuple_delimiter}9){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}NEUROPATHY{tuple_delimiter}Neuropathy can be a long-term complication of type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}NEPHROPATHY{tuple_delimiter}Nephropathy can be a long-term complication of type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}RETINOPATHY{tuple_delimiter}Retinopathy can be a long-term complication of type 2 diabetes.{tuple_delimiter}8){record_delimiter}
+("relationship"{tuple_delimiter}TYPE 2 DIABETES{tuple_delimiter}CARDIOVASCULAR DISEASE{tuple_delimiter}Cardiovascular disease can be a long-term complication of type 2 diabetes.{tuple_delimiter}8){completion_delimiter}
+#############################
+
+
+
+-Real Data-
+######################
+text: {input_text}
+######################
+output:

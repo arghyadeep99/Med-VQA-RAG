@@ -1,0 +1,2470 @@
+model_type,metric_name,test_name,success,input,actual_output,expected_output,metric_score,metric_threshold,metric_success,metric_reason,evaluation_model,evaluation_cost,context,retrieval_context,verbose_logs
+enhanced,AnswerRelevancy,test_case_1,False,What type of imaging does this not represent?,No acute cardiopulmonary process.,,0.0,0.5,False,The score is 0.00 because the output provided a medical observation instead of addressing the specific type of imaging requested in the input.,gpt-4o,0.0036325000000000003,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical observation rather than a type of imaging.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,What type of image is this?,No acute cardiopulmonary process,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0034975,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,What type of imaging does this not represent?,No acute cardiopulmonary process.,,0.0,0.5,False,The score is 0.00 because the output provided a medical observation instead of addressing the specific type of imaging requested in the input.,gpt-4o,0.0036325000000000003,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical observation, not a type of imaging.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What type of image is this?,No acute cardiopulmonary process,,1.0,0.5,True,"The score is 1.00 because the response perfectly aligns with the input, addressing the question directly without any irrelevant information. Great job on maintaining focus and clarity!",gpt-4o,0.0035375,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Which organ system is abnormal in this image?,Cardiomegaly and prominence of the left ventricle,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.00372,,,"Statements:
+[
+    ""Cardiomegaly is present."",
+    ""There is prominence of the left ventricle.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Which organ system is abnormal in this image?,Cardiomegaly and prominence of the left ventricle,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the abnormal organ system in the image. Great job on maintaining focus and clarity!,gpt-4o,0.0037800000000000004,,,"Statements:
+[
+    ""Cardiomegaly is present."",
+    ""There is prominence of the left ventricle.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,False,What is not pictured in this image?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the output discusses a medical condition, which is completely unrelated to the task of identifying what is not pictured in an image. This lack of relevance results in the lowest possible score.",gpt-4o,0.0038750000000000004,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical condition, which is unrelated to identifying what is not pictured in an image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,False,What is not pictured in this image?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the output discusses a medical condition, which is completely unrelated to the task of identifying what is not pictured in an image. This lack of relevance results in the lowest possible score.",gpt-4o,0.0038750000000000004,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical condition, which is unrelated to identifying what is not pictured in an image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,How is the patient oriented?,Post-operative chest radiograph showing left perihilar consolidation.,,0.0,0.5,False,"The score is 0.00 because the output did not address the patient's orientation at all, instead focusing on unrelated medical details about the chest radiograph and lung condition.",gpt-4o,0.0042450000000000005,,,"Statements:
+[
+    ""The chest radiograph is post-operative."",
+    ""The radiograph shows left perihilar consolidation.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about the chest radiograph being post-operative does not provide information about the patient's orientation.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The radiograph showing left perihilar consolidation is related to the patient's lung condition, not their orientation.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,False,How is the patient oriented?,Post-operative chest radiograph showing left perihilar consolidation.,,0.0,0.5,False,"The score is 0.00 because the output did not address the question about the patient's orientation, instead focusing on unrelated medical details.",gpt-4o,0.0041625,,,"Statements:
+[
+    ""The chest radiograph is post-operative."",
+    ""The radiograph shows left perihilar consolidation.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about the chest radiograph being post-operative does not provide information about the patient's orientation.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about left perihilar consolidation is related to the patient's lung condition, not their orientation.""
+    }
+]"
+enhanced,GEval,test_case_0,False,What type of imaging does this not represent?,No acute cardiopulmonary process.,ultrasound,0.018676004319858212,0.5,False,The actual output does not address the question about imaging type and contains a factual contradiction.,gpt-4o,0.0009325000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What type of imaging does this not represent?,No acute cardiopulmonary process.,ultrasound,0.015296734223488628,0.5,False,The actual output does not address the question about imaging type and contains a factual contradiction by providing an unrelated medical statement.,gpt-4o,0.0009925000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,Which organ system is abnormal in this image?,Cardiomegaly and prominence of the left ventricle,Cardiovascular,0.7324175744135117,0.5,True,"The actual output identifies specific abnormalities related to the cardiovascular system, which aligns with the expected output. However, it does not directly state 'cardiovascular,' leading to a minor paraphrasing issue.",gpt-4o,0.001175,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,What is not pictured in this image?,No acute cardiopulmonary process.,The extremities,0.04268242666922205,0.5,False,"The actual output does not address the question about what is not pictured, contradicting the expected output which specifies 'The extremities'.",gpt-4o,0.00103,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What is not pictured in this image?,No acute cardiopulmonary process.,The extremities,0.02973645384501867,0.5,False,"The actual output does not address the question about what is not pictured, contradicting the expected output which specifies 'The extremities'.",gpt-4o,0.00103,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,How is the patient oriented?,Post-operative chest radiograph showing left perihilar consolidation.,Posterior-Anterior,0.0033085974575044626,0.5,False,"The actual output does not address the orientation of the patient and instead describes a radiograph finding, which is a factual contradiction to the expected output.",gpt-4o,0.0010575,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,What type of image is this?,No acute cardiopulmonary process,Chest X-ray,0.22160785290281887,0.5,False,"The actual output does not identify the type of image as a Chest X-ray, which is a factual contradiction. It instead describes the findings, which is not the expected response.",gpt-4o,0.001095,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,What type of image is this?,No acute cardiopulmonary process,Chest X-ray,0.23697390286408546,0.5,False,"The actual output does not identify the image type as a Chest X-ray, which is a factual contradiction. It instead describes the findings, missing the expected identification.",gpt-4o,0.001075,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,How is the patient oriented?,Post-operative chest radiograph showing left perihilar consolidation.,Posterior-Anterior,0.005340332565681315,0.5,False,"The actual output does not address the orientation of the patient and instead describes a radiograph finding, which is a factual contradiction to the expected output.",gpt-4o,0.0010575,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,Which organ system is abnormal in this image?,Cardiomegaly and prominence of the left ventricle,Cardiovascular,0.7230342485318546,0.5,True,"The actual output describes specific abnormalities, 'cardiomegaly and prominence of the left ventricle,' which are related to the cardiovascular system, aligning with the expected output. There is no factual contradiction, but the response is more detailed than necessary.",gpt-4o,0.0012850000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What is the abnormality by the right hemidiaphragm?,No pneumothorax detected.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the abnormality by the right hemidiaphragm without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0036175000000000005,,,"Statements:
+[
+    ""No pneumothorax detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,What is under the right hemidiaphragm?,Findings under the right hemidiaphragm,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, providing a clear and concise answer.",gpt-4o,0.0035575000000000003,,,"Statements:
+[
+    ""Findings are located under the right hemidiaphragm.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0038225000000000004,,,"Statements:
+[
+    ""The post-operative chest radiograph shows bibasilar atelectasis."",
+    ""There is a small right pleural effusion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What is the abnormality by the right hemidiaphragm?,No pneumothorax detected.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the abnormality by the right hemidiaphragm without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0036175000000000005,,,"Statements:
+[
+    ""No pneumothorax detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0039525,,,"Statements:
+[
+    ""The chest radiograph is post-operative."",
+    ""It shows bibasilar atelectasis."",
+    ""There is a small right pleural effusion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0039525,,,"Statements:
+[
+    ""The chest radiograph is post-operative."",
+    ""It shows bibasilar atelectasis."",
+    ""There is a small right pleural effusion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What is under the right hemidiaphragm?,Findings under the right hemidiaphragm,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the query. Great job!",gpt-4o,0.0036175,,,"Statements:
+[
+    ""Findings are located under the right hemidiaphragm.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,,0.6666666666666666,0.5,True,"The score is 0.67 because the response partially addresses the question by discussing radiological findings, but it includes irrelevant information about ground-glass opacity, which does not directly answer the query about the location of a cavitary lesion.",gpt-4o,0.00436,,,"Statements:
+[
+    ""Ground-glass opacity is present."",
+    ""It is located in the right upper lobe."",
+    ""There is a fiducial marker.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Ground-glass opacity is a different radiological finding and does not specify the location of a cavitary lesion.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,,0.3333333333333333,0.5,False,"The score is 0.33 because the actual output included information about ground-glass opacity and fiducial markers, which are not directly related to identifying the location of a cavitary lesion. These irrelevant details detracted from the focus on the specific query, thus preventing a higher score. However, the score is not lower because the output may have contained some relevant information that partially addressed the question.",gpt-4o,0.004960000000000001,,,"Statements:
+[
+    ""Ground-glass opacity is present."",
+    ""It is located in the right upper lobe."",
+    ""There is a fiducial marker.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Ground-glass opacity is a different radiological finding and does not specify the location of a cavitary lesion.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""A fiducial marker is used for localization in imaging but does not indicate the location of a cavitary lesion.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,,0.3333333333333333,0.5,False,"The score is 0.33 because the response included information about ground-glass opacity and fiducial markers, which are not directly related to identifying the location of a cavitary lesion. However, the mention of medical terms shows some understanding of the context, which is why the score is not lower.",gpt-4o,0.0048200000000000005,,,"Statements:
+[
+    ""Ground-glass opacity is present."",
+    ""The opacity is located in the right upper lobe."",
+    ""There is a fiducial marker.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""Ground-glass opacity is a type of lung abnormality but does not specify the location of a cavitary lesion.""
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""A fiducial marker is used for precise targeting in medical procedures and does not indicate the location of a cavitary lesion.""
+    }
+]"
+enhanced,GEval,test_case_1,False,What is under the right hemidiaphragm?,Findings under the right hemidiaphragm,Free air,0.3437589276622646,0.5,False,"The actual output is vague and does not specify 'free air' as expected, which is a critical medical detail.",gpt-4o,0.001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,What is under the right hemidiaphragm?,Findings under the right hemidiaphragm,Free air,0.4126880827842917,0.5,False,"The actual output lacks specificity by not mentioning 'free air,' which is a critical medical detail, and instead provides a vague description.",gpt-4o,0.00103,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,Chest x-ray,0.5394698018215436,0.5,True,"The actual output correctly identifies the image as a chest radiograph, aligning with the expected output of a chest x-ray, but includes additional specific medical details not required by the input.",gpt-4o,0.00115,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,Chest x-ray,0.4840415331045227,0.5,False,"The actual output provides a specific type of chest x-ray, which is a post-operative chest radiograph, but includes additional details not present in the expected output.",gpt-4o,0.00111,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,Right upper lobe,0.4334758849714686,0.5,False,"The actual output mentions 'right upper lobe,' aligning with the expected output, but introduces 'ground-glass opacity' and 'fiducial marker,' which are not relevant to the cavitary lesion, indicating factual contradictions.",gpt-4o,0.001225,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,What kind of image is this?,Post-operative chest radiograph showing bibasilar atelectasis and a small right pleural effusion.,Chest x-ray,0.55509504651079,0.5,True,"The actual output correctly identifies the image as a chest radiograph, aligning with the expected output of a chest x-ray, but includes additional specific medical details not required by the input.",gpt-4o,0.00115,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,What is the abnormality by the right hemidiaphragm?,No pneumothorax detected.,Free air,0.10410722450929051,0.5,False,The actual output contradicts the expected output by stating 'No pneumothorax detected' instead of identifying 'Free air' as the abnormality by the right hemidiaphragm.,gpt-4o,0.00114,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,Right upper lobe,0.2899577652449911,0.5,False,"The actual output mentions 'right upper lobe,' aligning with the expected output, but introduces 'ground-glass opacity' and 'fiducial marker,' which are not related to 'cavitary lesion,' indicating factual contradictions.",gpt-4o,0.001235,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What is the abnormality by the right hemidiaphragm?,No pneumothorax detected.,Free air,0.14482644250592436,0.5,False,"The actual output does not address the abnormality by the right hemidiaphragm, which is expected to be 'Free air'. Instead, it mentions 'No pneumothorax detected', which is unrelated and factually contradictory.",gpt-4o,0.0012400000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,where is the cavitary lesion?,Ground-glass opacity in the right upper lobe fiducial marker,Right upper lobe,0.29368542853036383,0.5,False,"The actual output mentions 'right upper lobe,' aligning with the expected output, but introduces 'ground-glass opacity' and 'fiducial marker,' which are not relevant to the cavitary lesion, indicating factual contradictions.",gpt-4o,0.001225,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant information, maintaining complete focus on the question asked. Great job!",gpt-4o,0.0038875000000000003,,,"Statements:
+[
+    ""The AP chest radiograph shows a large right-sided pleural effusion."",
+    ""There is compressive atelectasis of the right lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the abnormality, instead providing unrelated information about changes.",gpt-4o,0.003765,,,"Statements:
+[
+    ""The chest radiograph shows no significant changes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates there are no significant changes, which does not address the location of an abnormality.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the abnormality, instead providing unrelated information about changes.",gpt-4o,0.003765,,,"Statements:
+[
+    ""The chest radiograph shows no significant changes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates there are no significant changes, which does not address the location of an abnormality.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,What is abnormal about the hila?,No abnormalities detected.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the input question about abnormalities in the hila, instead stating there are no abnormalities, which is irrelevant to the query.",gpt-4o,0.0037575000000000004,,,"Statements:
+[
+    ""No abnormalities detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates that there are no abnormalities, which does not address the input question about what is abnormal.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the abnormality, instead providing unrelated information about the lack of significant changes.",gpt-4o,0.0038050000000000002,,,"Statements:
+[
+    ""The chest radiograph shows no significant changes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates there are no significant changes, which does not address the location of an abnormality.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,What is abnormal about the hila?,No abnormalities detected.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the input's request for abnormalities in the hila, instead stating there are no abnormalities, which is irrelevant to the question.",gpt-4o,0.0037425,,,"Statements:
+[
+    ""No abnormalities detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates that there are no abnormalities, which does not address the input asking for abnormalities.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,,0.0,0.5,False,"The score is 0.00 because the output contains statements that describe medical conditions observed in the image, which are irrelevant to the question about identifying the plane of the image.",gpt-4o,0.0043525000000000005,,,"Statements:
+[
+    ""AP chest radiograph shows a large right-sided pleural effusion."",
+    ""There is compressive atelectasis of the right lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical image finding, not related to identifying the plane of an image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement also describes a medical condition observed in an image, not the plane of the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What organ is primarily evaluated in this image?,Multiple old right-sided rib fractures are present. **There is a moderate right pleural effusion.** **Bibasilar atelectasis is present.**,,0.6666666666666666,0.5,True,"The score is 0.67 because the response partially addresses the question by focusing on the organ being evaluated, but includes an irrelevant statement about rib fractures, which diverts attention from the main topic.",gpt-4o,0.004327500000000001,,,"Statements:
+[
+    ""Multiple old right-sided rib fractures are present."",
+    ""There is a moderate right pleural effusion."",
+    ""Bibasilar atelectasis is present.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about rib fractures is related to the bones, not the organ being evaluated.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What organ is primarily evaluated in this image?,Multiple old right-sided rib fractures are present. **There is a moderate right pleural effusion.** **Bibasilar atelectasis is present.**,,0.6666666666666666,0.5,True,"The score is 0.67 because the response partially addresses the question by focusing on the organ being evaluated. However, the mention of rib fractures diverts attention from the main topic, slightly reducing the overall relevancy.",gpt-4o,0.004367500000000001,,,"Statements:
+[
+    ""Multiple old right-sided rib fractures are present."",
+    ""There is a moderate right pleural effusion."",
+    ""Bibasilar atelectasis is present.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about rib fractures is related to the bones, not the organ being evaluated.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,,0.0,0.5,False,"The score is 0.00 because the output entirely focuses on describing medical conditions and findings rather than addressing the specific question about the plane of the image. The statements provided do not relate to the input query, leading to a complete lack of relevancy.",gpt-4o,0.004465,,,"Statements:
+[
+    ""AP chest radiograph shows a large right-sided pleural effusion."",
+    ""There is compressive atelectasis of the right lung.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical image finding, not the plane of the image.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""This statement also describes a medical condition observed in the image, not the plane of the image.""
+    }
+]"
+enhanced,GEval,test_case_9,False,What is abnormal about the hila?,No abnormalities detected.,Enlarged,0.08902163677169686,0.5,False,"The actual output contradicts the expected output by stating no abnormalities when enlargement is expected, indicating a factual contradiction.",gpt-4o,0.0009700000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",Right upper lobe,0.08540386002741193,0.5,False,"The actual output contradicts the expected output by stating no significant changes, missing the critical information about the right upper lobe abnormality.",gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,What is abnormal about the hila?,No abnormalities detected.,Enlarged,0.10367650560130037,0.5,False,The actual output contradicts the expected output by stating no abnormalities when enlargement is expected.,gpt-4o,0.00092,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,What organ is primarily evaluated in this image?,Multiple old right-sided rib fractures are present. **There is a moderate right pleural effusion.** **Bibasilar atelectasis is present.**,Lungs,0.24399478529707302,0.5,False,"The actual output describes conditions related to the lungs, such as pleural effusion and atelectasis, but does not explicitly identify the lungs as the primary organ evaluated.",gpt-4o,0.00116,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",Right upper lobe,0.08445821822232816,0.5,False,"The actual output contradicts the expected output by stating no significant changes, missing the critical information about the right upper lobe abnormality.",gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,where is the abnormality?,"Overall, the chest radiograph shows no significant changes.",Right upper lobe,0.0686854917677289,0.5,False,"The actual output contradicts the expected output by stating no significant changes, missing the critical information about the right upper lobe abnormality.",gpt-4o,0.0010350000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What organ is primarily evaluated in this image?,Multiple old right-sided rib fractures are present. **There is a moderate right pleural effusion.** **Bibasilar atelectasis is present.**,Lungs,0.22969048055702856,0.5,False,"The actual output describes conditions related to the lungs, such as pleural effusion and atelectasis, but does not directly identify the lungs as the primary organ evaluated, which is a factual contradiction.",gpt-4o,0.0012200000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,PA,0.12138479518413489,0.5,False,"The actual output provides a detailed description of a chest radiograph, which is not directly related to identifying the plane as 'PA'. There is a factual contradiction as the expected output is 'PA', but the actual output describes an 'AP' radiograph.",gpt-4o,0.0012925000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,PA,0.12586349666001193,0.5,False,"The actual output provides a detailed description of a chest radiograph, which is not directly related to identifying the plane of the image as expected. There is a factual contradiction as the expected output is 'PA' while the actual output describes an 'AP' radiograph.",gpt-4o,0.0013225,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Which plane is this image taken?,AP chest radiograph showing a large right-sided pleural effusion with compressive atelectasis of the right lung.,PA,0.1588880485816189,0.5,False,"The actual output provides a detailed description of a chest radiograph, which is not directly related to identifying the plane of the image as expected. There is a factual contradiction as the expected output is 'PA' while the actual output describes an 'AP' radiograph. The response does not address the question of which plane the image is taken in.",gpt-4o,0.0014825,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_0,True,What is happening in the right lung?,Post-surgical changes in the right hemithorax,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the right lung without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0037300000000000002,,,"Statements:
+[
+    ""Post-surgical changes are present."",
+    ""The changes are in the right hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about abnormalities in the lung apices, instead mentioning the absence of an acute cardiopulmonary process, which is irrelevant to the query.",gpt-4o,0.003955,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of an acute cardiopulmonary process, which does not directly address abnormalities in the lung apices.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,What is happening in the right lung?,Post-surgical changes in the right hemithorax,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the right lung without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0037300000000000002,,,"Statements:
+[
+    ""Post-surgical changes are present."",
+    ""The changes are in the right hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the output did not address the specific question about abnormalities in the lung apices, instead mentioning the absence of an acute cardiopulmonary process, which is irrelevant to the query.",gpt-4o,0.003965000000000001,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of an acute cardiopulmonary process, which does not directly address abnormalities in the lung apices.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,How would you describe the aortopulmonary window?,The aortopulmonary window is unremarkable in the absence of acute cardiopulmonary processes.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question about the aortopulmonary window without any irrelevant information. Great job on staying focused and providing a clear, concise answer!",gpt-4o,0.00396,,,"Statements:
+[
+    ""The aortopulmonary window is unremarkable."",
+    ""There is an absence of acute cardiopulmonary processes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the output did not address the specific question about abnormalities in the lung apices, instead mentioning the absence of an acute cardiopulmonary process, which is irrelevant to the query.",gpt-4o,0.003955,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of an acute cardiopulmonary process, which does not directly address abnormalities in the lung apices.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,What is happening in the right lung?,Post-surgical changes in the right hemithorax,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the right lung without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035975000000000004,,,"Statements:
+[
+    ""Post-surgical changes are present in the right hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,How would you describe the aortopulmonary window?,The aortopulmonary window is unremarkable in the absence of acute cardiopulmonary processes.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question about the aortopulmonary window without any irrelevant information. Great job on staying focused and providing a clear, concise answer!",gpt-4o,0.00395,,,"Statements:
+[
+    ""The aortopulmonary window is unremarkable."",
+    ""There is an absence of acute cardiopulmonary processes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Why are the breasts asymmetrical?, breast asymmetry,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question about breast asymmetry without any irrelevant information. Great job on staying focused and providing a clear, concise answer!",gpt-4o,0.005512500000000001,,,"Statements:
+[
+    ""Breast asymmetry is a condition."",
+    ""It refers to a difference in size or shape between the breasts."",
+    ""Breast asymmetry is common."",
+    ""It can be caused by various factors."",
+    ""Hormonal changes can lead to breast asymmetry."",
+    ""Genetic factors may contribute to breast asymmetry."",
+    ""Breast asymmetry can be temporary or permanent."",
+    ""Surgical options are available to correct breast asymmetry."",
+    ""Breast asymmetry is not always a medical concern."",
+    ""It can affect self-esteem and body image.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Why are the breasts asymmetrical?, breast asymmetry,,1.0,0.5,True,"The score is 1.00 because the response perfectly addressed the question about asymmetrical breasts without any irrelevant information. Great job on staying focused and providing a clear, concise answer!",gpt-4o,0.00536,,,"Statements:
+[
+    ""Breast asymmetry is a condition."",
+    ""It refers to a difference in size or shape between the breasts."",
+    ""Asymmetry can be natural."",
+    ""It may be noticeable."",
+    ""Breast asymmetry can occur during puberty."",
+    ""It can also be due to hormonal changes."",
+    ""Surgery is an option for correction."",
+    ""Breast asymmetry is common."",
+    ""It is not always a cause for concern."",
+    ""Consultation with a healthcare provider is recommended.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_3,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,Nodular opacities,0.06879537693865431,0.5,False,"The actual output contradicts the expected output by stating there is no acute process, while the expected output identifies nodular opacities as abnormalities.",gpt-4o,0.0010600000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,How would you describe the aortopulmonary window?,The aortopulmonary window is unremarkable in the absence of acute cardiopulmonary processes.,middle mogul,0.03845466234219573,0.5,False,The actual output does not match the expected output and contains factual information not present in the expected output.,gpt-4o,0.0009950000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,Nodular opacities,0.07472557052180537,0.5,False,"The actual output contradicts the expected output by stating there is no acute process, while the expected output identifies nodular opacities as abnormalities.",gpt-4o,0.0010500000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Why are the breasts asymmetrical?, breast asymmetry,Prior surgery,0.28597871017604176,0.5,False,"The actual output 'breast asymmetry' is a restatement of the input and does not address the expected cause 'prior surgery', missing critical information.",gpt-4o,0.0010525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,What is happening in the right lung?,Post-surgical changes in the right hemithorax,Volume loss,0.2798921830251785,0.5,False,"The actual output mentions 'post-surgical changes' which could imply volume loss but does not explicitly state it, leading to a factual contradiction with the expected output.",gpt-4o,0.001085,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,How would you describe the aortopulmonary window?,The aortopulmonary window is unremarkable in the absence of acute cardiopulmonary processes.,middle mogul,0.0434589470750812,0.5,False,The Actual Output does not match the Expected Output and contains factual information not present in the Expected Output.,gpt-4o,0.0010050000000000003,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Why are the breasts asymmetrical?, breast asymmetry,Prior surgery,0.3202684555326537,0.5,False,The actual output 'breast asymmetry' is a restatement of the input and does not address the expected cause 'prior surgery'.,gpt-4o,0.0010225,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What is happening in the right lung?,Post-surgical changes in the right hemithorax,Volume loss,0.2730099850168487,0.5,False,"The actual output mentions 'post-surgical changes' which could imply volume loss but does not explicitly state it, leading to a factual contradiction with the expected output.",gpt-4o,0.001085,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,What abnormalities are in the lung apices?,No acute cardiopulmonary process.,Nodular opacities,0.055604620969804654,0.5,False,"The Actual Output contradicts the Expected Output by stating 'No acute cardiopulmonary process' instead of identifying 'Nodular opacities' in the lung apices, which is a critical medical omission.",gpt-4o,0.0012000000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,What is happening in the right lung?,Post-surgical changes in the right hemithorax,Volume loss,0.311321439153148,0.5,False,"The actual output mentions 'post-surgical changes' which could imply volume loss but does not explicitly state it, leading to a factual contradiction with the expected output.",gpt-4o,0.001085,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_9,True,Where is the catheter tip located?,The catheter tip is located in the lower SVC.,,1.0,0.5,True,The score is 1.00 because the response directly and accurately addresses the question about the catheter tip's location without any irrelevant information. Great job on staying focused and precise!,gpt-4o,0.0035825000000000006,,,"Statements:
+[
+    ""The catheter tip is located in the lower SVC.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is the diffuse pleural thickening?,Diffuse right-sided pleural thickening,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0035075,,,"Statements:
+[
+    ""Diffuse right-sided pleural thickening.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Which sign do you see in the aortopulmonary window in this image?,No significant abnormalities detected in the aortopulmonary window.,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant and directly addresses the question about the sign in the aortopulmonary window, with no irrelevant information included. Great job!",gpt-4o,0.0037124999999999997,,,"Statements:
+[
+    ""No significant abnormalities detected in the aortopulmonary window.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the statement 'No acute cardiopulmonary process' is a general observation and does not specifically address the characteristic findings in the aortopulmonary window, which was the focus of the input question.",gpt-4o,0.00412,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'No acute cardiopulmonary process' is a general observation and does not specifically address the characteristic findings in the aortopulmonary window.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Where is the diffuse pleural thickening?,Diffuse right-sided pleural thickening,,1.0,0.5,True,The score is 1.00 because the response directly and accurately addresses the question about the location of diffuse pleural thickening without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035775000000000004,,,"Statements:
+[
+    ""Diffuse right-sided pleural thickening.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Which sign do you see in the aortopulmonary window in this image?,No significant abnormalities detected in the aortopulmonary window.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0036225000000000003,,,"Statements:
+[
+    ""No significant abnormalities detected in the aortopulmonary window.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the statement 'No acute cardiopulmonary process' is irrelevant to the specific question about the aortopulmonary window, failing to address the characteristic findings requested.",gpt-4o,0.00405,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'No acute cardiopulmonary process' is a general observation and does not specifically address the characteristic findings in the aortopulmonary window.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,,0.0,0.5,False,"The score is 0.00 because the statement 'No acute cardiopulmonary process' does not address the specific question about the characteristic findings in the aortopulmonary window, making it entirely irrelevant to the input.",gpt-4o,0.00409,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement 'No acute cardiopulmonary process' is a general observation and does not specifically address the characteristic findings in the aortopulmonary window.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which lung is abnormal?,Right lung complications after thoracocentesis,,0.6,0.5,True,"The score is 0.60 because while the output provides detailed information about thoracocentesis, it does not directly address the question of which lung is abnormal. The explanation of the procedure is informative but not relevant to identifying the abnormal lung, which is why the score isn't higher. However, the inclusion of medical context shows a good understanding of related topics, maintaining a moderate score.",gpt-4o,0.0053325000000000004,,,"Statements:
+[
+    ""Right lung complications can occur after thoracocentesis."",
+    ""Thoracocentesis is a medical procedure."",
+    ""Complications may affect the right lung."",
+    ""The procedure involves the removal of fluid from the pleural space."",
+    ""Lung complications are a potential risk.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes what thoracocentesis is, not which lung is abnormal.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement explains the procedure of thoracocentesis, not which lung is abnormal.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Which lung is abnormal?,Right lung complications after thoracocentesis,,0.6,0.5,True,"The score is 0.60 because while the output provides detailed information about thoracocentesis, it does not directly address the question of which lung is abnormal. The explanation of the procedure is informative but not relevant to identifying the abnormal lung, which is why the score isn't higher. However, the inclusion of related medical information shows a good understanding of the context, contributing to the current score.",gpt-4o,0.0053525000000000005,,,"Statements:
+[
+    ""Right lung complications can occur after thoracocentesis."",
+    ""Thoracocentesis is a medical procedure."",
+    ""Complications may affect the right lung."",
+    ""The procedure involves the removal of fluid from the pleural space."",
+    ""Lung complications are a potential risk.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes what thoracocentesis is, not which lung is abnormal.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement explains the procedure of thoracocentesis, not which lung is abnormal.""
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_2,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,middle mogul,0.06789339116807132,0.5,False,The actual output does not address the characteristic finding in the aortopulmonary window and contradicts the expected output by discussing an unrelated topic.,gpt-4o,0.0010675,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,True,Which lung is abnormal?,Right lung complications after thoracocentesis,Right lung,0.6394753370713501,0.5,True,"The actual output identifies the right lung as abnormal, consistent with the expected output, but adds unnecessary detail about complications, which is a minor deviation.",gpt-4o,0.0010425,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,True,Where is the diffuse pleural thickening?,Diffuse right-sided pleural thickening,Right lung,0.9038097782961559,0.5,True,"The actual output correctly identifies the location as the right lung, aligning with the expected output, with only minor paraphrasing present.",gpt-4o,0.0010175000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,True,Where is the diffuse pleural thickening?,Diffuse right-sided pleural thickening,Right lung,0.9058858980293267,0.5,True,"The actual output correctly identifies the location as the right lung, matching the expected output, with only minor paraphrasing.",gpt-4o,0.0009975000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,middle mogul,0.06940182134626795,0.5,False,The actual output 'No acute cardiopulmonary process' does not match the expected output 'middle mogul' and contains a factual contradiction regarding the aortopulmonary window.,gpt-4o,0.0011375,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,Which sign do you see in the aortopulmonary window in this image?,No significant abnormalities detected in the aortopulmonary window.,middle mogul,0.13744848470838672,0.5,False,"The actual output contradicts the expected output by stating no abnormalities, while the expected output identifies 'middle mogul' as a sign. This is a factual contradiction and a critical medical omission.",gpt-4o,0.0011650000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,What characteristic finding do you see in the aortopulmonary window?,No acute cardiopulmonary process.,middle mogul,0.0575402283788361,0.5,False,"The actual output does not mention 'middle mogul' and instead provides an unrelated statement about the cardiopulmonary process, indicating a factual contradiction and critical omission.",gpt-4o,0.0011075,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,True,Which lung is abnormal?,Right lung complications after thoracocentesis,Right lung,0.713679859519645,0.5,True,"The actual output correctly identifies the right lung as abnormal, aligning with the expected output, but adds unnecessary detail about complications after thoracocentesis, which is not a factual contradiction but slightly deviates from the expected concise response.",gpt-4o,0.0012125,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,Which sign do you see in the aortopulmonary window in this image?,No significant abnormalities detected in the aortopulmonary window.,middle mogul,0.14731368885357404,0.5,False,"The actual output contradicts the expected output by stating no abnormalities, while the expected output identifies 'middle mogul' as a sign. This is a factual contradiction and a critical omission.",gpt-4o,0.0011650000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,True,Where is the catheter tip located?,The catheter tip is located in the lower SVC.,Right superior cavoatrial junction,0.7863877884633853,0.5,True,"The actual output describes the catheter tip location as the lower SVC, which is a minor paraphrase of the expected output's right superior cavoatrial junction, as both refer to similar anatomical regions without factual contradiction or critical medical omission.",gpt-4o,0.001255,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_2,True,Where does the catheter tip extend into?,The catheter tip is located in the superior vena cava.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and concise understanding of the query. Great job!",gpt-4o,0.0035675000000000004,,,"Statements:
+[
+    ""The catheter tip is located in the superior vena cava.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where does the catheter tip extend into?,The catheter tip is located in the superior vena cava.,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly answers the question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.0035575000000000003,,,"Statements:
+[
+    ""The catheter tip is located in the superior vena cava.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is the catheter tip located?,The catheter tip is located in the lower SVC.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining complete focus on the location of the catheter tip. Great job on staying on point!",gpt-4o,0.0036125000000000003,,,"Statements:
+[
+    ""The catheter tip is located in the lower SVC.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,What level is the abnormality located at?,Mild right basal atelectasis,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused answer.",gpt-4o,0.0034675,,,"Statements:
+[
+    ""Mild right basal atelectasis.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Which ribs are located near the abnormality seen in this image?,Right 9th rib fracture,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0035025000000000004,,,"Statements:
+[
+    ""Right 9th rib fracture.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which ribs are located near the abnormality seen in this image?,Right 9th rib fracture,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, providing a clear and direct answer.",gpt-4o,0.0034725000000000008,,,"Statements:
+[
+    ""Right 9th rib fracture.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,What kind of image is this?,Chest radiograph showing normal heart size and absence of acute cardiopulmonary processes.,,1.0,0.5,True,"The score is 1.00 because the response perfectly aligns with the input, providing a clear and relevant answer without any irrelevant statements. Great job on maintaining focus and clarity!",gpt-4o,0.0038374999999999998,,,"Statements:
+[
+    ""The chest radiograph shows a normal heart size."",
+    ""There is an absence of acute cardiopulmonary processes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,What kind of image is this?,Chest radiograph showing normal heart size and absence of acute cardiopulmonary processes.,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant to the input, with no irrelevant statements present. Great job on maintaining focus and clarity!",gpt-4o,0.0037974999999999997,,,"Statements:
+[
+    ""The chest radiograph shows a normal heart size."",
+    ""There is an absence of acute cardiopulmonary processes.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,False,How was this x-ray taken?, X-ray showing right-sided pneumothorax with chest tube in place,,0.0,0.5,False,"The score is 0.00 because the output focused on describing the x-ray findings and medical interventions visible, rather than addressing the method of how the x-ray was taken. This lack of alignment with the input question resulted in a completely irrelevant response.",gpt-4o,0.004367500000000001,,,"Statements:
+[
+    ""X-ray shows right-sided pneumothorax."",
+    ""A chest tube is in place.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the findings of the x-ray, not how it was taken.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical intervention visible on the x-ray, not the method of taking the x-ray.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,How was this x-ray taken?, X-ray showing right-sided pneumothorax with chest tube in place,,0.0,0.5,False,"The score is 0.00 because the output focused on describing the findings and interventions visible on the x-ray, rather than addressing the method of how the x-ray was taken, which was the core of the input question.",gpt-4o,0.00438,,,"Statements:
+[
+    ""X-ray shows right-sided pneumothorax."",
+    ""A chest tube is in place.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes the findings of the x-ray, not the method of how it was taken.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a medical intervention visible on the x-ray, not the method of how the x-ray was taken.""
+    }
+]"
+enhanced,GEval,test_case_2,True,Where does the catheter tip extend into?,The catheter tip is located in the superior vena cava.,Right superior cavoatrial junction,0.6078315972161693,0.5,True,The actual output correctly identifies the general location in the superior vena cava but lacks the specific detail of the right superior cavoatrial junction.,gpt-4o,0.0010575,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,True,What kind of image is this?,Chest radiograph showing normal heart size and absence of acute cardiopulmonary processes.,x-ray,0.7835372836140732,0.5,True,"The actual output correctly identifies the image as a chest radiograph, which is synonymous with an x-ray, and provides additional detail without factual contradiction or critical omissions.",gpt-4o,0.0010975,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,How was this x-ray taken?, X-ray showing right-sided pneumothorax with chest tube in place,PA,0.03791571622508983,0.5,False,"The actual output does not address how the x-ray was taken, which is the expected output, and instead describes the x-ray findings, leading to a factual contradiction.",gpt-4o,0.0010975,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,What level is the abnormality located at?,Mild right basal atelectasis,T5,0.005340332641008787,0.5,False,The actual output 'Mild right basal atelectasis' does not match the expected output 'T5' and introduces a factual contradiction by describing a different condition and location.,gpt-4o,0.0010975000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,Which ribs are located near the abnormality seen in this image?,Right 9th rib fracture,4th and 5th,0.04621734748299932,0.5,False,"The actual output mentions a right 9th rib fracture, which contradicts the expected output of 4th and 5th ribs, indicating a factual contradiction.",gpt-4o,0.001105,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Which ribs are located near the abnormality seen in this image?,Right 9th rib fracture,4th and 5th,0.018442409868111277,0.5,False,"The actual output mentions a right 9th rib fracture, which contradicts the expected output of 4th and 5th ribs, indicating a factual contradiction.",gpt-4o,0.001105,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,True,Where is the catheter tip located?,The catheter tip is located in the lower SVC.,Right superior cavoatrial junction,0.7576714396058901,0.5,True,"The actual output describes the catheter tip location as the lower SVC, which is a minor paraphrasing of the expected output's right superior cavoatrial junction, with no factual contradictions or critical medical omissions.",gpt-4o,0.001205,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,Where does the catheter tip extend into?,The catheter tip is located in the superior vena cava.,Right superior cavoatrial junction,0.5895483633921319,0.5,True,"The actual output is factually correct but less specific than the expected output, which specifies the right superior cavoatrial junction, a more precise location within the superior vena cava.",gpt-4o,0.0011375,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,True,What kind of image is this?,Chest radiograph showing normal heart size and absence of acute cardiopulmonary processes.,x-ray,0.7902547909722639,0.5,True,"The actual output correctly identifies the image as a chest radiograph, which is synonymous with an x-ray, and provides additional detail without factual contradiction or critical omissions.",gpt-4o,0.0010975,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,How was this x-ray taken?, X-ray showing right-sided pneumothorax with chest tube in place,PA,0.022340372467019406,0.5,False,"The actual output does not address how the x-ray was taken, which is the expected output 'PA'. Instead, it describes the x-ray findings, which is a factual contradiction.",gpt-4o,0.0011275,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_0,True,What level is the abnormality located at?,Mild right basal atelectasis,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the abnormality without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.0035875000000000004,,,"Statements:
+[
+    ""Mild right basal atelectasis.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,How wide is the cardiac shadow?,Normal cardiac silhouette size.,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the width of the cardiac shadow without any irrelevant information. Great job on staying focused and concise!,gpt-4o,0.0035425,,,"Statements:
+[
+    ""Normal cardiac silhouette size.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,Where is the aortic arch?,The aortic arch is located at the top of the heart within the mediastinum.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the location of the aortic arch without any irrelevant information. Great job on staying focused and precise!,gpt-4o,0.0038275,,,"Statements:
+[
+    ""The aortic arch is located at the top of the heart."",
+    ""It is within the mediastinum.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,How wide is the cardiac shadow?,Normal cardiac silhouette size.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the width of the cardiac shadow without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035025000000000004,,,"Statements:
+[
+    ""Normal cardiac silhouette size.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,True,Where in the image are the calcifications located?,Calcifications are present in the left hilus and left chest wall.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0037600000000000003,,,"Statements:
+[
+    ""Calcifications are present in the left hilus."",
+    ""Calcifications are present in the left chest wall.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,Which side of the image is the aortic arch visualized?,The aortic arch is visualized on the left side of the chest in standard PA and lateral chest radiographs.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the input.",gpt-4o,0.0041275,,,"Statements:
+[
+    ""The aortic arch is visualized on the left side of the chest."",
+    ""This visualization occurs in standard PA chest radiographs."",
+    ""The aortic arch is also visualized in lateral chest radiographs.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which side of the image is the aortic arch visualized?,The aortic arch is visualized on the left side of the chest in standard PA and lateral chest radiographs.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, demonstrating a clear and focused understanding of the query. Great job!",gpt-4o,0.0041525,,,"Statements:
+[
+    ""The aortic arch is visualized on the left side of the chest."",
+    ""Standard PA chest radiographs show the aortic arch."",
+    ""Lateral chest radiographs show the aortic arch.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Where is the aortic arch?,The aortic arch is located at the top of the heart within the mediastinum.,,1.0,0.5,True,The score is 1.00 because the response directly and accurately addresses the question about the location of the aortic arch without any irrelevant information. Great job on staying focused and precise!,gpt-4o,0.003875,,,"Statements:
+[
+    ""The aortic arch is located at the top of the heart."",
+    ""The aortic arch is within the mediastinum.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,Where in the image are the calcifications located?,Calcifications are present in the left hilus and left chest wall.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the question without any irrelevant information, maintaining a clear and focused answer.",gpt-4o,0.00373,,,"Statements:
+[
+    ""Calcifications are present in the left hilus."",
+    ""Calcifications are present in the left chest wall.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,GEval,test_case_7,False,Which side of the image is the aortic arch visualized?,The aortic arch is visualized on the left side of the chest in standard PA and lateral chest radiographs.,Right side,0.013483902527255908,0.5,False,The actual output contradicts the expected output by stating the aortic arch is on the left side instead of the right.,gpt-4o,0.0010475000000000003,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,Which side of the image is the aortic arch visualized?,The aortic arch is visualized on the left side of the chest in standard PA and lateral chest radiographs.,Right side,0.012053416001795025,0.5,False,The actual output contradicts the expected output by stating the aortic arch is on the left side instead of the right side.,gpt-4o,0.0010575,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,What level is the abnormality located at?,Mild right basal atelectasis,T5,0.010976725972589075,0.5,False,The actual output 'Mild right basal atelectasis' does not match the expected output 'T5' and introduces a factual contradiction by mentioning a different condition and location.,gpt-4o,0.0011075,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Where is the aortic arch?,The aortic arch is located at the top of the heart within the mediastinum.,Right side,0.0811130056627737,0.5,False,The actual output contains a factual contradiction as it incorrectly describes the location of the aortic arch compared to the expected output.,gpt-4o,0.00102,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Where is the aortic arch?,The aortic arch is located at the top of the heart within the mediastinum.,Right side,0.04776684299912103,0.5,False,"The actual output contradicts the expected output by stating the aortic arch is at the top of the heart within the mediastinum, while the expected output states it is on the right side.",gpt-4o,0.00117,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,Where in the image are the calcifications located?,Calcifications are present in the left hilus and left chest wall.,High on the image,0.20546750051112816,0.5,False,"The actual output specifies locations (left hilus and left chest wall) not mentioned in the expected output, indicating a factual contradiction.",gpt-4o,0.0010425,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,True,How wide is the cardiac shadow?,Normal cardiac silhouette size.,Less than half the thorax,0.5705114045408669,0.5,True,"The actual output does not directly contradict the expected output but does not specifically address the width of the cardiac shadow. It provides a general statement about the cardiac silhouette size, which could imply normalcy but lacks precision.",gpt-4o,0.0011775000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,True,How wide is the cardiac shadow?,Normal cardiac silhouette size.,Less than half the thorax,0.5611248983583897,0.5,True,"The actual output does not directly contradict the expected output but does not specifically address the width of the cardiac shadow. It provides a general statement about the cardiac silhouette size, which could imply normalcy but lacks specificity.",gpt-4o,0.0011775000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,Where in the image are the calcifications located?,Calcifications are present in the left hilus and left chest wall.,High on the image,0.21333114622540067,0.5,False,"The actual output specifies locations not mentioned in the expected output, indicating a factual contradiction.",gpt-4o,0.0009525,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_7,True,Which side is more clearly visualized?,Postoperative chest radiograph showing right apical pneumothorax.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, providing a clear and concise answer. Great job on maintaining focus and clarity!",gpt-4o,0.0036425000000000003,,,"Statements:
+[
+    ""Postoperative chest radiograph shows right apical pneumothorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where is the lung lesion located?,Lung lesion,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0034475000000000005,,,"Statements:
+[
+    ""Lung lesion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is the lung lesion located?,Lung lesion,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question about the location of the lung lesion without any irrelevant information.,gpt-4o,0.0034475000000000005,,,"Statements:
+[
+    ""Lung lesion.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,False,Which lobe of the lung is the lesion located in?,No significant changes were observed in the follow-up chest X-ray.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the lesion in the lung, focusing instead on unrelated details.",gpt-4o,0.0041600000000000005,,,"Statements:
+[
+    ""No significant changes were observed."",
+    ""The follow-up chest X-ray was conducted.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide information about the location of the lesion in the lung.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement mentions a follow-up procedure but does not specify the location of the lesion in the lung.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,Which lung is clearer?,Post-operative chest radiograph showing a loculated right pleural effusion and increased opacity in the right upper lobe.,,1.0,0.5,True,The score is 1.00 because the response is perfectly relevant and directly addresses the question without any irrelevant information. Great job on maintaining focus and clarity!,gpt-4o,0.00402,,,"Statements:
+[
+    ""The chest radiograph is post-operative."",
+    ""There is a loculated right pleural effusion."",
+    ""Increased opacity is observed in the right upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,True,Which side is more clearly visualized?,Postoperative chest radiograph showing right apical pneumothorax.,,1.0,0.5,True,"The score is 1.00 because the response perfectly addresses the input without any irrelevant statements, providing a clear and concise answer.",gpt-4o,0.0037425,,,"Statements:
+[
+    ""Postoperative chest radiograph is available."",
+    ""The radiograph shows a right apical pneumothorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,False,Which lobe of the lung is the lesion located in?,No significant changes were observed in the follow-up chest X-ray.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the lesion in the lung, instead providing unrelated information about follow-up procedures without specifying the lobe.",gpt-4o,0.00425,,,"Statements:
+[
+    ""No significant changes were observed."",
+    ""The follow-up chest X-ray was conducted.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not provide information about the location of the lesion in the lung.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement mentions a follow-up procedure but does not specify the location of the lesion in the lung.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,How many lesions are present in the image?,No significant lesions are identified in the chest X-ray of the patient with a history of cholangiocarcinoma.,,0.5,0.5,True,"The score is 0.50 because while the output does address the question about the number of lesions, it includes irrelevant information about the patient's history of cholangiocarcinoma, which does not pertain to the image analysis. This additional detail detracts from the focus on the lesion count, preventing a higher score.",gpt-4o,0.004432500000000001,,,"Statements:
+[
+    ""No significant lesions are identified in the chest X-ray."",
+    ""The patient has a history of cholangiocarcinoma.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The patient's history of cholangiocarcinoma is not relevant to the number of lesions present in the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,How many lesions are present in the image?,No significant lesions are identified in the chest X-ray of the patient with a history of cholangiocarcinoma.,,0.5,0.5,True,"The score is 0.50 because while the output partially addresses the question by discussing the patient's medical history, it fails to directly answer the query about the number of lesions in the image. The mention of cholangiocarcinoma, although informative, does not contribute to identifying the lesions, which is why the score isn't higher. However, the inclusion of medical context shows an understanding of the patient's condition, maintaining a moderate score.",gpt-4o,0.0046525,,,"Statements:
+[
+    ""No significant lesions are identified in the chest X-ray."",
+    ""The patient has a history of cholangiocarcinoma.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The patient's history of cholangiocarcinoma is not relevant to the number of lesions present in the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,Which lung is clearer?,Post-operative chest radiograph showing a loculated right pleural effusion and increased opacity in the right upper lobe.,,0.0,0.5,False,"The score is 0.00 because the output fails to address the question of which lung is clearer, instead focusing on unrelated conditions in the right lung without providing a comparative analysis.",gpt-4o,0.00444,,,"Statements:
+[
+    ""The post-operative chest radiograph shows a loculated right pleural effusion."",
+    ""There is increased opacity in the right upper lobe.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement describes a condition in the right lung, but does not directly address which lung is clearer.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates an issue in the right lung, but does not provide a comparison to determine which lung is clearer.""
+    }
+]"
+enhanced,GEval,test_case_1,False,Where is the lung lesion located?,Lung lesion,Right lung,0.42055665804515846,0.5,False,"The actual output lacks specificity by not mentioning 'right lung' as in the expected output, but it does not contradict the input.",gpt-4o,0.0009925000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,Which lobe of the lung is the lesion located in?,No significant changes were observed in the follow-up chest X-ray.,Right upper lobe,0.0017986208711916148,0.5,False,The actual output does not address the question about the lesion's location and provides unrelated information about a follow-up X-ray.,gpt-4o,0.001025,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Which side is more clearly visualized?,Postoperative chest radiograph showing right apical pneumothorax.,Left,0.0092912356221187,0.5,False,"The actual output does not address which side is more clearly visualized and introduces unrelated medical information, contradicting the expected output.",gpt-4o,0.00102,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,Which lobe of the lung is the lesion located in?,No significant changes were observed in the follow-up chest X-ray.,Right upper lobe,0.0029312230327373226,0.5,False,The actual output does not address the question about the lesion's location and contradicts the expected output by not mentioning the right upper lobe.,gpt-4o,0.001055,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_4,False,How many lesions are present in the image?,No significant lesions are identified in the chest X-ray of the patient with a history of cholangiocarcinoma.,One,0.24740363387196035,0.5,False,"The actual output contradicts the expected output by stating no significant lesions, while the expected output indicates one lesion. This is a factual contradiction.",gpt-4o,0.001065,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Which side is more clearly visualized?,Postoperative chest radiograph showing right apical pneumothorax.,Left,0.018676004319858212,0.5,False,"The actual output does not address which side is more clearly visualized and instead describes a medical condition, contradicting the expected output.",gpt-4o,0.00103,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,Which lung is clearer?,Post-operative chest radiograph showing a loculated right pleural effusion and increased opacity in the right upper lobe.,Left,0.301073058258689,0.5,False,"The actual output describes conditions affecting the right lung, implying the left lung is clearer, but it does not directly answer the question.",gpt-4o,0.0010475,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,Where is the lung lesion located?,Lung lesion,Right lung,0.4003312749657367,0.5,False,"The actual output lacks specificity by not mentioning 'right lung' as in the expected output, which is a critical detail.",gpt-4o,0.0009825,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,Which lung is clearer?,Post-operative chest radiograph showing a loculated right pleural effusion and increased opacity in the right upper lobe.,Left,0.13419238908174383,0.5,False,"The actual output describes conditions affecting the right lung, implying the left lung is clearer, but it does not directly answer the question.",gpt-4o,0.0010475,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,How many lesions are present in the image?,No significant lesions are identified in the chest X-ray of the patient with a history of cholangiocarcinoma.,One,0.1992956685458757,0.5,False,"The actual output contradicts the expected output by stating no significant lesions are identified, while the expected output indicates one lesion. This is a factual contradiction.",gpt-4o,0.001085,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_3,True,How wide is the heart compared to the thorax?,Heart size is within normal limits.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the width of the heart compared to the thorax without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035925,,,"Statements:
+[
+    ""Heart size is within normal limits.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,True,How wide is the heart compared to the thorax?,Heart size is within normal limits.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question about the width of the heart compared to the thorax without any irrelevant information. Great job on staying focused and relevant!,gpt-4o,0.0035925,,,"Statements:
+[
+    ""Heart size is within normal limits.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,Where is the lesion?,No acute cardiopulmonary disease.,,0.0,0.5,False,"The score is 0.00 because the output discusses the absence of cardiopulmonary disease, which is irrelevant to the question about the location of a lesion.",gpt-4o,0.0037750000000000006,,,"Statements:
+[
+    ""No acute cardiopulmonary disease.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses the absence of cardiopulmonary disease, which does not address the location of a lesion.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,False,Where is free air trapped subcutaneously in this image?,No free air was detected in the subcutaneous tissue.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the question about the location of free air trapped subcutaneously, instead mentioning the absence of free air, which is irrelevant to the query.",gpt-4o,0.003945000000000001,,,"Statements:
+[
+    ""No free air was detected in the subcutaneous tissue.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of free air, which does not address the question of where free air is trapped.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,False,Where is free air trapped subcutaneously in this image?,No free air was detected in the subcutaneous tissue.,,0.0,0.5,False,"The score is 0.00 because the output did not address the question about the location of trapped free air subcutaneously, instead mentioning the absence of free air, which is irrelevant to the query.",gpt-4o,0.003935000000000001,,,"Statements:
+[
+    ""No free air was detected in the subcutaneous tissue.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of free air, which does not address the question of where free air is trapped.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,False,Which lung lobe is the lesion present in?,No significant changes were observed.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the location of the lesion in the lung lobe, instead providing unrelated information about the absence of significant changes.",gpt-4o,0.0040425,,,"Statements:
+[
+    ""No significant changes were observed.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not specify which lung lobe the lesion is present in. It only mentions that no significant changes were observed, which does not address the input question about the location of the lesion.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,False,What are the two major organs present in this image?,Post-surgical changes in the right hemithorax,,0.0,0.5,False,"The score is 0.00 because the output failed to identify the two major organs in the image, instead discussing unrelated topics such as post-surgical changes and locations in the right hemithorax without specifying any organs.",gpt-4o,0.004257500000000001,,,"Statements:
+[
+    ""Post-surgical changes are present."",
+    ""The changes are located in the right hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about post-surgical changes does not identify any organs.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The location of changes in the right hemithorax does not specify any organs.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,False,Which lung lobe is the lesion present in?,No significant changes were observed.,,0.0,0.5,False,"The score is 0.00 because the output fails to address the specific question about the location of the lesion in a lung lobe, making it entirely irrelevant to the input.",gpt-4o,0.0037625000000000007,,,"Statements:
+[
+    ""No significant changes were observed.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not specify any information about the location of a lesion in a lung lobe.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,False,What are the two major organs present in this image?,Post-surgical changes in the right hemithorax,,0.0,0.5,False,"The score is 0.00 because the output failed to identify the two major organs in the image, instead discussing unrelated topics such as post-surgical changes and locations in the right hemithorax without specifying any organs.",gpt-4o,0.004257500000000001,,,"Statements:
+[
+    ""Post-surgical changes are present."",
+    ""The changes are located in the right hemithorax.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about post-surgical changes does not identify any organs.""
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The location of changes in the right hemithorax does not specify any organs.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_6,False,Where is the lesion?,No acute cardiopulmonary disease.,,0.0,0.5,False,"The score is 0.00 because the output discusses the absence of cardiopulmonary disease, which is irrelevant to the question about the location of a lesion.",gpt-4o,0.003785,,,"Statements:
+[
+    ""No acute cardiopulmonary disease.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement discusses the absence of cardiopulmonary disease, which does not address the location of a lesion.""
+    }
+]"
+enhanced,GEval,test_case_4,False,Where is free air trapped subcutaneously in this image?,No free air was detected in the subcutaneous tissue.,Above the clavicles bilaterally,0.016816064253001264,0.5,False,"The actual output contradicts the expected output by stating no free air is detected, while the expected output specifies its location above the clavicles bilaterally.",gpt-4o,0.0010975,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,Which lung lobe is the lesion present in?,No significant changes were observed.,Right lower lobe,0.038762677951897195,0.5,False,The actual output does not address the question about the lung lobe and contradicts the expected output by stating no changes were observed.,gpt-4o,0.0010225000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,What are the two major organs present in this image?,Post-surgical changes in the right hemithorax,Heart 	lungs,0.004742587300927061,0.5,False,"The actual output does not identify the heart and lungs as the major organs, contradicting the expected output.",gpt-4o,0.0009875,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,Where is the lesion?,No acute cardiopulmonary disease.,Right lower lobe,0.04986161417361038,0.5,False,"The actual output does not address the location of the lesion as expected, indicating a factual contradiction and a critical medical omission.",gpt-4o,0.0009950000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,What are the two major organs present in this image?,Post-surgical changes in the right hemithorax,Heart 	lungs,0.007585817740967664,0.5,False,"The actual output does not identify the heart and lungs, which are the expected major organs, and instead mentions post-surgical changes, indicating a factual contradiction.",gpt-4o,0.0010875,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,Which lung lobe is the lesion present in?,No significant changes were observed.,Right lower lobe,0.031744071427592765,0.5,False,The actual output does not address the question about the lung lobe and contradicts the expected output by stating no changes were observed.,gpt-4o,0.0010225000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,Where is the lesion?,No acute cardiopulmonary disease.,Right lower lobe,0.09159370446728668,0.5,False,"The actual output does not address the location of the lesion, which is a critical medical omission, and instead provides unrelated information about the absence of acute cardiopulmonary disease.",gpt-4o,0.001105,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,How wide is the heart compared to the thorax?,Heart size is within normal limits.,It is less than half the width of the thorax,0.25610244312597646,0.5,False,"The actual output does not directly address the comparison of heart width to thorax width, which is a factual contradiction, but it implies normalcy which is somewhat related.",gpt-4o,0.001115,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,How wide is the heart compared to the thorax?,Heart size is within normal limits.,It is less than half the width of the thorax,0.2741577376160724,0.5,False,"The actual output does not address the specific comparison of heart width to thorax width, which is less than half, but it does not contain factual contradictions or critical medical omissions.",gpt-4o,0.0011350000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,Where is free air trapped subcutaneously in this image?,No free air was detected in the subcutaneous tissue.,Above the clavicles bilaterally,0.02320091005519353,0.5,False,"The actual output contradicts the expected output by stating no free air is detected, while the expected output specifies its location above the clavicles bilaterally.",gpt-4o,0.0010975,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,AnswerRelevancy,test_case_6,True,What rib is the lesion located inferior to?,No rib fracture detected.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0034725000000000003,,,"Statements:
+[
+    ""No rib fracture detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""idk"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_5,True,At which rib is the lesion located?,The lesion is located at the ninth right rib.,,1.0,0.5,True,The score is 1.00 because the response perfectly addresses the question without any irrelevant information. Great job on staying focused and providing a clear answer!,gpt-4o,0.0035325,,,"Statements:
+[
+    ""The lesion is located at the ninth right rib.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_4,True,At which rib is the lesion located?,The lesion is located at the ninth right rib.,,1.0,0.5,True,"The score is 1.00 because the response is perfectly relevant, directly addressing the question about the rib location of the lesion without any irrelevant information. Great job!",gpt-4o,0.0035525000000000005,,,"Statements:
+[
+    ""The lesion is located at the ninth right rib.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    }
+]"
+enhanced,AnswerRelevancy,test_case_7,False,What rib is the lesion located inferior to?,No rib fracture detected.,,0.0,0.5,False,"The score is 0.00 because the output failed to address the specific question about the lesion's location relative to a rib, instead mentioning the absence of a rib fracture, which is irrelevant to the query.",gpt-4o,0.0038650000000000004,,,"Statements:
+[
+    ""No rib fracture detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of a rib fracture, which does not address the location of a lesion relative to a rib.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_9,True,On which side is the cardiac border more obscured?,Left cardiac border obscured by small hiatal hernia,,0.5,0.5,True,"The score is 0.50 because the response partially addresses the question about the cardiac border's obscurity but includes irrelevant information about a hiatal hernia, which does not pertain to the query.",gpt-4o,0.004072500000000001,,,"Statements:
+[
+    ""The left cardiac border is obscured."",
+    ""A small hiatal hernia is present.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The presence of a hiatal hernia is unrelated to the obscuring of the cardiac border.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_3,False,What is the most important abnormality found in this image?,No acute cardiopulmonary process,,0.0,0.5,False,"The score is 0.00 because the output failed to identify any abnormality in the image, which was the core requirement of the input question. Instead, it mentioned the absence of an abnormality, which is irrelevant to the task of identifying an important abnormality.",gpt-4o,0.004005000000000001,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of an abnormality rather than identifying an important abnormality in the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_8,True,On which side is the cardiac border more obscured?,Left cardiac border obscured by small hiatal hernia,,0.5,0.5,True,"The score is 0.50 because while the output partially addresses the question about the cardiac border, it includes irrelevant information about a hiatal hernia, which does not pertain to the obscuring of the cardiac border. This extraneous detail detracts from the overall relevance of the response.",gpt-4o,0.0042425,,,"Statements:
+[
+    ""The left cardiac border is obscured."",
+    ""A small hiatal hernia is present.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The presence of a hiatal hernia is unrelated to the obscuring of the cardiac border.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_2,False,What is the most important abnormality found in this image?,No acute cardiopulmonary process,,0.0,0.5,False,"The score is 0.00 because the output failed to identify any abnormality in the image, which was the core requirement of the input question. Instead, it mentioned the absence of abnormalities, which is irrelevant to the task of identifying the most important abnormality.",gpt-4o,0.004007500000000001,,,"Statements:
+[
+    ""No acute cardiopulmonary process.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement indicates the absence of an abnormality rather than identifying an important abnormality present in the image.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_1,True,Where is the aneurysm located?,The ascending aortic aneurysm appears stable with no new abnormalities detected.,,0.5,0.5,True,"The score is 0.50 because the response did not specify the location of the aneurysm, which was the main focus of the input question. However, it did provide some related information, which is why it is not lower.",gpt-4o,0.0040550000000000004,,,"Statements:
+[
+    ""The ascending aortic aneurysm appears stable."",
+    ""No new abnormalities are detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement about no new abnormalities does not specify the location of the aneurysm.""
+    }
+]"
+enhanced,AnswerRelevancy,test_case_0,True,Where is the aneurysm located?,The ascending aortic aneurysm appears stable with no new abnormalities detected.,,0.5,0.5,True,"The score is 0.50 because the response partially addresses the input by discussing aneurysms but fails to specify the location, which is crucial to fully answering the question. This lack of specificity prevents a higher score, yet the mention of aneurysms keeps it from being lower.",gpt-4o,0.004205,,,"Statements:
+[
+    ""The ascending aortic aneurysm appears stable."",
+    ""No new abnormalities detected.""
+] 
+ 
+Verdicts:
+[
+    {
+        ""verdict"": ""yes"",
+        ""reason"": null
+    },
+    {
+        ""verdict"": ""no"",
+        ""reason"": ""The statement does not specify the location of the aneurysm, which is the focus of the input question.""
+    }
+]"
+enhanced,GEval,test_case_4,False,At which rib is the lesion located?,The lesion is located at the ninth right rib.,7th rib,0.0434589470750812,0.5,False,There is a factual contradiction between the expected output and the actual output regarding the rib number.,gpt-4o,0.0009450000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_1,False,Where is the aneurysm located?,The ascending aortic aneurysm appears stable with no new abnormalities detected.,In the thorasic aorta,0.20184631782259926,0.5,False,"The actual output does not address the location of the aneurysm as expected, instead providing stability information, which is a factual contradiction and a critical medical omission.",gpt-4o,0.00109,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_6,False,What rib is the lesion located inferior to?,No rib fracture detected.,7th rib,0.04268242335726595,0.5,False,"The actual output does not address the question about the lesion's location relative to the 7th rib, resulting in a factual contradiction and critical omission.",gpt-4o,0.0010550000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_8,False,On which side is the cardiac border more obscured?,Left cardiac border obscured by small hiatal hernia,Right,0.14719903998925848,0.5,False,"The actual output contradicts the expected output by stating the left cardiac border is obscured instead of the right, which is a factual contradiction.",gpt-4o,0.0010500000000000002,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_3,False,What is the most important abnormality found in this image?,No acute cardiopulmonary process,Width of aorta,0.1176751906302846,0.5,False,The actual output contradicts the expected output by not identifying the width of the aorta as the abnormality.,gpt-4o,0.00099,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_5,False,At which rib is the lesion located?,The lesion is located at the ninth right rib.,7th rib,0.01685232397933389,0.5,False,"There is a factual contradiction as the expected output states the lesion is at the 7th rib, but the actual output states it is at the ninth right rib.",gpt-4o,0.001095,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_2,False,What is the most important abnormality found in this image?,No acute cardiopulmonary process,Width of aorta,0.03174407110445874,0.5,False,"The actual output contradicts the expected output by not identifying the width of the aorta as the abnormality and instead states there is no acute cardiopulmonary process, which is a factual contradiction and a critical medical omission.",gpt-4o,0.0012100000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_7,False,What rib is the lesion located inferior to?,No rib fracture detected.,7th rib,0.03927823888081588,0.5,False,"The actual output does not address the location of the lesion relative to the 7th rib, which is a factual contradiction to the expected output.",gpt-4o,0.0010450000000000001,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_9,False,On which side is the cardiac border more obscured?,Left cardiac border obscured by small hiatal hernia,Right,0.16392403094515196,0.5,False,There is a factual contradiction as the expected output is 'Right' but the actual output states 'Left cardiac border obscured by small hiatal hernia'.,gpt-4o,0.00109,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"
+enhanced,GEval,test_case_0,False,Where is the aneurysm located?,The ascending aortic aneurysm appears stable with no new abnormalities detected.,In the thorasic aorta,0.19497890857775946,0.5,False,"The actual output does not directly answer the question about the location of the aneurysm, which is expected to be in the thoracic aorta. Instead, it provides stability information about an ascending aortic aneurysm, which is related but not directly addressing the location query.",gpt-4o,0.00132,,,"Criteria:
+None 
+ 
+Evaluation Steps:
+[
+    ""Check for factual contradictions"",
+    ""Penalize critical medical omissions in response"",
+    ""Accept minor paraphrasing""
+]"

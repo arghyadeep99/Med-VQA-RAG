@@ -1,0 +1,17 @@
+faiss-cpu==1.11.0
+fastapi==0.115.12
+graphrag
+# lightrag==0.1.0b6
+neo4j==5.28.1
+neo4j_graphrag==1.7.0
+numpy==2.2.5
+open_clip_torch==2.32.0
+pandas==2.2.3
+Pillow==11.2.1
+pydantic==2.11.4
+python-dotenv==1.1.0
+scipy==1.15.3
+torch==2.7.0
+tqdm==4.67.1
+transformers==4.51.3
+uvicorn==0.34.2
