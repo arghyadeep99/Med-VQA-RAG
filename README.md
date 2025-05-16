@@ -20,7 +20,7 @@ LLaMA 11B visual-instruct.
 ![High Level Architecture](docs/685-Proposal-Arch.png)
 
 ## Report
-(report_link) can be found in the repo.
+![Report](docs/report.pdf) can be found in the repo.
 
 ## Code Structure
 This repo contains all the codes involved in various parts of setup (explained next). The main parts include:
