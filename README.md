@@ -17,7 +17,7 @@ experimented on Microsoft's Llava-RAD, Stanford's ChexAgent and Meta's
 LLaMA 11B visual-instruct.
 
 ## High Level Diagram
-![High Level Architecture](docs/685-Proposal-Arch.png)
+![High Level Architecture](docs/685-newarch.png)
 
 ## Report
 ![Report](docs/report.pdf) can be found in the repo.
