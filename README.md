@@ -20,7 +20,7 @@ LLaMA 11B visual-instruct.
 ![High Level Architecture](docs/685-newarch.png)
 
 ## Report
-![Report](docs/report.pdf) can be found in the repo.
+[Final Report](docs/CS685_Final_Project_Report.pdf) can be found in the repo.
 
 ## Code Structure
 This repo contains all the codes involved in various parts of setup (explained next). The main parts include:
